@@ -2,6 +2,7 @@ import { Input } from "@/components/ui/input";
 import { Info } from "lucide-react";
 import Link from "next/link";
 import { WebsiteCard } from "@/components/ui/website-card";
+import { Footer } from "@/components/footer";
 
 export default function Home() {
     return (
@@ -139,6 +140,8 @@ export default function Home() {
                     />
                 </div>
             </section>
+
+            <Footer />
         </div>
     );
 }
