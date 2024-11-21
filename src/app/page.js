@@ -1,6 +1,7 @@
 import { Input } from "@/components/ui/input";
-import { Info, ArrowUpRight } from "lucide-react";
+import { Info } from "lucide-react";
 import Link from "next/link";
+import { WebsiteCard } from "@/components/ui/website-card";
 
 export default function Home() {
     return (
@@ -51,28 +52,19 @@ export default function Home() {
             </section>
 
             {/* Gallery Section */}
-            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <section className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
                 <h2 className="text-xl font-medium mb-6">Editors picks</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-7xl mx-auto">
-                    <Link
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-8xl mx-auto">
+                    <WebsiteCard
+                        name="Awwwards.com"
+                        href="https://awwwards.com"
+                        size="featured"
+                    />
+                    <WebsiteCard
+                        name="Featured Site"
                         href="#"
-                        className="group relative aspect-[4/3] bg-gray-300 rounded-xl overflow-hidden hover:opacity-90 transition-opacity"
-                    >
-                        <div className="absolute top-3 left-3 bg-background/90 px-3 py-0.5 rounded-2xl text-sm font-bold">
-                            Awwwards.com
-                        </div>
-                        <div className="absolute top-3 right-3 bg-background/90 p-1.5 rounded-full">
-                            <ArrowUpRight className="h-4 w-4" />
-                        </div>
-                    </Link>
-                    <Link
-                        href="#"
-                        className="group relative aspect-[4/3] bg-muted rounded-lg overflow-hidden hover:opacity-90 transition-opacity"
-                    >
-                        <div className="absolute bottom-3 left-3 bg-background/90 px-3 py-1 rounded text-sm">
-                            Featured Site
-                        </div>
-                    </Link>
+                        size="featured"
+                    />
                 </div>
             </section>
         </div>

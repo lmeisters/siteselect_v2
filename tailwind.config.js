@@ -10,6 +10,9 @@ module.exports = {
             fontFamily: {
                 sans: ["var(--font-inter)"],
             },
+            maxWidth: {
+                "8xl": "105rem", // 1408px
+            },
             colors: {
                 background: "var(--background)",
                 foreground: "var(--foreground)",
