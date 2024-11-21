@@ -59,11 +59,26 @@ export default function Home() {
                         name="Awwwards.com"
                         href="https://awwwards.com"
                         size="featured"
+                        tags={[
+                            "Active",
+                            "Free",
+                            "Portfolio",
+                            "Active",
+                            "Free",
+                            "Portfolio",
+                            "Active",
+                            "Free",
+                            "Portfolio",
+                            "Active",
+                            "Free",
+                            "Portfolio",
+                        ]}
                     />
                     <WebsiteCard
                         name="Featured Site"
                         href="#"
                         size="featured"
+                        tags={["React", "Next.js", "Tailwind"]}
                     />
                 </div>
             </section>

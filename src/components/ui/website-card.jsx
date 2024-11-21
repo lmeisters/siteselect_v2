@@ -3,7 +3,13 @@ import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
-export function WebsiteCard({ name, href, className, size = "default" }) {
+export function WebsiteCard({
+    name,
+    href,
+    className,
+    size = "default",
+    tags = [],
+}) {
     const imagePath = `/images/${name.toLowerCase().replace(".com", "")}.webp`;
     const hasImage = name !== "Featured Site";
 
@@ -45,6 +51,37 @@ export function WebsiteCard({ name, href, className, size = "default" }) {
                 )}
             >
                 {name}
+            </div>
+            <div
+                className={cn(
+                    "absolute bottom-0 left-0 right-0",
+                    size === "featured" ? "p-4" : "p-3",
+                    "flex flex-wrap gap-2"
+                )}
+            >
+                {tags.map((tag, index) => (
+                    <span
+                        key={index}
+                        style={{
+                            "--enter-delay": `${index * 50}ms`,
+                            "--exit-delay": `${
+                                (tags.length - 1 - index) * 50
+                            }ms`,
+                        }}
+                        className={cn(
+                            "bg-white px-3 py-1 rounded-2xl font-bold",
+                            size === "featured" ? "text-sm" : "text-xs",
+                            "opacity-0 translate-y-5 blur-md",
+                            "will-change-transform will-change-opacity",
+                            "transition-all duration-300 ease-out",
+                            "group-hover:[transition-delay:var(--enter-delay)]",
+                            "group-hover:opacity-100 group-hover:translate-y-0 group-hover:blur-none",
+                            "[transition-delay:var(--exit-delay)]"
+                        )}
+                    >
+                        {tag}
+                    </span>
+                ))}
             </div>
             <div
                 className={cn(
