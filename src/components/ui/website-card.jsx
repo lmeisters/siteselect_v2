@@ -22,7 +22,7 @@ export function WebsiteCard({
                 "group relative rounded-xl overflow-hidden hover:opacity-100 transition-opacity",
                 size === "featured"
                     ? "aspect-[4/3] md:aspect-[16/9] lg:aspect-[2/1]"
-                    : "aspect-[3/2]",
+                    : "aspect-[16/10]",
                 !hasImage && "bg-gray-100",
                 className
             )}
