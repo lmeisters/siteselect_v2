@@ -38,7 +38,7 @@ export const Header = () => {
     }, [isFocused]);
 
     return (
-        <nav>
+        <nav className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-sm">
             <div className="max-w-8xl mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
                 <Link href="/" className="text-xl font-bold tracking-tighter">
                     SS.
@@ -63,8 +63,8 @@ export const Header = () => {
                 </div>
                 <Sheet>
                     <SheetTrigger asChild>
-                        <button className="w-10 flex justify-end hover:opacity-80 rounded-xl border border-gray-200 p-2 transition-colors hover:bg-gray-50">
-                            <Info className="h-5 w-5" />
+                        <button className="group rounded-lg p-2 border border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors">
+                            <Info className="h-5 w-5 text-muted-foreground group-hover:text-foreground transition-colors" />
                         </button>
                     </SheetTrigger>
                     <SheetContent>
