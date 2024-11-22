@@ -6,6 +6,11 @@ const inter = Inter({
     variable: "--font-inter",
 });
 
+export const viewport = {
+    width: "device-width",
+    initialScale: 1,
+};
+
 export const metadata = {
     title: "SiteSelect | Curated Design Gallery for Creative Inspiration",
     description:
@@ -25,10 +30,6 @@ export const metadata = {
             "max-image-preview": "large",
             "max-snippet": -1,
         },
-    },
-    viewport: {
-        width: "device-width",
-        initialScale: 1,
     },
     alternate: {
         canonical: "https://siteselect.com",
