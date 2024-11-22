@@ -16,6 +16,11 @@ import {
 export const Header = () => {
     const searchRef = useRef(null);
     const [isFocused, setIsFocused] = useState(false);
+    const [isMac, setIsMac] = useState(false);
+
+    useEffect(() => {
+        setIsMac(navigator?.platform?.includes("Mac"));
+    }, []);
 
     useEffect(() => {
         const handleKeyDown = (e) => {
@@ -36,7 +41,7 @@ export const Header = () => {
         <nav>
             <div className="max-w-8xl mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
                 <Link href="/" className="text-xl font-bold tracking-tighter">
-                    SiteSelect
+                    SS.
                 </Link>
                 <div className="flex items-center space-x-4 flex-1 max-w-md mx-auto">
                     <div className="relative w-full">
@@ -51,18 +56,14 @@ export const Header = () => {
                         />
                         <kbd className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 transform hidden sm:inline-block">
                             <span className="text-xs font-bold text-muted-foreground">
-                                {isFocused
-                                    ? "Esc"
-                                    : navigator?.platform?.includes("Mac")
-                                    ? "⌘K"
-                                    : "Ctrl + K"}
+                                {isFocused ? "Esc" : isMac ? "⌘K" : "Ctrl + K"}
                             </span>
                         </kbd>
                     </div>
                 </div>
                 <Sheet>
                     <SheetTrigger asChild>
-                        <button className="w-10 flex justify-end hover:opacity-80">
+                        <button className="w-10 flex justify-end hover:opacity-80 rounded-xl border border-gray-200 p-2 transition-colors hover:bg-gray-50">
                             <Info className="h-5 w-5" />
                         </button>
                     </SheetTrigger>
