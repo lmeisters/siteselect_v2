@@ -4,6 +4,14 @@ import { Input } from "@/components/ui/input";
 import { Info, Search } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import {
+    Sheet,
+    SheetContent,
+    SheetDescription,
+    SheetHeader,
+    SheetTitle,
+    SheetTrigger,
+} from "@/components/ui/sheet";
 
 export const Header = () => {
     const searchRef = useRef(null);
@@ -52,9 +60,47 @@ export const Header = () => {
                         </kbd>
                     </div>
                 </div>
-                <div className="w-10 flex justify-end">
-                    <Info className="h-5 w-5" />
-                </div>
+                <Sheet>
+                    <SheetTrigger asChild>
+                        <button className="w-10 flex justify-end hover:opacity-80">
+                            <Info className="h-5 w-5" />
+                        </button>
+                    </SheetTrigger>
+                    <SheetContent>
+                        <SheetHeader>
+                            <SheetTitle>About SiteSelect</SheetTitle>
+                            <SheetDescription>
+                                Your gateway to discovering exceptional website
+                                designs and creative inspiration.
+                            </SheetDescription>
+                        </SheetHeader>
+                        <div className="mt-6 space-y-4">
+                            <p className="text-sm text-muted-foreground">
+                                Explore our handpicked collection of the web's
+                                finest designs. From stunning layouts to
+                                innovative interactions, SiteSelect showcases
+                                the best in modern web design. Perfect for
+                                designers, developers, and creative
+                                professionals seeking fresh inspiration for
+                                their next project.
+                            </p>
+                            <div className="border-t pt-4">
+                                <p className="text-sm font-medium">
+                                    Want your website featured?
+                                </p>
+                                <p className="text-sm text-muted-foreground">
+                                    Submit at{" "}
+                                    <a
+                                        href="mailto:siteselect@gmail.com"
+                                        className="text-primary hover:opacity-80"
+                                    >
+                                        siteselect@gmail.com
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </SheetContent>
+                </Sheet>
             </div>
         </nav>
     );
