@@ -87,11 +87,31 @@ export function WebsiteCard({
                     </button>
 
                     {tags?.length > 0 && (
-                        <div className="absolute bottom-4 left-4 flex flex-wrap gap-2">
-                            {tags.map((tag) => (
+                        <div
+                            className={cn(
+                                "absolute bottom-0 left-0 right-0",
+                                size === "featured" ? "p-4" : "p-3",
+                                "flex flex-wrap gap-2"
+                            )}
+                        >
+                            {tags.map((tag, index) => (
                                 <span
                                     key={tag}
-                                    className="bg-white/90 backdrop-blur-sm px-2 py-1 rounded-lg text-xs"
+                                    style={{
+                                        "--enter-delay": `${index * 50}ms`,
+                                        "--exit-delay": `${
+                                            (tags.length - 1 - index) * 50
+                                        }ms`,
+                                    }}
+                                    className={cn(
+                                        "bg-white/90 backdrop-blur-sm px-3 py-1 rounded-2xl text-xs font-bold",
+                                        "opacity-0 translate-y-5 blur-md",
+                                        "will-change-transform will-change-opacity",
+                                        "transition-all duration-300 ease-out",
+                                        "group-hover:[transition-delay:var(--enter-delay)]",
+                                        "group-hover:opacity-100 group-hover:translate-y-0 group-hover:blur-none",
+                                        "[transition-delay:var(--exit-delay)]"
+                                    )}
                                 >
                                     {tag}
                                 </span>
