@@ -1,8 +1,6 @@
 import Link from "next/link";
 
 export function Footer() {
-    const currentYear = new Date().getFullYear();
-
     return (
         <footer className="border-t mt-16">
             <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -12,7 +10,7 @@ export function Footer() {
                             href="/"
                             className="text-lg font-bold tracking-tighter"
                         >
-                            SiteSelect
+                            SiteSelect.
                         </Link>
                         <p className="text-sm text-muted-foreground">
                             Curated design inspiration for creative
