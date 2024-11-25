@@ -78,10 +78,21 @@ body {
     body {
         @apply bg-background text-foreground;
     }
-}
+    /* Custom scrollbar styling */
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
 
-.aspect-container {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    ::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: hsl(var(--muted-foreground) / 0.2);
+        border-radius: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: hsl(var(--muted-foreground) / 0.3);
+    }
 }
