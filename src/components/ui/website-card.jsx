@@ -11,12 +11,9 @@ export function WebsiteCard({
     className,
     size = "default",
     tags = [],
-    slug,
 }) {
     const imagePath = `/images/${name.toLowerCase().replace(/\s+/g, "-")}.webp`;
     const hasImage = name !== "Featured Site";
-    const CardWrapper = slug ? Link : "div";
-    const wrapperProps = slug ? { href: `/websites/${slug}` } : {};
 
     const handleExternalClick = (e) => {
         e.stopPropagation();
@@ -24,8 +21,7 @@ export function WebsiteCard({
     };
 
     return (
-        <CardWrapper
-            {...wrapperProps}
+        <div
             className={cn(
                 "group block relative w-full overflow-hidden rounded-xl",
                 className
@@ -120,6 +116,6 @@ export function WebsiteCard({
                     )}
                 </div>
             </div>
-        </CardWrapper>
+        </div>
     );
 }

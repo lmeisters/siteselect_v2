@@ -1,4 +1,5 @@
 import { WebsiteCard } from "@/components/ui/website-card";
+import { WebsiteDialog } from "@/components/ui/website-dialog";
 import { getAllWebsites } from "@/lib/api";
 
 export async function DirectorySection() {
@@ -14,14 +15,15 @@ export async function DirectorySection() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
                 {websites.map((website) => (
-                    <div key={website.id}>
-                        <WebsiteCard
-                            name={website.name}
-                            href={website.href}
-                            tags={website.tags}
-                            slug={website.slug}
-                        />
-                    </div>
+                    <WebsiteDialog key={website.id} website={website}>
+                        <div className="cursor-pointer">
+                            <WebsiteCard
+                                name={website.name}
+                                href={website.href}
+                                tags={website.tags}
+                            />
+                        </div>
+                    </WebsiteDialog>
                 ))}
             </div>
         </section>
