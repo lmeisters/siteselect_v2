@@ -11,17 +11,16 @@ export function WebsiteCard({
     className,
     size = "default",
     tags = [],
+    onNameClick,
 }) {
     const imagePath = `/images/${name.toLowerCase().replace(/\s+/g, "-")}.webp`;
     const hasImage = name !== "Featured Site";
 
-    const handleExternalClick = (e) => {
-        e.stopPropagation();
-        window.open(href, "_blank", "noopener,noreferrer");
-    };
-
     return (
-        <div
+        <Link
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
             className={cn(
                 "group block relative w-full overflow-hidden rounded-xl",
                 className
@@ -56,30 +55,18 @@ export function WebsiteCard({
 
                 {/* Content overlay */}
                 <div className="absolute inset-0 p-4">
-                    <div
+                    <button
+                        onClick={(e) => {
+                            e.preventDefault();
+                            onNameClick?.();
+                        }}
                         className={cn(
                             "bg-white px-3 py-1 rounded-2xl text-sm font-bold inline-block",
-                            size === "featured" ? "text-base" : "text-sm"
+                            size === "featured" ? "text-base" : "text-sm",
+                            "hover:bg-gray-50"
                         )}
                     >
                         {name}
-                    </div>
-
-                    <button
-                        onClick={handleExternalClick}
-                        className={cn(
-                            "absolute bg-white p-1.5 rounded-full overflow-hidden",
-                            size === "featured"
-                                ? "top-4 right-4"
-                                : "top-4 right-4"
-                        )}
-                    >
-                        <ArrowUpRight
-                            className={cn(
-                                size === "featured" ? "h-4 w-4" : "h-3.5 w-3.5",
-                                "group-hover:animate-arrow-exit"
-                            )}
-                        />
                     </button>
 
                     {tags?.length > 0 && (
@@ -116,6 +103,6 @@ export function WebsiteCard({
                     )}
                 </div>
             </div>
-        </div>
+        </Link>
     );
 }

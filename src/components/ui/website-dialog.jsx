@@ -8,11 +8,19 @@ import {
     DialogDescription,
 } from "@/components/ui/dialog";
 import { WebsiteCard } from "@/components/ui/website-card";
+import { useState } from "react";
 
-export function WebsiteDialog({ website, children }) {
+export function WebsiteDialog({ website }) {
+    const [isOpen, setIsOpen] = useState(false);
+
     return (
-        <Dialog>
-            <DialogTrigger asChild>{children}</DialogTrigger>
+        <Dialog open={isOpen} onOpenChange={setIsOpen}>
+            <WebsiteCard
+                name={website.name}
+                href={website.href}
+                tags={website.tags}
+                onNameClick={() => setIsOpen(true)}
+            />
             <DialogContent className="sm:max-w-3xl">
                 <DialogTitle className="sr-only">{website.name}</DialogTitle>
                 <DialogDescription className="sr-only">
