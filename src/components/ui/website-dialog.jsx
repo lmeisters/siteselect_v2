@@ -1,4 +1,12 @@
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+"use client";
+
+import {
+    Dialog,
+    DialogContent,
+    DialogTrigger,
+    DialogTitle,
+    DialogDescription,
+} from "@/components/ui/dialog";
 import { WebsiteCard } from "@/components/ui/website-card";
 
 export function WebsiteDialog({ website, children }) {
@@ -6,6 +14,10 @@ export function WebsiteDialog({ website, children }) {
         <Dialog>
             <DialogTrigger asChild>{children}</DialogTrigger>
             <DialogContent className="sm:max-w-3xl">
+                <DialogTitle className="sr-only">{website.name}</DialogTitle>
+                <DialogDescription className="sr-only">
+                    {website.description}
+                </DialogDescription>
                 <div className="space-y-4">
                     <WebsiteCard
                         name={website.name}
