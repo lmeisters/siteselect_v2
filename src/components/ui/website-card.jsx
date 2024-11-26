@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Info } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
@@ -61,12 +61,42 @@ export function WebsiteCard({
                             onNameClick?.();
                         }}
                         className={cn(
-                            "bg-white px-3 py-1 rounded-2xl text-sm font-bold inline-block",
+                            "bg-white px-3 py-1 rounded-2xl text-sm font-bold inline-flex items-center",
+                            "transition-all duration-200 ease-out",
+                            "group/info relative",
                             size === "featured" ? "text-base" : "text-sm",
-                            "hover:bg-gray-50"
+                            "pl-3 hover:pr-3",
+                            "pr-[0.75rem] hover:pr-[1.875rem]"
                         )}
                     >
-                        {name}
+                        <span>{name}</span>
+                        <Info
+                            className={cn(
+                                "w-3.5 h-3.5 absolute right-3",
+                                "transition-all duration-200 ease-out",
+                                "-translate-x-2 opacity-0 group-hover/info:translate-x-0 group-hover/info:opacity-100",
+                                "text-black", // Added explicit color
+                                "z-10", // Added z-index
+                                size === "featured" ? "w-4 h-4" : "w-3.5 h-3.5"
+                            )}
+                        />
+                    </button>
+
+                    <button
+                        // onClick={handleExternalClick}
+                        className={cn(
+                            "absolute bg-white p-1.5 rounded-full overflow-hidden",
+                            size === "featured"
+                                ? "top-4 right-4"
+                                : "top-4 right-4"
+                        )}
+                    >
+                        <ArrowUpRight
+                            className={cn(
+                                size === "featured" ? "h-4 w-4" : "h-3.5 w-3.5",
+                                "group-hover:animate-arrow-exit"
+                            )}
+                        />
                     </button>
 
                     {tags?.length > 0 && (
