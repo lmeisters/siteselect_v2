@@ -21,7 +21,7 @@ import {
 } from "@/components/ui/dialog";
 import { AboutSheet } from "@/components/about-sheet";
 
-const RECENT_SEARCHES = ["Minimalist", "E-commerce", "Portfolio", "Dark mode"];
+const RECENT_SEARCHES = ["Minimalist", "E-commerce", "Portfolio"];
 
 const POPULAR_TAGS = [
     "Minimal",
@@ -34,10 +34,17 @@ const POPULAR_TAGS = [
     "Modern",
 ];
 
+const SEARCH_PREFIXES = {
+    tag: "Search by tag",
+    color: "Search by color scheme",
+    type: "Search by website type",
+};
+
 export const Header = () => {
     const [isMac, setIsMac] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
     const [searchValue, setSearchValue] = useState("");
+    const [searchPrefix, setSearchPrefix] = useState(null);
 
     useEffect(() => {
         setIsMac(navigator?.platform?.includes("Mac"));
@@ -56,7 +63,16 @@ export const Header = () => {
     }, []);
 
     const handleSearchChange = (value) => {
-        setSearchValue(value);
+        const prefixMatch = value.match(/^(tag|color|type):(.+)/);
+
+        if (prefixMatch) {
+            const [, prefix, query] = prefixMatch;
+            setSearchPrefix(prefix);
+            setSearchValue(value);
+        } else {
+            setSearchPrefix(null);
+            setSearchValue(value);
+        }
     };
 
     return (
@@ -91,7 +107,7 @@ export const Header = () => {
                             </DialogDescription>
                             <Command className="rounded-lg border shadow-md">
                                 <CommandInput
-                                    placeholder="Search for designs"
+                                    placeholder="Search (try tag:minimal, color:dark, type:portfolio)"
                                     value={searchValue}
                                     onValueChange={handleSearchChange}
                                     className="h-9"
@@ -99,29 +115,76 @@ export const Header = () => {
                                 />
                                 <CommandList className="max-h-[300px] overflow-y-auto">
                                     <CommandEmpty>
-                                        No results found.
+                                        {searchPrefix ? (
+                                            <p>
+                                                No results found for{" "}
+                                                {searchPrefix} search.
+                                            </p>
+                                        ) : (
+                                            "No results found."
+                                        )}
                                     </CommandEmpty>
-                                    <CommandGroup heading="Recent Searches">
-                                        {RECENT_SEARCHES.map((search) => (
-                                            <CommandItem
-                                                key={search}
-                                                onSelect={() => {
-                                                    handleSearchChange(search);
-                                                    setIsOpen(false);
-                                                }}
-                                                className="cursor-pointer"
-                                            >
-                                                <Clock className="mr-2 h-4 w-4" />
-                                                {search}
-                                            </CommandItem>
-                                        ))}
-                                    </CommandGroup>
+
+                                    {!searchPrefix && (
+                                        <>
+                                            <CommandGroup heading="Recent Searches">
+                                                {RECENT_SEARCHES.map(
+                                                    (search) => (
+                                                        <CommandItem
+                                                            key={search}
+                                                            onSelect={() => {
+                                                                handleSearchChange(
+                                                                    search
+                                                                );
+                                                                setIsOpen(
+                                                                    false
+                                                                );
+                                                            }}
+                                                            className="cursor-pointer"
+                                                        >
+                                                            <Clock className="mr-2 h-4 w-4" />
+                                                            {search}
+                                                        </CommandItem>
+                                                    )
+                                                )}
+                                            </CommandGroup>
+
+                                            <CommandGroup heading="Search Syntax">
+                                                {Object.entries(
+                                                    SEARCH_PREFIXES
+                                                ).map(
+                                                    ([prefix, description]) => (
+                                                        <CommandItem
+                                                            key={prefix}
+                                                            onSelect={() => {
+                                                                handleSearchChange(
+                                                                    `${prefix}:`
+                                                                );
+                                                            }}
+                                                            className="cursor-pointer"
+                                                        >
+                                                            <Search className="mr-2 h-4 w-4" />
+                                                            <span className="font-mono">
+                                                                {prefix}:
+                                                            </span>
+                                                            <span className="ml-2 text-muted-foreground">
+                                                                {description}
+                                                            </span>
+                                                        </CommandItem>
+                                                    )
+                                                )}
+                                            </CommandGroup>
+                                        </>
+                                    )}
+
                                     <CommandGroup heading="Popular Tags">
                                         {POPULAR_TAGS.map((tag) => (
                                             <CommandItem
                                                 key={tag}
                                                 onSelect={() => {
-                                                    handleSearchChange(tag);
+                                                    handleSearchChange(
+                                                        `tag:${tag.toLowerCase()}`
+                                                    );
                                                     setIsOpen(false);
                                                 }}
                                                 className="cursor-pointer"
