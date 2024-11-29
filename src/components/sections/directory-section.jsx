@@ -1,9 +1,24 @@
+"use client";
+
 import { WebsiteCard } from "@/components/ui/website-card";
 import { WebsiteDialog } from "@/components/ui/website-dialog";
-import { getAllWebsites } from "@/lib/api";
+import { useSearchStore } from "@/lib/search-store";
+import { useEffect, useState } from "react";
+import { searchWebsites } from "@/lib/api";
 
-export async function DirectorySection() {
-    const websites = await getAllWebsites();
+export function DirectorySection() {
+    const [websites, setWebsites] = useState([]);
+    const { query, type, tag, color } = useSearchStore();
+
+    useEffect(() => {
+        async function fetchWebsites() {
+            const searchParams = { query, type, tag, color };
+            const results = await searchWebsites(searchParams);
+            setWebsites(results);
+        }
+
+        fetchWebsites();
+    }, [query, type, tag, color]);
 
     return (
         <section className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
