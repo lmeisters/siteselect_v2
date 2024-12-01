@@ -111,6 +111,7 @@ export function SearchCommand() {
     const handleSelect = (website) => {
         setIsOpen(false);
         setSearch({ query: website.name });
+        router.push("/directory");
     };
 
     return (
@@ -182,6 +183,7 @@ export function SearchCommand() {
                                             onSelect={() => {
                                                 handleSearchChange(search);
                                                 setIsOpen(false);
+                                                router.push("/directory");
                                             }}
                                             className="cursor-pointer"
                                         >
@@ -226,6 +228,7 @@ export function SearchCommand() {
                                             `tag:${tag.toLowerCase()}`
                                         );
                                         setIsOpen(false);
+                                        router.push("/directory");
                                     }}
                                     className="cursor-pointer"
                                 >
