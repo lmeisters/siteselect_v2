@@ -68,13 +68,13 @@ export async function getAllWebsites() {
 export async function searchWebsites({ query, type, tag, color }) {
     try {
         let supabaseQuery = supabase.from("websites").select(`
-                *,
-                website_tags (
-                    tags (
-                        name
-                    )
+            *,
+            website_tags (
+                tags (
+                    name
                 )
-            `);
+            )
+        `);
 
         if (query) {
             supabaseQuery = supabaseQuery.or(
@@ -83,15 +83,20 @@ export async function searchWebsites({ query, type, tag, color }) {
         }
 
         if (type) {
-            supabaseQuery = supabaseQuery.eq("type", type);
+            supabaseQuery = supabaseQuery.eq("type", type.toLowerCase());
         }
 
         if (color) {
-            supabaseQuery = supabaseQuery.eq("color_scheme", color);
+            supabaseQuery = supabaseQuery.eq(
+                "color_scheme",
+                color.toLowerCase()
+            );
         }
 
         if (tag) {
-            supabaseQuery = supabaseQuery.contains("tags", [tag]);
+            supabaseQuery = supabaseQuery.contains("website_tags.tags.name", [
+                tag.toLowerCase(),
+            ]);
         }
 
         const { data, error } = await supabaseQuery;

@@ -6,17 +6,14 @@ export function useSearchStore() {
 
     const setSearch = (params) => {
         const url = new URL(window.location.href);
-        const currentParams = new URLSearchParams(url.search);
+        const newParams = new URLSearchParams();
 
-        Object.entries(params).forEach(([key, value]) => {
-            if (value) {
-                currentParams.set(key, value);
-            } else {
-                currentParams.delete(key);
-            }
-        });
+        const [[key, value]] = Object.entries(params);
+        if (value) {
+            newParams.set(key, value);
+        }
 
-        router.push(`${url.pathname}?${currentParams.toString()}`);
+        router.push(`${url.pathname}?${newParams.toString()}`);
     };
 
     return {
