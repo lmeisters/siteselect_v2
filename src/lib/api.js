@@ -124,3 +124,56 @@ export async function searchWebsites({ query, type, tag, color }) {
         throw error;
     }
 }
+
+export async function getFilterCounts() {
+    try {
+        const { data: typeData } = await supabase
+            .from("websites")
+            .select("type", { count: "exact" })
+            .not("type", "is", null);
+
+        const { data: colorData } = await supabase
+            .from("websites")
+            .select("color_scheme", { count: "exact" })
+            .not("color_scheme", "is", null);
+
+        const { data: tagData } = await supabase
+            .from("website_tags")
+            .select(
+                `
+        tags (
+          name
+        )
+      `
+            )
+            .not("tags.name", "is", null);
+
+        // Count occurrences of each type
+        const typeCounts = typeData.reduce((acc, item) => {
+            acc[item.type] = (acc[item.type] || 0) + 1;
+            return acc;
+        }, {});
+
+        // Count occurrences of each color
+        const colorCounts = colorData.reduce((acc, item) => {
+            acc[item.color_scheme] = (acc[item.color_scheme] || 0) + 1;
+            return acc;
+        }, {});
+
+        // Count occurrences of each tag
+        const tagCounts = tagData.reduce((acc, item) => {
+            const tagName = item.tags.name;
+            acc[tagName] = (acc[tagName] || 0) + 1;
+            return acc;
+        }, {});
+
+        return {
+            types: typeCounts,
+            colors: colorCounts,
+            tags: tagCounts,
+        };
+    } catch (error) {
+        console.error("Error getting filter counts:", error);
+        throw error;
+    }
+}

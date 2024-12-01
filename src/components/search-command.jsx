@@ -18,7 +18,7 @@ import {
 } from "@/components/ui/dialog";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { searchWebsites } from "@/lib/api";
+import { searchWebsites, getFilterCounts } from "@/lib/api";
 import { useSearchStore } from "@/lib/search-store";
 import { SEARCH_CATEGORIES } from "@/lib/constants";
 
@@ -32,6 +32,11 @@ export function SearchCommand() {
     const [searchResults, setSearchResults] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const [selectedCategory, setSelectedCategory] = useState("type");
+    const [filterCounts, setFilterCounts] = useState({
+        types: {},
+        colors: {},
+        tags: {},
+    });
 
     const categories = {
         type: "Types",
@@ -69,6 +74,18 @@ export function SearchCommand() {
             setSelectedCategory("type");
         }
     }, [isOpen]);
+
+    useEffect(() => {
+        async function fetchCounts() {
+            try {
+                const counts = await getFilterCounts();
+                setFilterCounts(counts);
+            } catch (error) {
+                console.error("Error fetching counts:", error);
+            }
+        }
+        fetchCounts();
+    }, []);
 
     const handleSearch = async (value) => {
         setIsLoading(true);
@@ -262,7 +279,16 @@ export function SearchCommand() {
                                                     }
                                                     className="cursor-pointer mb-0.5 last:mb-0"
                                                 >
-                                                    {item}
+                                                    <span className="flex-1">
+                                                        {item}
+                                                    </span>
+                                                    <span className="text-xs text-muted-foreground mr-2">
+                                                        {filterCounts[
+                                                            `${selectedCategory}s`
+                                                        ]?.[
+                                                            item.toLowerCase()
+                                                        ] || 0}
+                                                    </span>
                                                 </CommandItem>
                                             ))}
                                         </CommandGroup>
