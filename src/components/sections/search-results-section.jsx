@@ -11,7 +11,8 @@ import { SEARCH_CATEGORIES } from "@/lib/constants";
 export function SearchResultsSection() {
     const [websites, setWebsites] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
-    const { query, type, tag, color, setSearch } = useSearchStore();
+    const { query, type, tag, color, setSearch, resetSearch } =
+        useSearchStore();
 
     useEffect(() => {
         async function fetchWebsites() {
@@ -39,14 +40,24 @@ export function SearchResultsSection() {
             <div className="flex gap-8">
                 {/* Main Content */}
                 <div className="flex-1">
-                    <div className="mb-8">
-                        <h1 className="text-3xl font-bold tracking-tight">
-                            Search Results
-                        </h1>
-                        <p className="text-muted-foreground mt-1">
-                            Found {websites.length} websites matching your
-                            criteria
-                        </p>
+                    <div className="flex items-center justify-between mb-8">
+                        <div>
+                            <h1 className="text-3xl font-bold tracking-tight">
+                                Search Results
+                            </h1>
+                            <p className="text-muted-foreground mt-1">
+                                Found {websites.length} websites matching your
+                                criteria
+                            </p>
+                        </div>
+                        {(query || type || tag || color) && (
+                            <button
+                                onClick={() => resetSearch()}
+                                className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground bg-secondary hover:bg-secondary/80 rounded-md transition-colors"
+                            >
+                                Reset Filters
+                            </button>
+                        )}
                     </div>
 
                     {isLoading ? (

@@ -1,6 +1,6 @@
 "use client";
 
-import { Search, Clock, Layout, Tag, Palette } from "lucide-react";
+import { Search, Layout, Tag, Palette } from "lucide-react";
 import {
     Command,
     CommandEmpty,
@@ -24,7 +24,7 @@ import { SEARCH_CATEGORIES } from "@/lib/constants";
 
 export function SearchCommand() {
     const router = useRouter();
-    const { setSearch } = useSearchStore();
+    const { setSearch, resetSearch } = useSearchStore();
     const [isMac, setIsMac] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
     const [searchValue, setSearchValue] = useState("");
@@ -146,18 +146,36 @@ export function SearchCommand() {
                     Search through website designs and filter by categories
                 </DialogDescription>
                 <Command className="rounded-lg border shadow-md">
-                    <CommandInput
-                        placeholder="Search designs..."
-                        value={searchValue}
-                        onValueChange={handleSearchChange}
-                        onKeyDown={(e) => {
-                            if (e.key === "Enter") {
-                                e.preventDefault();
-                                handleSearchSubmit(searchValue);
-                            }
-                        }}
-                        className="h-9"
-                    />
+                    <div className="flex items-center justify-between border-b px-3">
+                        <div className="flex items-center flex-1">
+                            <Search className="mr-2 h-4 w-4 shrink-0 opacity-50" />
+                            <CommandInput
+                                placeholder="Search designs..."
+                                value={searchValue}
+                                onValueChange={handleSearchChange}
+                                onKeyDown={(e) => {
+                                    if (e.key === "Enter") {
+                                        e.preventDefault();
+                                        handleSearchSubmit(searchValue);
+                                    }
+                                }}
+                                className="h-9"
+                            />
+                        </div>
+                        {(searchValue || selectedCategory) && (
+                            <button
+                                onClick={() => {
+                                    setSearchValue("");
+                                    setSelectedCategory("type");
+                                    setSearchResults([]);
+                                    resetSearch();
+                                }}
+                                className="text-sm text-muted-foreground hover:text-foreground px-2 py-1 rounded-md hover:bg-accent"
+                            >
+                                Reset
+                            </button>
+                        )}
+                    </div>
                     <div className="flex">
                         <CommandList className="w-[50%] max-h-[300px] overflow-y-auto border-r">
                             <CommandEmpty>

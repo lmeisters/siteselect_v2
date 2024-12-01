@@ -16,11 +16,17 @@ export function useSearchStore() {
         router.push(`${url.pathname}?${newParams.toString()}`);
     };
 
+    const resetSearch = () => {
+        const url = new URL(window.location.href);
+        router.push(url.pathname);
+    };
+
     return {
         query: searchParams.get("query") || "",
         type: searchParams.get("type") || "",
         tag: searchParams.get("tag") || "",
         color: searchParams.get("color") || "",
         setSearch,
+        resetSearch,
     };
 }
