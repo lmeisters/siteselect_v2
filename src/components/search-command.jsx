@@ -1,6 +1,6 @@
 "use client";
 
-import { Search, Clock } from "lucide-react";
+import { Search, Clock, Layout, Tag, Palette } from "lucide-react";
 import {
     Command,
     CommandEmpty,
@@ -22,8 +22,6 @@ import { searchWebsites } from "@/lib/api";
 import { useSearchStore } from "@/lib/search-store";
 import { SEARCH_CATEGORIES } from "@/lib/constants";
 
-const RECENT_SEARCHES = ["Minimalist", "E-commerce", "Portfolio"];
-
 export function SearchCommand() {
     const router = useRouter();
     const { setSearch } = useSearchStore();
@@ -32,6 +30,19 @@ export function SearchCommand() {
     const [searchValue, setSearchValue] = useState("");
     const [searchResults, setSearchResults] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
+    const [selectedCategory, setSelectedCategory] = useState("type");
+
+    const categories = {
+        type: "Types",
+        tag: "Tags",
+        color: "Colors",
+    };
+
+    const categoryIcons = {
+        type: Layout,
+        tag: Tag,
+        color: Palette,
+    };
 
     useEffect(() => {
         setIsMac(navigator?.platform?.includes("Mac"));
@@ -48,6 +59,15 @@ export function SearchCommand() {
         document.addEventListener("keydown", handleKeyDown);
         return () => document.removeEventListener("keydown", handleKeyDown);
     }, []);
+
+    useEffect(() => {
+        if (!isOpen) {
+            setSearchValue("");
+            setSearchResults([]);
+        } else {
+            setSelectedCategory("type");
+        }
+    }, [isOpen]);
 
     const handleSearch = async (value) => {
         setIsLoading(true);
@@ -132,7 +152,7 @@ export function SearchCommand() {
                         className="h-9"
                     />
                     <div className="flex">
-                        <CommandList className="w-[60%] max-h-[300px] overflow-y-auto border-r">
+                        <CommandList className="w-[50%] max-h-[300px] overflow-y-auto border-r">
                             <CommandEmpty>
                                 {isLoading
                                     ? "Searching..."
@@ -162,54 +182,60 @@ export function SearchCommand() {
                             )}
 
                             {!searchValue && (
-                                <CommandGroup heading="Recent Searches">
-                                    {RECENT_SEARCHES.map((search) => (
-                                        <CommandItem
-                                            key={search}
-                                            onSelect={() => {
-                                                handleSearchChange(search);
-                                                setIsOpen(false);
-                                            }}
-                                            className="cursor-pointer"
-                                        >
-                                            <Clock className="mr-2 h-4 w-4" />
-                                            {search}
-                                        </CommandItem>
-                                    ))}
+                                <CommandGroup>
+                                    {Object.entries(categories).map(
+                                        ([key, label]) => {
+                                            const Icon = categoryIcons[key];
+                                            return (
+                                                <CommandItem
+                                                    key={key}
+                                                    onSelect={() =>
+                                                        setSelectedCategory(key)
+                                                    }
+                                                    className={`cursor-pointer mb-0.5 last:mb-0 ${
+                                                        selectedCategory === key
+                                                            ? "bg-accent"
+                                                            : ""
+                                                    }`}
+                                                >
+                                                    <Icon className="mr-2 h-4 w-4" />
+                                                    <span className="capitalize">
+                                                        {label}
+                                                    </span>
+                                                </CommandItem>
+                                            );
+                                        }
+                                    )}
                                 </CommandGroup>
                             )}
                         </CommandList>
 
-                        <div className="w-[40%] p-2 space-y-4">
-                            {Object.entries(SEARCH_CATEGORIES).map(
-                                ([category, items]) => (
-                                    <div key={category} className="space-y-2">
-                                        <h3 className="text-sm font-medium text-muted-foreground px-2 capitalize">
-                                            {category}
-                                        </h3>
-                                        <div className="flex flex-wrap gap-1 px-2">
-                                            {items.map((item) => (
-                                                <button
+                        {selectedCategory && (
+                            <div className="w-[90%]">
+                                <div>
+                                    <CommandList>
+                                        <CommandGroup>
+                                            {SEARCH_CATEGORIES[
+                                                `${selectedCategory}s`
+                                            ]?.map((item) => (
+                                                <CommandItem
                                                     key={item}
-                                                    onClick={() =>
+                                                    onSelect={() =>
                                                         handleCategorySelect(
-                                                            category.slice(
-                                                                0,
-                                                                -1
-                                                            ),
+                                                            selectedCategory,
                                                             item
                                                         )
                                                     }
-                                                    className="text-xs px-2 py-1 rounded-md bg-secondary hover:bg-secondary/80 transition-colors"
+                                                    className="cursor-pointer mb-0.5 last:mb-0"
                                                 >
                                                     {item}
-                                                </button>
+                                                </CommandItem>
                                             ))}
-                                        </div>
-                                    </div>
-                                )
-                            )}
-                        </div>
+                                        </CommandGroup>
+                                    </CommandList>
+                                </div>
+                            </div>
+                        )}
                     </div>
                 </Command>
             </DialogContent>
