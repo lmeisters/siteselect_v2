@@ -150,7 +150,7 @@ export function SearchCommand() {
             <DialogTrigger asChild>
                 <button className="flex w-full items-center h-9 rounded-3xl border bg-background px-3 text-sm text-muted-foreground shadow-sm hover:bg-accent">
                     <Search className="mr-2 h-4 w-4 shrink-0 opacity-50" />
-                    <span className="flex-1 text-left">
+                    <span className="flex-1 text-left truncate">
                         {query
                             ? query
                             : type
@@ -166,7 +166,7 @@ export function SearchCommand() {
                     </kbd>
                 </button>
             </DialogTrigger>
-            <DialogContent className="p-0 gap-0">
+            <DialogContent className="p-0 gap-0 w-[95vw] max-w-lg rounded-xl">
                 <DialogTitle className="sr-only">Search Designs</DialogTitle>
                 <DialogDescription className="sr-only">
                     Search through website designs and filter by categories
@@ -202,8 +202,8 @@ export function SearchCommand() {
                             </button>
                         )}
                     </div>
-                    <div className="flex">
-                        <CommandList className="w-[50%] max-h-[300px] overflow-y-auto border-r">
+                    <div className="flex flex-col sm:flex-row">
+                        <CommandList className="w-full sm:w-[30%] max-h-[300px] sm:max-h-[400px] overflow-y-auto border-b sm:border-b-0 sm:border-r">
                             <CommandEmpty>
                                 {isLoading
                                     ? "Searching..."
@@ -221,9 +221,11 @@ export function SearchCommand() {
                                             className="cursor-pointer"
                                         >
                                             <Search className="mr-2 h-4 w-4" />
-                                            <div className="flex flex-col">
-                                                <span>{website.name}</span>
-                                                <span className="text-sm text-muted-foreground">
+                                            <div className="flex flex-col overflow-hidden">
+                                                <span className="truncate">
+                                                    {website.name}
+                                                </span>
+                                                <span className="text-sm text-muted-foreground truncate">
                                                     {website.tags.join(", ")}
                                                 </span>
                                             </div>
@@ -262,38 +264,35 @@ export function SearchCommand() {
                         </CommandList>
 
                         {selectedCategory && (
-                            <div className="w-[90%]">
-                                <div>
-                                    <CommandList>
-                                        <CommandGroup>
-                                            {SEARCH_CATEGORIES[
-                                                `${selectedCategory}s`
-                                            ]?.map((item) => (
-                                                <CommandItem
-                                                    key={item}
-                                                    onSelect={() =>
-                                                        handleCategorySelect(
-                                                            selectedCategory,
-                                                            item
-                                                        )
-                                                    }
-                                                    className="cursor-pointer mb-0.5 last:mb-0"
-                                                >
-                                                    <span className="flex-1">
-                                                        {item}
-                                                    </span>
-                                                    <span className="text-xs text-muted-foreground mr-2">
-                                                        {filterCounts[
-                                                            `${selectedCategory}s`
-                                                        ]?.[
-                                                            item.toLowerCase()
-                                                        ] || 0}
-                                                    </span>
-                                                </CommandItem>
-                                            ))}
-                                        </CommandGroup>
-                                    </CommandList>
-                                </div>
+                            <div className="w-full sm:w-[70%] max-h-[200px] sm:max-h-[400px] overflow-y-auto">
+                                <CommandList>
+                                    <CommandGroup>
+                                        {SEARCH_CATEGORIES[
+                                            `${selectedCategory}s`
+                                        ]?.map((item) => (
+                                            <CommandItem
+                                                key={item}
+                                                onSelect={() =>
+                                                    handleCategorySelect(
+                                                        selectedCategory,
+                                                        item
+                                                    )
+                                                }
+                                                className="cursor-pointer mb-0.5 last:mb-0"
+                                            >
+                                                <span className="flex-1 truncate">
+                                                    {item}
+                                                </span>
+                                                <span className="text-xs text-muted-foreground mr-2">
+                                                    {filterCounts[
+                                                        `${selectedCategory}s`
+                                                    ]?.[item.toLowerCase()] ||
+                                                        0}
+                                                </span>
+                                            </CommandItem>
+                                        ))}
+                                    </CommandGroup>
+                                </CommandList>
                             </div>
                         )}
                     </div>
