@@ -5,6 +5,7 @@ import {
     DialogContent,
     DialogTitle,
     DialogDescription,
+    DialogTrigger,
 } from "@/components/ui/dialog";
 import { WebsiteCard } from "@/components/ui/website-card";
 import { useState } from "react";
@@ -43,7 +44,7 @@ const WebsiteStructuredData = ({ website }) => {
     );
 };
 
-export function WebsiteDialog({ website }) {
+export function WebsiteDialog({ website, children }) {
     const [isOpen, setIsOpen] = useState(false);
     const imagePath = `/images/${website.name
         .toLowerCase()
@@ -51,12 +52,7 @@ export function WebsiteDialog({ website }) {
 
     return (
         <Dialog open={isOpen} onOpenChange={setIsOpen}>
-            <WebsiteCard
-                name={website.name}
-                href={website.href}
-                tags={website.tags}
-                onNameClick={() => setIsOpen(true)}
-            />
+            <DialogTrigger asChild>{children}</DialogTrigger>
             <DialogContent className="sm:max-w-3xl">
                 <WebsiteStructuredData website={website} />
                 <article className="website-details">
@@ -68,32 +64,25 @@ export function WebsiteDialog({ website }) {
                             className="group inline-flex items-center text-foreground hover:text-gray-700"
                             aria-label={`Visit ${website.name} website`}
                         >
-                            <DialogTitle className="text-2xl font-bold" as="h2">
+                            <DialogTitle className="text-2xl font-bold">
                                 {website.name}
                             </DialogTitle>
-                            <ArrowUpRight
-                                className="ml-2 h-4 w-4 -mt-1 group-hover:text-gray-700 transition-all duration-300 transform group-hover:translate-x-[2px] group-hover:-translate-y-[2px]"
-                                aria-hidden="true"
-                            />
+                            <ArrowUpRight className="ml-2 h-4 w-4 -mt-1 group-hover:text-gray-700 transition-all duration-300 transform group-hover:translate-x-[2px] group-hover:-translate-y-[2px]" />
                         </a>
                     </header>
                     <DialogDescription className="text-lg text-gray-600 mb-4">
                         {website.description}
                     </DialogDescription>
-                    <nav
-                        aria-label="Website tags"
-                        className="flex flex-wrap gap-2 mb-6"
-                    >
-                        {website.tags.map((tag) => (
+                    <div className="flex flex-wrap gap-2 mb-6">
+                        {website.tags?.map((tag) => (
                             <span
                                 key={tag}
                                 className="px-3 py-1 text-sm bg-gray-100 text-gray-800 rounded-full"
-                                role="listitem"
                             >
                                 {tag}
                             </span>
                         ))}
-                    </nav>
+                    </div>
                     <figure className="relative w-full aspect-video rounded-lg overflow-hidden">
                         <Image
                             src={imagePath}

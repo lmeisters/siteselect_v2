@@ -26,15 +26,13 @@ export function WebsiteCard({
                 className
             )}
         >
-            {/* Aspect ratio container */}
             <div
                 className={cn(
                     "relative w-full",
                     size === "featured" ? "pb-[56.25%]" : "pb-[55%]"
                 )}
             >
-                {/* Image container */}
-                <div className="absolute inset-0 w-full h-full">
+                <div className="absolute inset-0">
                     {hasImage ? (
                         <Image
                             src={imagePath}
@@ -53,7 +51,6 @@ export function WebsiteCard({
                     )}
                 </div>
 
-                {/* Content overlay */}
                 <div className="absolute inset-0 p-4">
                     <button
                         onClick={(e) => {
@@ -61,7 +58,7 @@ export function WebsiteCard({
                             onNameClick?.();
                         }}
                         className={cn(
-                            "bg-white px-3 py-1 rounded-2xl text-sm font-bold inline-flex items-center",
+                            "bg-white px-3 py-1 rounded-2xl font-bold inline-flex items-center",
                             "transition-all duration-200 ease-out",
                             "group/info relative",
                             size === "featured" ? "text-base" : "text-sm",
@@ -72,18 +69,15 @@ export function WebsiteCard({
                         <span>{name}</span>
                         <Info
                             className={cn(
-                                "w-3.5 h-3.5 absolute right-3",
+                                "absolute right-3",
                                 "transition-all duration-200 ease-out",
                                 "-translate-x-2 opacity-0 group-hover/info:translate-x-0 group-hover/info:opacity-100",
-                                "text-black", // Added explicit color
-                                "z-10", // Added z-index
                                 size === "featured" ? "w-4 h-4" : "w-3.5 h-3.5"
                             )}
                         />
                     </button>
 
                     <button
-                        // onClick={handleExternalClick}
                         className={cn(
                             "absolute bg-white p-1.5 rounded-full overflow-hidden",
                             size === "featured"
@@ -109,7 +103,7 @@ export function WebsiteCard({
                         >
                             {tags.map((tag, index) => (
                                 <span
-                                    key={tag}
+                                    key={`${tag}-${index}`}
                                     style={{
                                         "--enter-delay": `${index * 50}ms`,
                                         "--exit-delay": `${
@@ -119,7 +113,6 @@ export function WebsiteCard({
                                     className={cn(
                                         "bg-white/90 backdrop-blur-sm px-3 py-1 rounded-2xl text-xs font-bold",
                                         "opacity-0 translate-y-5 blur-md",
-                                        "will-change-transform will-change-opacity",
                                         "transition-all duration-300 ease-out",
                                         "group-hover:[transition-delay:var(--enter-delay)]",
                                         "group-hover:opacity-100 group-hover:translate-y-0 group-hover:blur-none",

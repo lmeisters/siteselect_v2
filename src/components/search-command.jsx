@@ -1,6 +1,6 @@
 "use client";
 
-import { Search, Clock, Hash } from "lucide-react";
+import { Search, Clock } from "lucide-react";
 import {
     Command,
     CommandEmpty,
@@ -20,25 +20,9 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { searchWebsites } from "@/lib/api";
 import { useSearchStore } from "@/lib/search-store";
+import { SEARCH_CATEGORIES } from "@/lib/constants";
 
 const RECENT_SEARCHES = ["Minimalist", "E-commerce", "Portfolio"];
-
-const POPULAR_TAGS = [
-    "Minimal",
-    "Creative",
-    "Portfolio",
-    "E-commerce",
-    "Agency",
-    "Dark",
-    "Responsive",
-    "Modern",
-];
-
-const SEARCH_PREFIXES = {
-    tag: "Search by tag",
-    color: "Search by color scheme",
-    type: "Search by website type",
-};
 
 export function SearchCommand() {
     const router = useRouter();
@@ -46,7 +30,6 @@ export function SearchCommand() {
     const [isMac, setIsMac] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
     const [searchValue, setSearchValue] = useState("");
-    const [searchPrefix, setSearchPrefix] = useState(null);
     const [searchResults, setSearchResults] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
 
@@ -69,19 +52,7 @@ export function SearchCommand() {
     const handleSearch = async (value) => {
         setIsLoading(true);
         try {
-            const prefixMatch = value.match(/^(tag|color|type):(.+)/);
-            let searchParams = { query: value };
-
-            if (prefixMatch) {
-                const [, prefix, query] = prefixMatch;
-                searchParams = {
-                    [prefix]: query.trim(),
-                };
-            }
-
-            setSearch(searchParams);
-
-            const results = await searchWebsites(searchParams);
+            const results = await searchWebsites({ query: value });
             setSearchResults(results);
         } catch (error) {
             console.error("Search error:", error);
@@ -92,15 +63,6 @@ export function SearchCommand() {
 
     const handleSearchChange = (value) => {
         setSearchValue(value);
-        const prefixMatch = value.match(/^(tag|color|type):(.+)/);
-
-        if (prefixMatch) {
-            const [, prefix] = prefixMatch;
-            setSearchPrefix(prefix);
-        } else {
-            setSearchPrefix(null);
-        }
-
         if (value.length >= 2) {
             handleSearch(value);
         } else {
@@ -108,10 +70,34 @@ export function SearchCommand() {
         }
     };
 
+    const handleSearchSubmit = async (value) => {
+        if (!value) return;
+        setIsLoading(true);
+        try {
+            setIsOpen(false);
+            setSearch({ query: value.toLowerCase() });
+            if (window.location.pathname !== "/directory") {
+                router.push(
+                    `/directory?query=${encodeURIComponent(
+                        value.toLowerCase()
+                    )}`
+                );
+            }
+        } catch (error) {
+            console.error("Search error:", error);
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
     const handleSelect = (website) => {
         setIsOpen(false);
         setSearch({ query: website.name });
-        router.push("/directory");
+    };
+
+    const handleCategorySelect = (category, value) => {
+        setIsOpen(false);
+        setSearch({ [category]: value.toLowerCase() });
     };
 
     return (
@@ -128,54 +114,54 @@ export function SearchCommand() {
                 </button>
             </DialogTrigger>
             <DialogContent className="p-0 gap-0">
-                <DialogTitle className="sr-only">Search designs</DialogTitle>
+                <DialogTitle className="sr-only">Search Designs</DialogTitle>
                 <DialogDescription className="sr-only">
-                    Search for designs using keywords or browse recent searches
-                    and popular tags
+                    Search through website designs and filter by categories
                 </DialogDescription>
                 <Command className="rounded-lg border shadow-md">
                     <CommandInput
-                        placeholder="Search (try tag:minimal, color:dark, type:portfolio)"
+                        placeholder="Search designs..."
                         value={searchValue}
                         onValueChange={handleSearchChange}
+                        onKeyDown={(e) => {
+                            if (e.key === "Enter") {
+                                e.preventDefault();
+                                handleSearchSubmit(searchValue);
+                            }
+                        }}
                         className="h-9"
-                        autoFocus
                     />
-                    <CommandList className="max-h-[300px] overflow-y-auto">
-                        <CommandEmpty>
-                            {isLoading ? (
-                                "Searching..."
-                            ) : searchPrefix ? (
-                                <p>
-                                    No results found for {searchPrefix} search.
-                                </p>
-                            ) : (
-                                "No results found."
+                    <div className="flex">
+                        <CommandList className="w-[60%] max-h-[300px] overflow-y-auto border-r">
+                            <CommandEmpty>
+                                {isLoading
+                                    ? "Searching..."
+                                    : "No results found."}
+                            </CommandEmpty>
+
+                            {searchResults.length > 0 && (
+                                <CommandGroup heading="Search Results">
+                                    {searchResults.map((website) => (
+                                        <CommandItem
+                                            key={website.id}
+                                            onSelect={() =>
+                                                handleSelect(website)
+                                            }
+                                            className="cursor-pointer"
+                                        >
+                                            <Search className="mr-2 h-4 w-4" />
+                                            <div className="flex flex-col">
+                                                <span>{website.name}</span>
+                                                <span className="text-sm text-muted-foreground">
+                                                    {website.tags.join(", ")}
+                                                </span>
+                                            </div>
+                                        </CommandItem>
+                                    ))}
+                                </CommandGroup>
                             )}
-                        </CommandEmpty>
 
-                        {searchResults.length > 0 && (
-                            <CommandGroup heading="Search Results">
-                                {searchResults.map((website) => (
-                                    <CommandItem
-                                        key={website.id}
-                                        onSelect={() => handleSelect(website)}
-                                        className="cursor-pointer"
-                                    >
-                                        <Search className="mr-2 h-4 w-4" />
-                                        <div className="flex flex-col">
-                                            <span>{website.name}</span>
-                                            <span className="text-sm text-muted-foreground">
-                                                {website.tags.join(", ")}
-                                            </span>
-                                        </div>
-                                    </CommandItem>
-                                ))}
-                            </CommandGroup>
-                        )}
-
-                        {!searchValue && (
-                            <>
+                            {!searchValue && (
                                 <CommandGroup heading="Recent Searches">
                                     {RECENT_SEARCHES.map((search) => (
                                         <CommandItem
@@ -183,7 +169,6 @@ export function SearchCommand() {
                                             onSelect={() => {
                                                 handleSearchChange(search);
                                                 setIsOpen(false);
-                                                router.push("/directory");
                                             }}
                                             className="cursor-pointer"
                                         >
@@ -192,52 +177,40 @@ export function SearchCommand() {
                                         </CommandItem>
                                     ))}
                                 </CommandGroup>
+                            )}
+                        </CommandList>
 
-                                <CommandGroup heading="Search Syntax">
-                                    {Object.entries(SEARCH_PREFIXES).map(
-                                        ([prefix, description]) => (
-                                            <CommandItem
-                                                key={prefix}
-                                                onSelect={() => {
-                                                    handleSearchChange(
-                                                        `${prefix}:`
-                                                    );
-                                                }}
-                                                className="cursor-pointer"
-                                            >
-                                                <Search className="mr-2 h-4 w-4" />
-                                                <span className="font-mono">
-                                                    {prefix}:
-                                                </span>
-                                                <span className="ml-2 text-muted-foreground">
-                                                    {description}
-                                                </span>
-                                            </CommandItem>
-                                        )
-                                    )}
-                                </CommandGroup>
-                            </>
-                        )}
-
-                        <CommandGroup heading="Popular Tags">
-                            {POPULAR_TAGS.map((tag) => (
-                                <CommandItem
-                                    key={tag}
-                                    onSelect={() => {
-                                        handleSearchChange(
-                                            `tag:${tag.toLowerCase()}`
-                                        );
-                                        setIsOpen(false);
-                                        router.push("/directory");
-                                    }}
-                                    className="cursor-pointer"
-                                >
-                                    <Hash className="mr-2 h-4 w-4" />
-                                    {tag}
-                                </CommandItem>
-                            ))}
-                        </CommandGroup>
-                    </CommandList>
+                        <div className="w-[40%] p-2 space-y-4">
+                            {Object.entries(SEARCH_CATEGORIES).map(
+                                ([category, items]) => (
+                                    <div key={category} className="space-y-2">
+                                        <h3 className="text-sm font-medium text-muted-foreground px-2 capitalize">
+                                            {category}
+                                        </h3>
+                                        <div className="flex flex-wrap gap-1 px-2">
+                                            {items.map((item) => (
+                                                <button
+                                                    key={item}
+                                                    onClick={() =>
+                                                        handleCategorySelect(
+                                                            category.slice(
+                                                                0,
+                                                                -1
+                                                            ),
+                                                            item
+                                                        )
+                                                    }
+                                                    className="text-xs px-2 py-1 rounded-md bg-secondary hover:bg-secondary/80 transition-colors"
+                                                >
+                                                    {item}
+                                                </button>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )
+                            )}
+                        </div>
+                    </div>
                 </Command>
             </DialogContent>
         </Dialog>

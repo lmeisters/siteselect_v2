@@ -1,7 +1,13 @@
 "use client";
 
 import { WebsiteCard } from "@/components/ui/website-card";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import {
+    Dialog,
+    DialogContent,
+    DialogTrigger,
+    DialogTitle,
+    DialogDescription,
+} from "@/components/ui/dialog";
 
 export function WebsiteDetails({ website }) {
     return (
@@ -16,6 +22,13 @@ export function WebsiteDetails({ website }) {
                 </div>
             </DialogTrigger>
             <DialogContent className="sm:max-w-3xl">
+                <DialogTitle className="sr-only">
+                    {website.name} Details
+                </DialogTitle>
+                <DialogDescription className="sr-only">
+                    Detailed information about {website.name} including
+                    description and preview
+                </DialogDescription>
                 <div className="space-y-4">
                     <WebsiteCard
                         name={website.name}
