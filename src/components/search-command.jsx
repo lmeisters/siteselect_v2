@@ -176,7 +176,17 @@ export function SearchCommand() {
                         <div className="flex items-center flex-1">
                             <Search className="mr-2 h-4 w-4 shrink-0 opacity-50" />
                             <CommandInput
-                                placeholder="Search designs..."
+                                placeholder={
+                                    query
+                                        ? query
+                                        : type
+                                        ? `Type: ${type}`
+                                        : tag
+                                        ? `Tag: ${tag}`
+                                        : color
+                                        ? `Color: ${color}`
+                                        : "Search designs..."
+                                }
                                 value={searchValue}
                                 onValueChange={handleSearchChange}
                                 onKeyDown={(e) => {
