@@ -118,6 +118,13 @@ export function SearchCommand() {
     const handleCategorySelect = (category, value) => {
         setIsOpen(false);
         setSearch({ [category]: value.toLowerCase() });
+        if (window.location.pathname !== "/directory") {
+            router.push(
+                `/directory?${category}=${encodeURIComponent(
+                    value.toLowerCase()
+                )}`
+            );
+        }
     };
 
     return (
