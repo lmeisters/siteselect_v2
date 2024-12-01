@@ -24,7 +24,8 @@ import { SEARCH_CATEGORIES } from "@/lib/constants";
 
 export function SearchCommand() {
     const router = useRouter();
-    const { setSearch, resetSearch } = useSearchStore();
+    const { query, type, tag, color, setSearch, resetSearch } =
+        useSearchStore();
     const [isMac, setIsMac] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
     const [searchValue, setSearchValue] = useState("");
@@ -133,7 +134,15 @@ export function SearchCommand() {
                 <button className="flex w-full items-center h-9 rounded-3xl border bg-background px-3 text-sm text-muted-foreground shadow-sm hover:bg-accent">
                     <Search className="mr-2 h-4 w-4 shrink-0 opacity-50" />
                     <span className="flex-1 text-left">
-                        Search for designs...
+                        {query
+                            ? query
+                            : type
+                            ? `Type: ${type}`
+                            : tag
+                            ? `Tag: ${tag}`
+                            : color
+                            ? `Color: ${color}`
+                            : "Search for designs..."}
                     </span>
                     <kbd className="pointer-events-none hidden sm:inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[12px] font-medium opacity-100">
                         <span className="text-xs">{isMac ? "⌘" : "Ctrl"}</span>K
