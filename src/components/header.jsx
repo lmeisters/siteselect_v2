@@ -11,7 +11,7 @@ export function Header() {
                 <Link href="/" className="text-xl font-bold tracking-tighter">
                     SS.
                 </Link>
-                <div className="flex items-center space-x-4 flex-1 max-w-md mx-auto">
+                <div className="flex items-center space-x-4 flex-1 max-w-[200px] sm:max-w-xs md:max-w-md mx-auto">
                     <SearchCommand />
                 </div>
                 <AboutSheet />

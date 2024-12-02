@@ -16,11 +16,12 @@ import {
     DialogDescription,
     DialogTrigger,
 } from "@/components/ui/dialog";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import { searchWebsites, getFilterCounts } from "@/lib/api";
 import { useSearchStore } from "@/lib/search-store";
 import { SEARCH_CATEGORIES } from "@/lib/constants";
+import debounce from "lodash/debounce";
 
 export function SearchCommand() {
     const router = useRouter();
@@ -37,6 +38,8 @@ export function SearchCommand() {
         colors: {},
         tags: {},
     });
+    const [currentSuggestion, setCurrentSuggestion] = useState("");
+    const [suggestion, setSuggestion] = useState("");
 
     const categories = {
         type: "Types",
@@ -87,24 +90,58 @@ export function SearchCommand() {
         fetchCounts();
     }, []);
 
-    const handleSearch = async (value) => {
-        setIsLoading(true);
-        try {
-            const results = await searchWebsites({ query: value });
-            setSearchResults(results);
-        } catch (error) {
-            console.error("Search error:", error);
-        } finally {
-            setIsLoading(false);
-        }
-    };
+    const debouncedSearch = useCallback(
+        debounce(async (value) => {
+            if (value.length < 2) {
+                setSearchResults([]);
+                setIsLoading(false);
+                return;
+            }
+
+            setIsLoading(true);
+            try {
+                const results = await searchWebsites({ query: value });
+                setSearchResults(results);
+            } catch (error) {
+                console.error("Search error:", error);
+                setSearchResults([]);
+            } finally {
+                setIsLoading(false);
+            }
+        }, 300),
+        []
+    );
 
     const handleSearchChange = (value) => {
         setSearchValue(value);
+        debouncedSearch(value);
+
+        // Find suggestion from search results or categories
         if (value.length >= 2) {
-            handleSearch(value);
+            let possibleSuggestion = "";
+
+            // Check search results first
+            const matchingResult = searchResults.find((website) =>
+                website.name.toLowerCase().startsWith(value.toLowerCase())
+            );
+
+            if (matchingResult) {
+                possibleSuggestion = matchingResult.name;
+            } else if (selectedCategory) {
+                // Check category items
+                const categoryItems =
+                    SEARCH_CATEGORIES[`${selectedCategory}s`] || [];
+                const matchingCategory = categoryItems.find((item) =>
+                    item.toLowerCase().startsWith(value.toLowerCase())
+                );
+                if (matchingCategory) {
+                    possibleSuggestion = matchingCategory;
+                }
+            }
+
+            setSuggestion(possibleSuggestion);
         } else {
-            setSearchResults([]);
+            setSuggestion("");
         }
     };
 
@@ -175,28 +212,49 @@ export function SearchCommand() {
                     <div className="flex items-center justify-between border-b px-3">
                         <div className="flex items-center flex-1">
                             <Search className="mr-2 h-4 w-4 shrink-0 opacity-50" />
-                            <CommandInput
-                                placeholder={
-                                    query
-                                        ? query
-                                        : type
-                                        ? `Type: ${type}`
-                                        : tag
-                                        ? `Tag: ${tag}`
-                                        : color
-                                        ? `Color: ${color}`
-                                        : "Search designs..."
-                                }
-                                value={searchValue}
-                                onValueChange={handleSearchChange}
-                                onKeyDown={(e) => {
-                                    if (e.key === "Enter") {
-                                        e.preventDefault();
-                                        handleSearchSubmit(searchValue);
+                            <div className="relative flex-1">
+                                <CommandInput
+                                    placeholder={
+                                        query
+                                            ? query
+                                            : type
+                                            ? `Type: ${type}`
+                                            : tag
+                                            ? `Tag: ${tag}`
+                                            : color
+                                            ? `Color: ${color}`
+                                            : "Search designs..."
                                     }
-                                }}
-                                className="h-9"
-                            />
+                                    value={searchValue}
+                                    onValueChange={handleSearchChange}
+                                    onKeyDown={(e) => {
+                                        if (e.key === "Enter") {
+                                            e.preventDefault();
+                                            handleSearchSubmit(searchValue);
+                                        } else if (
+                                            e.key === "Tab" &&
+                                            suggestion
+                                        ) {
+                                            e.preventDefault();
+                                            setSearchValue(suggestion);
+                                            setSuggestion("");
+                                        }
+                                    }}
+                                    className="h-9"
+                                />
+                                {suggestion && searchValue && (
+                                    <div className="flex h-9 w-full rounded-md bg-transparent py-2 text-sm outline-none absolute top-0 left-0 pointer-events-none">
+                                        <span className="invisible">
+                                            {searchValue}
+                                        </span>
+                                        <span className="text-muted-foreground/50">
+                                            {suggestion.slice(
+                                                searchValue.length
+                                            )}
+                                        </span>
+                                    </div>
+                                )}
+                            </div>
                         </div>
                         {(searchValue || selectedCategory) && (
                             <button

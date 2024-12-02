@@ -177,3 +177,38 @@ export async function getFilterCounts() {
         throw error;
     }
 }
+
+export async function getSearchSuggestions(query) {
+    if (!query || query.length < 2) return [];
+
+    try {
+        const { data, error } = await supabase
+            .from("websites")
+            .select(
+                `
+                id,
+                name,
+                website_tags (
+                    tags (
+                        name
+                    )
+                )
+            `
+            )
+            .ilike("name", `%${query}%`)
+            .limit(5);
+
+        if (error) throw error;
+
+        return data.map((website) => ({
+            id: website.id,
+            name: website.name,
+            tags: website.website_tags
+                .map((wt) => wt.tags.name)
+                .filter(Boolean),
+        }));
+    } catch (error) {
+        console.error("Suggestion error:", error);
+        return [];
+    }
+}
