@@ -21,7 +21,7 @@ import { useRouter } from "next/navigation";
 import { searchWebsites, getFilterCounts } from "@/lib/api";
 import { useSearchStore } from "@/lib/search-store";
 import { SEARCH_CATEGORIES } from "@/lib/constants";
-import debounce from "lodash/debounce";
+import { debounce, find } from "lodash";
 
 export function SearchCommand() {
     const router = useRouter();
@@ -116,22 +116,19 @@ export function SearchCommand() {
         setSearchValue(value);
         debouncedSearch(value);
 
-        // Find suggestion from search results or categories
         if (value.length >= 2) {
             let possibleSuggestion = "";
 
-            // Check search results first
-            const matchingResult = searchResults.find((website) =>
+            const matchingResult = find(searchResults, (website) =>
                 website.name.toLowerCase().startsWith(value.toLowerCase())
             );
 
             if (matchingResult) {
                 possibleSuggestion = matchingResult.name;
             } else if (selectedCategory) {
-                // Check category items
                 const categoryItems =
                     SEARCH_CATEGORIES[`${selectedCategory}s`] || [];
-                const matchingCategory = categoryItems.find((item) =>
+                const matchingCategory = find(categoryItems, (item) =>
                     item.toLowerCase().startsWith(value.toLowerCase())
                 );
                 if (matchingCategory) {
