@@ -6,19 +6,27 @@ export function useSearchStore() {
 
     const setSearch = (params) => {
         const url = new URL(window.location.href);
-        const newParams = new URLSearchParams();
+        const newParams = new URLSearchParams(searchParams.toString());
 
         const [[key, value]] = Object.entries(params);
         if (value) {
-            newParams.set(key, value);
+            newParams.set(key, value.toLowerCase());
+        } else {
+            newParams.delete(key);
         }
 
-        router.push(`${url.pathname}?${newParams.toString()}`);
+        router.replace(`${url.pathname}?${newParams.toString()}`, {
+            scroll: false,
+            shallow: true,
+        });
     };
 
     const resetSearch = () => {
         const url = new URL(window.location.href);
-        router.push(url.pathname);
+        router.replace(url.pathname, {
+            scroll: false,
+            shallow: true,
+        });
     };
 
     return {
