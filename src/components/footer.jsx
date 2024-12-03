@@ -5,7 +5,7 @@ export function Footer() {
         <footer className="border-t mt-16">
             <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="py-2 md:py-4 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <div className="flex flex-row items-center gap-2">
+                    <div className="flex flex-col md:flex-row items-center gap-2 text-center md:text-left">
                         <Link
                             href="/"
                             className="text-lg font-bold tracking-tighter"
@@ -18,7 +18,7 @@ export function Footer() {
                         </p>
                     </div>
 
-                    <div className="text-sm text-muted-foreground">
+                    <div className="text-sm text-muted-foreground text-center md:text-right">
                         Created by{" "}
                         <Link
                             href="https://github.com/lmeisters"
