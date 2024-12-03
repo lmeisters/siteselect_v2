@@ -10,29 +10,28 @@ import { cn } from "@/lib/utils";
 import {
     Activity,
     Clock,
-    Banknote,
     Lock,
-    Github,
-    Brain,
     Brush,
-    ChartBar,
     Code,
     Briefcase,
-    User,
-    Portfolio,
+    Smartphone,
+    RefreshCcw,
 } from "lucide-react";
 
 const COMMON_TAGS = [
+    // Primary categories
+    { id: "design", label: "Design", icon: Brush },
+    { id: "development", label: "Development", icon: Code },
+    { id: "portfolio", label: "Portfolio", icon: Briefcase },
+
+    // Product types
+    { id: "saas", label: "SaaS", icon: RefreshCcw },
+    { id: "mobile", label: "Mobile", icon: Smartphone },
+
+    // Status/attributes
     { id: "active", label: "Active", icon: Activity },
     { id: "recently-updated", label: "Recently Updated", icon: Clock },
     { id: "free", label: "Free", icon: Lock },
-    { id: "paid", label: "Paid", icon: Banknote },
-    { id: "ai", label: "AI", icon: Brain },
-    { id: "design", label: "Design", icon: Brush },
-    { id: "marketing", label: "Marketing", icon: ChartBar },
-    { id: "development", label: "Development", icon: Code },
-    { id: "business", label: "Business", icon: Briefcase },
-    { id: "portfolio", label: "Personal", icon: User },
 ];
 
 export function DirectorySection() {
@@ -77,12 +76,13 @@ export function DirectorySection() {
                                 }}
                                 className={cn(
                                     "px-3 py-1.5 rounded-lg text-sm font-medium transition-all duration-200",
-                                    "bg-secondary hover:bg-secondary/80",
+                                    "bg-secondary",
                                     "border border-border/50",
                                     "flex items-center gap-1.5",
-                                    "text-muted-foreground hover:text-foreground",
-                                    tag === commonTag.id &&
-                                        "bg-primary text-primary-foreground hover:text-primary-foreground"
+                                    "text-muted-foreground",
+                                    tag === commonTag.id
+                                        ? "bg-primary text-primary-foreground"
+                                        : "hover:bg-secondary/80 hover:text-foreground"
                                 )}
                             >
                                 <Icon className="h-3.5 w-3.5" />
