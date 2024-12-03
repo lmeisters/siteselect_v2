@@ -60,17 +60,23 @@ module.exports = {
                 },
             },
             keyframes: {
-                "arrow-up-right": {
-                    "0%": {
+                "arrow-exit": {
+                    "0%, 100%": {
                         transform: "translate(0, 0)",
+                        opacity: "1",
                     },
-                    "100%": {
-                        transform: "translate(2px, -2px)",
+                    "50%": {
+                        transform: "translate(4px, -4px)",
+                        opacity: "0",
+                    },
+                    "50.1%": {
+                        transform: "translate(-4px, 4px)",
+                        opacity: "0",
                     },
                 },
             },
             animation: {
-                "arrow-up-right": "arrow-up-right 0.2s ease-out both",
+                "arrow-exit": "arrow-exit 0.4s cubic-bezier(0.16, 1, 0.3, 1) ",
             },
             borderRadius: {
                 lg: "var(--radius)",

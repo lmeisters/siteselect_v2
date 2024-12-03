@@ -26,27 +26,26 @@ export function WebsiteCard({
                 <button
                     onClick={(e) => {
                         e.stopPropagation();
-                        console.log("Button clicked");
                         setIsDialogOpen(true);
-                        console.log("Dialog open state:", isDialogOpen);
                         onNameClick?.();
                     }}
                     className={cn(
-                        "z-20 bg-white px-3 py-1 rounded-2xl font-bold inline-flex items-center",
+                        "z-20 bg-white rounded-2xl font-bold inline-flex items-center",
                         "transition-all duration-200 ease-out",
                         "group/info absolute top-4 left-4",
                         size === "featured" ? "text-base" : "text-sm",
-                        "pl-3 hover:pr-3",
-                        "pr-[0.75rem] hover:pr-[1.875rem]"
+                        "px-3 py-1",
+                        "hover:pr-7"
                     )}
                 >
                     <span>{name}</span>
                     <Info
                         className={cn(
-                            "absolute right-3",
+                            "absolute right-2",
                             "transition-all duration-200 ease-out",
-                            "-translate-x-2 opacity-0 group-hover/info:translate-x-0 group-hover/info:opacity-100",
-                            size === "featured" ? "w-4 h-4" : "w-3.5 h-3.5"
+                            "-translate-x-1 opacity-0 pointer-events-none",
+                            "group-hover/info:translate-x-0 group-hover/info:opacity-100",
+                            size === "featured" ? "w-4 h-4 ml-1" : "w-3.5 h-3.5"
                         )}
                     />
                 </button>
@@ -102,7 +101,8 @@ export function WebsiteCard({
                                     "absolute bg-white p-1.5 rounded-full overflow-hidden",
                                     size === "featured"
                                         ? "top-4 right-4"
-                                        : "top-4 right-4"
+                                        : "top-4 right-4",
+                                    "group/arrow"
                                 )}
                             >
                                 <ArrowUpRight
@@ -110,7 +110,8 @@ export function WebsiteCard({
                                         size === "featured"
                                             ? "h-4 w-4"
                                             : "h-3.5 w-3.5",
-                                        "group-hover:animate-arrow-exit"
+                                        "transition-transform duration-200",
+                                        "group-hover/arrow:animate-arrow-exit"
                                     )}
                                 />
                             </button>
