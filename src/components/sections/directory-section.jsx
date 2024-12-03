@@ -95,8 +95,8 @@ export function DirectorySection() {
                             );
                         })}
                     </div>
-                    <div className="absolute left-0 top-0 h-full w-20 bg-gradient-to-r from-background/80 to-transparent pointer-events-none sm:hidden" />
-                    <div className="absolute right-0 top-0 h-full w-20 bg-gradient-to-l from-background/80 to-transparent pointer-events-none sm:hidden" />
+                    <div className="absolute left-0 top-0 h-full w-20 bg-gradient-to-r from-background to-transparent pointer-events-none sm:hidden" />
+                    <div className="absolute right-0 top-0 h-full w-20 bg-gradient-to-l from-background to-transparent pointer-events-none sm:hidden" />
                 </div>
             </div>
 

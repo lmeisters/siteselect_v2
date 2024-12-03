@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+import { WebsiteDialog } from "@/components/ui/website-dialog";
 import Image from "next/image";
 import { ArrowUpRight, Info } from "lucide-react";
 import Link from "next/link";
@@ -12,120 +14,145 @@ export function WebsiteCard({
     size = "default",
     tags = [],
     onNameClick,
+    description,
 }) {
+    const [isDialogOpen, setIsDialogOpen] = useState(false);
     const imagePath = `/images/${name.toLowerCase().replace(/\s+/g, "-")}.webp`;
     const hasImage = name !== "Featured Site";
 
     return (
-        <Link
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={cn(
-                "group block relative w-full overflow-hidden rounded-xl",
-                className
-            )}
-        >
-            <div
-                className={cn(
-                    "relative w-full",
-                    size === "featured" ? "pb-[56.25%]" : "pb-[55%]"
-                )}
-            >
-                <div className="absolute inset-0">
-                    {hasImage ? (
-                        <Image
-                            src={imagePath}
-                            alt={name}
-                            fill
-                            priority={size === "featured"}
-                            className="object-cover transition-all duration-1000 ease-out group-hover:scale-110 group-hover:brightness-[0.85]"
-                            sizes={
-                                size === "featured"
-                                    ? "(max-width: 768px) 100vw, 50vw"
-                                    : "33vw"
-                            }
-                        />
-                    ) : (
-                        <div className="w-full h-full bg-gray-100" />
+        <>
+            <div className="relative">
+                <button
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        console.log("Button clicked");
+                        setIsDialogOpen(true);
+                        console.log("Dialog open state:", isDialogOpen);
+                        onNameClick?.();
+                    }}
+                    className={cn(
+                        "z-20 bg-white px-3 py-1 rounded-2xl font-bold inline-flex items-center",
+                        "transition-all duration-200 ease-out",
+                        "group/info absolute top-4 left-4",
+                        size === "featured" ? "text-base" : "text-sm",
+                        "pl-3 hover:pr-3",
+                        "pr-[0.75rem] hover:pr-[1.875rem]"
                     )}
-                </div>
-
-                <div className="absolute inset-0 p-4">
-                    <button
-                        onClick={(e) => {
-                            e.preventDefault();
-                            onNameClick?.();
-                        }}
+                >
+                    <span>{name}</span>
+                    <Info
                         className={cn(
-                            "bg-white px-3 py-1 rounded-2xl font-bold inline-flex items-center",
+                            "absolute right-3",
                             "transition-all duration-200 ease-out",
-                            "group/info relative",
-                            size === "featured" ? "text-base" : "text-sm",
-                            "pl-3 hover:pr-3",
-                            "pr-[0.75rem] hover:pr-[1.875rem]"
+                            "-translate-x-2 opacity-0 group-hover/info:translate-x-0 group-hover/info:opacity-100",
+                            size === "featured" ? "w-4 h-4" : "w-3.5 h-3.5"
                         )}
-                    >
-                        <span>{name}</span>
-                        <Info
-                            className={cn(
-                                "absolute right-3",
-                                "transition-all duration-200 ease-out",
-                                "-translate-x-2 opacity-0 group-hover/info:translate-x-0 group-hover/info:opacity-100",
-                                size === "featured" ? "w-4 h-4" : "w-3.5 h-3.5"
-                            )}
-                        />
-                    </button>
+                    />
+                </button>
 
-                    <button
+                {isDialogOpen && (
+                    <WebsiteDialog
+                        isOpen={isDialogOpen}
+                        onClose={() => {
+                            console.log("Closing dialog");
+                            setIsDialogOpen(false);
+                        }}
+                        website={{ name, href, description, tags }}
+                    />
+                )}
+
+                <Link
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={cn(
+                        "group block relative w-full overflow-hidden rounded-xl",
+                        className
+                    )}
+                >
+                    <div
                         className={cn(
-                            "absolute bg-white p-1.5 rounded-full overflow-hidden",
-                            size === "featured"
-                                ? "top-4 right-4"
-                                : "top-4 right-4"
+                            "relative w-full",
+                            size === "featured" ? "pb-[56.25%]" : "pb-[55%]"
                         )}
                     >
-                        <ArrowUpRight
-                            className={cn(
-                                size === "featured" ? "h-4 w-4" : "h-3.5 w-3.5",
-                                "group-hover:animate-arrow-exit"
+                        <div className="absolute inset-0">
+                            {hasImage ? (
+                                <Image
+                                    src={imagePath}
+                                    alt={name}
+                                    fill
+                                    priority={size === "featured"}
+                                    className="object-cover transition-all duration-1000 ease-out group-hover:scale-110 group-hover:brightness-[0.85]"
+                                    sizes={
+                                        size === "featured"
+                                            ? "(max-width: 768px) 100vw, 50vw"
+                                            : "33vw"
+                                    }
+                                />
+                            ) : (
+                                <div className="w-full h-full bg-gray-100" />
                             )}
-                        />
-                    </button>
+                        </div>
 
-                    {tags?.length > 0 && (
-                        <div
-                            className={cn(
-                                "absolute bottom-0 left-0 right-0",
-                                size === "featured" ? "p-4" : "p-3",
-                                "flex flex-wrap gap-2"
-                            )}
-                        >
-                            {tags.map((tag, index) => (
-                                <span
-                                    key={`${tag}-${index}`}
-                                    style={{
-                                        "--enter-delay": `${index * 50}ms`,
-                                        "--exit-delay": `${
-                                            (tags.length - 1 - index) * 50
-                                        }ms`,
-                                    }}
+                        <div className="absolute inset-0 p-4">
+                            <button
+                                className={cn(
+                                    "absolute bg-white p-1.5 rounded-full overflow-hidden",
+                                    size === "featured"
+                                        ? "top-4 right-4"
+                                        : "top-4 right-4"
+                                )}
+                            >
+                                <ArrowUpRight
                                     className={cn(
-                                        "bg-white/90 backdrop-blur-sm px-3 py-1 rounded-2xl text-xs font-bold",
-                                        "opacity-0 translate-y-5 blur-md",
-                                        "transition-all duration-300 ease-out",
-                                        "group-hover:[transition-delay:var(--enter-delay)]",
-                                        "group-hover:opacity-100 group-hover:translate-y-0 group-hover:blur-none",
-                                        "[transition-delay:var(--exit-delay)]"
+                                        size === "featured"
+                                            ? "h-4 w-4"
+                                            : "h-3.5 w-3.5",
+                                        "group-hover:animate-arrow-exit"
+                                    )}
+                                />
+                            </button>
+
+                            {tags?.length > 0 && (
+                                <div
+                                    className={cn(
+                                        "absolute bottom-0 left-0 right-0",
+                                        size === "featured" ? "p-4" : "p-3",
+                                        "flex flex-wrap gap-2"
                                     )}
                                 >
-                                    {tag}
-                                </span>
-                            ))}
+                                    {tags.map((tag, index) => (
+                                        <span
+                                            key={`${tag}-${index}`}
+                                            style={{
+                                                "--enter-delay": `${
+                                                    index * 50
+                                                }ms`,
+                                                "--exit-delay": `${
+                                                    (tags.length - 1 - index) *
+                                                    50
+                                                }ms`,
+                                            }}
+                                            className={cn(
+                                                "bg-white/90 backdrop-blur-sm px-3 py-1 rounded-2xl text-xs font-bold",
+                                                "opacity-0 translate-y-5 blur-md",
+                                                "transition-all duration-300 ease-out",
+                                                "group-hover:[transition-delay:var(--enter-delay)]",
+                                                "group-hover:opacity-100 group-hover:translate-y-0 group-hover:blur-none",
+                                                "[transition-delay:var(--exit-delay)]"
+                                            )}
+                                        >
+                                            {tag}
+                                        </span>
+                                    ))}
+                                </div>
+                            )}
                         </div>
-                    )}
-                </div>
+                    </div>
+                </Link>
             </div>
-        </Link>
+        </>
     );
 }

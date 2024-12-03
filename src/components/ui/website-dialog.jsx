@@ -44,14 +44,13 @@ const WebsiteStructuredData = ({ website }) => {
     );
 };
 
-export function WebsiteDialog({ website, children }) {
-    const [isOpen, setIsOpen] = useState(false);
+export function WebsiteDialog({ website, isOpen, onClose, children }) {
     const imagePath = `/images/${website.name
         .toLowerCase()
         .replace(/\s+/g, "-")}.webp`;
 
     return (
-        <Dialog open={isOpen} onOpenChange={setIsOpen}>
+        <Dialog open={isOpen} onOpenChange={onClose}>
             <DialogTrigger asChild>{children}</DialogTrigger>
             <DialogContent className="sm:max-w-3xl">
                 <WebsiteStructuredData website={website} />
