@@ -60,23 +60,23 @@ module.exports = {
                 },
             },
             keyframes: {
-                "arrow-exit": {
-                    "0%, 100%": {
+                "arrow-move": {
+                    "0%": {
                         transform: "translate(0, 0)",
-                        opacity: "1",
+                    },
+                    "49%": {
+                        transform: "translate(16px, -16px)",
                     },
                     "50%": {
-                        transform: "translate(4px, -4px)",
-                        opacity: "0",
+                        transform: "translate(-16px, 16px)",
                     },
-                    "50.1%": {
-                        transform: "translate(-4px, 4px)",
-                        opacity: "0",
+                    "100%": {
+                        transform: "translate(0, 0)",
                     },
                 },
             },
             animation: {
-                "arrow-exit": "arrow-exit 0.4s cubic-bezier(0.16, 1, 0.3, 1) ",
+                "arrow-move": "arrow-move 1.1s cubic-bezier(0.16, 1, 0.3, 1)",
             },
             borderRadius: {
                 lg: "var(--radius)",

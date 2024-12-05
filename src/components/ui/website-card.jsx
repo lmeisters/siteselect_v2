@@ -110,8 +110,8 @@ export function WebsiteCard({
                                         size === "featured"
                                             ? "h-4 w-4"
                                             : "h-3.5 w-3.5",
-                                        "transition-transform duration-200",
-                                        "group-hover/arrow:animate-arrow-exit"
+                                        "transition-all duration-100 ease-out",
+                                        "transform group-hover:translate-x-4 group-hover:-translate-y-2 group-hover:animate-arrow-move"
                                     )}
                                 />
                             </button>
