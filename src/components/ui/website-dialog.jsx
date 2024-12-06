@@ -7,8 +7,6 @@ import {
     DialogDescription,
     DialogTrigger,
 } from "@/components/ui/dialog";
-import { WebsiteCard } from "@/components/ui/website-card";
-import { useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 

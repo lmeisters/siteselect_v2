@@ -2,17 +2,17 @@
 
 import { WebsiteCard } from "@/components/ui/website-card";
 import { WebsiteDialog } from "@/components/ui/website-dialog";
-import { useSearchStore } from "@/lib/search-store";
 import { useEffect, useState } from "react";
 import { searchWebsites } from "@/lib/api";
 import { SectionLayout } from "@/components/layouts/section-layout";
 import { SEARCH_CATEGORIES } from "@/lib/constants";
+import { useSearchStore } from "@/lib/search-store";
 
 export function SearchResultsSection() {
-    const [websites, setWebsites] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
     const { query, type, tag, color, setSearch, resetSearch } =
         useSearchStore();
+    const [websites, setWebsites] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         async function fetchWebsites() {

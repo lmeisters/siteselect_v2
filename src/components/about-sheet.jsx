@@ -26,8 +26,8 @@ export function AboutSheet() {
                 </SheetHeader>
                 <div className="mt-6 space-y-4">
                     <p className="text-sm text-muted-foreground">
-                        Explore our handpicked collection of the web's finest
-                        designs. From stunning layouts to innovative
+                        Explore our handpicked collection of the web&apos;s
+                        finest designs. From stunning layouts to innovative
                         interactions, SiteSelect showcases the best in modern
                         web design. Perfect for designers, developers, and
                         creative professionals seeking fresh inspiration for

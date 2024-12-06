@@ -1,4 +1,15 @@
+"use client";
+
 import { useRouter, useSearchParams } from "next/navigation";
+
+function getSearchParamsObject(searchParams) {
+    return {
+        query: searchParams.get("query") || "",
+        type: searchParams.get("type") || "",
+        tag: searchParams.get("tag") || "",
+        color: searchParams.get("color") || "",
+    };
+}
 
 export function useSearchStore() {
     const router = useRouter();
@@ -17,7 +28,6 @@ export function useSearchStore() {
 
         router.replace(`${url.pathname}?${newParams.toString()}`, {
             scroll: false,
-            shallow: true,
         });
     };
 
@@ -25,15 +35,11 @@ export function useSearchStore() {
         const url = new URL(window.location.href);
         router.replace(url.pathname, {
             scroll: false,
-            shallow: true,
         });
     };
 
     return {
-        query: searchParams.get("query") || "",
-        type: searchParams.get("type") || "",
-        tag: searchParams.get("tag") || "",
-        color: searchParams.get("color") || "",
+        ...getSearchParamsObject(searchParams),
         setSearch,
         resetSearch,
     };
