@@ -1,5 +1,6 @@
 "use client";
 
+import { Suspense } from "react";
 import { WebsiteCard } from "@/components/ui/website-card";
 import { WebsiteDialog } from "@/components/ui/website-dialog";
 import { useSearchStore } from "@/lib/search-store";
@@ -34,7 +35,7 @@ const COMMON_TAGS = [
     { id: "free", label: "Free", icon: Lock },
 ];
 
-export function DirectorySection() {
+function DirectoryContent() {
     const [websites, setWebsites] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const { query, type, tag, color, setSearch } = useSearchStore();
@@ -124,6 +125,33 @@ export function DirectorySection() {
                     ))}
                 </div>
             )}
+        </SectionLayout>
+    );
+}
+
+export function DirectorySection() {
+    return (
+        <Suspense fallback={<DirectoryFallback />}>
+            <DirectoryContent />
+        </Suspense>
+    );
+}
+
+function DirectoryFallback() {
+    return (
+        <SectionLayout>
+            <div className="flex flex-row mb-6 gap-4 items-center justify-between">
+                <h1 className="text-xl font-medium">Directory</h1>
+                <div className="animate-pulse h-10 w-full sm:w-[400px] bg-muted rounded-lg" />
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {[...Array(6)].map((_, i) => (
+                    <div
+                        key={i}
+                        className="h-[300px] rounded-xl bg-muted animate-pulse"
+                    />
+                ))}
+            </div>
         </SectionLayout>
     );
 }
