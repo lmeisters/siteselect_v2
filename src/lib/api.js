@@ -73,6 +73,11 @@ export async function searchWebsites({ query, type, tag, color }) {
                 tags!inner (
                     name
                 )
+            ),
+            website_colors (
+                colors (
+                    name
+                )
             )
         `);
 
@@ -87,10 +92,24 @@ export async function searchWebsites({ query, type, tag, color }) {
         }
 
         if (color) {
-            supabaseQuery = supabaseQuery.eq(
-                "color_scheme",
-                color.toLowerCase()
-            );
+            const { data: coloredWebsites } = await supabase
+                .from("website_colors")
+                .select(
+                    `
+                    website_id,
+                    colors!inner (
+                        name
+                    )
+                `
+                )
+                .eq("colors.name", color);
+
+            if (coloredWebsites?.length > 0) {
+                const websiteIds = coloredWebsites.map((w) => w.website_id);
+                supabaseQuery = supabaseQuery.in("id", websiteIds);
+            } else {
+                return [];
+            }
         }
 
         if (tag) {
@@ -121,7 +140,10 @@ export async function searchWebsites({ query, type, tag, color }) {
 
         return data.map((website) => ({
             ...website,
-            tags: website.website_tags?.map((wt) => wt.tags.name) || [],
+            tags: [
+                ...(website.website_tags?.map((wt) => wt.tags.name) || []),
+                ...(website.website_colors?.map((wc) => wc.colors.name) || []),
+            ],
         }));
     } catch (error) {
         console.error("Search error:", error);
@@ -137,39 +159,49 @@ export async function getFilterCounts() {
             .not("type", "is", null);
 
         const { data: colorData } = await supabase
-            .from("websites")
-            .select("color_scheme", { count: "exact" })
-            .not("color_scheme", "is", null);
+            .from("website_colors")
+            .select(
+                `
+                colors (
+                    name
+                )
+            `
+            )
+            .not("colors.name", "is", null);
 
         const { data: tagData } = await supabase
             .from("website_tags")
             .select(
                 `
-        tags (
-          name
-        )
-      `
+                tags (
+                    name
+                )
+            `
             )
             .not("tags.name", "is", null);
 
         // Count occurrences of each type
-        const typeCounts = typeData.reduce((acc, item) => {
-            acc[item.type] = (acc[item.type] || 0) + 1;
-            return acc;
-        }, {});
+        const typeCounts =
+            typeData?.reduce((acc, item) => {
+                acc[item.type] = (acc[item.type] || 0) + 1;
+                return acc;
+            }, {}) || {};
 
         // Count occurrences of each color
-        const colorCounts = colorData.reduce((acc, item) => {
-            acc[item.color_scheme] = (acc[item.color_scheme] || 0) + 1;
-            return acc;
-        }, {});
+        const colorCounts =
+            colorData?.reduce((acc, item) => {
+                const colorName = item.colors.name;
+                acc[colorName] = (acc[colorName] || 0) + 1;
+                return acc;
+            }, {}) || {};
 
         // Count occurrences of each tag
-        const tagCounts = tagData.reduce((acc, item) => {
-            const tagName = item.tags.name;
-            acc[tagName] = (acc[tagName] || 0) + 1;
-            return acc;
-        }, {});
+        const tagCounts =
+            tagData?.reduce((acc, item) => {
+                const tagName = item.tags.name;
+                acc[tagName] = (acc[tagName] || 0) + 1;
+                return acc;
+            }, {}) || {};
 
         return {
             types: typeCounts,

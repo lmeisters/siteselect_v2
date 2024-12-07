@@ -9,15 +9,15 @@ export async function FeaturedSection() {
             <h2 className="text-xl font-medium mb-6">Editors picks</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2 max-w-8xl mx-auto">
                 {featuredWebsites.map((website) => (
-                    <div key={website.id}>
-                        <WebsiteCard
-                            name={website.name}
-                            href={website.href}
-                            size="featured"
-                            tags={website.tags}
-                            slug={website.slug}
-                        />
-                    </div>
+                    <WebsiteCard
+                        key={website.id}
+                        name={website.name}
+                        href={website.href}
+                        size="featured"
+                        tags={website.tags}
+                        description={website.description}
+                        slug={website.slug}
+                    />
                 ))}
             </div>
         </section>

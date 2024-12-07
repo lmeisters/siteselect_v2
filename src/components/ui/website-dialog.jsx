@@ -7,7 +7,7 @@ import {
     DialogDescription,
     DialogTrigger,
 } from "@/components/ui/dialog";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Layout, Tag, Palette } from "lucide-react";
 import Image from "next/image";
 import { SEARCH_CATEGORIES } from "@/lib/constants";
 
@@ -43,22 +43,47 @@ const WebsiteStructuredData = ({ website }) => {
     );
 };
 
+// ... existing imports ...
+
+const categoryIcons = {
+    Type: Layout,
+    Tag: Tag,
+    Color: Palette,
+};
+
+// Add this mapping from SEARCH_CATEGORIES
+const allCategories = {
+    Type: SEARCH_CATEGORIES.types,
+    Tag: SEARCH_CATEGORIES.tags,
+    Color: SEARCH_CATEGORIES.colors,
+};
+
 export function WebsiteDialog({ website, isOpen, onClose, children }) {
     const imagePath = `/images/${website.name
         .toLowerCase()
         .replace(/\s+/g, "-")}.webp`;
 
-    // Flatten all categories into a single array for easier lookup
-    const allCategories = {
-        Type: SEARCH_CATEGORIES.types,
-        Tag: SEARCH_CATEGORIES.tags,
-        Color: SEARCH_CATEGORIES.colors,
+    // Group tags by category based on SEARCH_CATEGORIES
+    const categorizedTags = {
+        types: [],
+        tags: [],
+        colors: [],
     };
+
+    website.tags?.forEach((tag) => {
+        if (SEARCH_CATEGORIES.types.includes(tag)) {
+            categorizedTags.types.push(tag);
+        } else if (SEARCH_CATEGORIES.colors.includes(tag)) {
+            categorizedTags.colors.push(tag);
+        } else if (SEARCH_CATEGORIES.tags.includes(tag)) {
+            categorizedTags.tags.push(tag);
+        }
+    });
 
     return (
         <Dialog open={isOpen} onOpenChange={onClose}>
             <DialogTrigger asChild>{children}</DialogTrigger>
-            <DialogContent className="sm:max-w-4xl">
+            <DialogContent className="sm:max-w-3xl">
                 <WebsiteStructuredData website={website} />
                 <div className="flex gap-6">
                     {/* Main Content */}
@@ -99,7 +124,7 @@ export function WebsiteDialog({ website, isOpen, onClose, children }) {
                         <h3 className="text-sm font-medium text-muted-foreground mb-4">
                             Categories & Tags
                         </h3>
-                        <div className="space-y-6">
+                        <div className="space-y-4">
                             {Object.entries(allCategories).map(
                                 ([category, items]) => {
                                     const relevantTags = items.filter((item) =>
@@ -110,20 +135,26 @@ export function WebsiteDialog({ website, isOpen, onClose, children }) {
 
                                     if (relevantTags.length === 0) return null;
 
+                                    const Icon = categoryIcons[category];
+
                                     return (
                                         <div key={category}>
-                                            <h4 className="text-sm font-medium mb-2">
-                                                {category}
-                                            </h4>
-                                            <ul className="space-y-2">
+                                            <div className="flex items-center gap-2 mb-2">
+                                                <Icon className="h-4 w-4 text-muted-foreground" />
+                                                <h4 className="text-sm font-medium capitalize">
+                                                    {category}
+                                                </h4>
+                                            </div>
+                                            <div className="flex flex-wrap gap-1.5">
                                                 {relevantTags.map((tag) => (
-                                                    <li key={tag}>
-                                                        <span className="text-sm px-2.5 py-1 bg-secondary text-secondary-foreground rounded-md inline-block">
-                                                            {tag}
-                                                        </span>
-                                                    </li>
+                                                    <span
+                                                        key={tag}
+                                                        className="text-xs px-2 py-0.5 bg-secondary text-secondary-foreground rounded-md"
+                                                    >
+                                                        {tag}
+                                                    </span>
                                                 ))}
-                                            </ul>
+                                            </div>
                                         </div>
                                     );
                                 }
