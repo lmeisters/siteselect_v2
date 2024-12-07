@@ -16,7 +16,7 @@ import {
     DialogDescription,
     DialogTrigger,
 } from "@/components/ui/dialog";
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { useRouter } from "next/navigation";
 import { searchWebsites, getFilterCounts } from "@/lib/api";
 import { useSearchStore } from "@/lib/search-store";
@@ -90,27 +90,34 @@ export function SearchCommand() {
         fetchCounts();
     }, []);
 
-    const debouncedSearch = useCallback(
-        debounce(async (value) => {
-            if (value.length < 2) {
-                setSearchResults([]);
-                setIsLoading(false);
-                return;
-            }
+    const debouncedSearch = useMemo(
+        () =>
+            debounce(async (value) => {
+                if (value.length < 2) {
+                    setSearchResults([]);
+                    setIsLoading(false);
+                    return;
+                }
 
-            setIsLoading(true);
-            try {
-                const results = await searchWebsites({ query: value });
-                setSearchResults(results);
-            } catch (error) {
-                console.error("Search error:", error);
-                setSearchResults([]);
-            } finally {
-                setIsLoading(false);
-            }
-        }, 300),
-        []
+                setIsLoading(true);
+                try {
+                    const results = await searchWebsites({ query: value });
+                    setSearchResults(results);
+                } catch (error) {
+                    console.error("Search error:", error);
+                    setSearchResults([]);
+                } finally {
+                    setIsLoading(false);
+                }
+            }, 300),
+        [setSearchResults, setIsLoading]
     );
+
+    useEffect(() => {
+        return () => {
+            debouncedSearch.cancel();
+        };
+    }, [debouncedSearch]);
 
     const handleSearchChange = (value) => {
         setSearchValue(value);
