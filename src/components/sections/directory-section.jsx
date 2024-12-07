@@ -2,7 +2,6 @@
 
 import { Suspense } from "react";
 import { WebsiteCard } from "@/components/ui/website-card";
-import { WebsiteDialog } from "@/components/ui/website-dialog";
 import { useSearchStore } from "@/lib/search-store";
 import { useEffect, useState } from "react";
 import { searchWebsites } from "@/lib/api";
@@ -121,24 +120,22 @@ function DirectoryContent() {
             ) : (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {websites.map((website) => (
-                        <WebsiteDialog key={website.id} website={website}>
-                            <div className="cursor-pointer">
-                                <WebsiteCard
-                                    name={website.name}
-                                    href={website.href}
-                                    tags={
-                                        tag
-                                            ? [
-                                                  tag,
-                                                  ...(
-                                                      website.tags || []
-                                                  ).filter((t) => t !== tag),
-                                              ]
-                                            : website.tags
-                                    }
-                                />
-                            </div>
-                        </WebsiteDialog>
+                        <WebsiteCard
+                            key={website.id}
+                            name={website.name}
+                            href={website.href}
+                            tags={
+                                tag
+                                    ? [
+                                          tag,
+                                          ...(website.tags || []).filter(
+                                              (t) => t !== tag
+                                          ),
+                                      ]
+                                    : website.tags
+                            }
+                            description={website.description}
+                        />
                     ))}
                 </div>
             )}

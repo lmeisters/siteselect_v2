@@ -67,7 +67,7 @@ export function WebsiteDialog({ website, isOpen, onClose, children }) {
                             <ArrowUpRight className="ml-2 h-4 w-4 -mt-1 group-hover:text-gray-700 transition-all duration-300 transform group-hover:translate-x-[2px] group-hover:-translate-y-[2px]" />
                         </a>
                     </header>
-                    <DialogDescription className="text-lg text-gray-600 mb-4">
+                    <DialogDescription className="text-lg text-muted-foreground mb-4">
                         {website.description}
                     </DialogDescription>
                     <div className="flex flex-wrap gap-2 mb-6">

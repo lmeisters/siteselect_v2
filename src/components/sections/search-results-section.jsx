@@ -81,6 +81,7 @@ export function SearchResultsSection() {
                                             name={website.name}
                                             href={website.href}
                                             tags={website.tags}
+                                            description={website.description}
                                         />
                                     </div>
                                 </WebsiteDialog>
