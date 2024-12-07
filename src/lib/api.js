@@ -68,13 +68,13 @@ export async function getAllWebsites() {
 export async function searchWebsites({ query, type, tag, color }) {
     try {
         let supabaseQuery = supabase.from("websites").select(`
-                *,
-                website_tags!inner (
-                    tags!inner (
-                        name
-                    )
+            *,
+            website_tags!inner (
+                tags!inner (
+                    name
                 )
-            `);
+            )
+        `);
 
         if (query) {
             supabaseQuery = supabaseQuery.or(
@@ -94,34 +94,38 @@ export async function searchWebsites({ query, type, tag, color }) {
         }
 
         if (tag) {
-            supabaseQuery = supabaseQuery.eq(
-                "website_tags.tags.name",
-                tag.toLowerCase()
-            );
+            const { data: taggedWebsites } = await supabase
+                .from("website_tags")
+                .select(
+                    `
+                    website_id,
+                    tags!inner (
+                        name
+                    )
+                `
+                )
+                .eq("tags.name", tag);
+
+            if (taggedWebsites?.length > 0) {
+                const websiteIds = taggedWebsites.map((w) => w.website_id);
+                supabaseQuery = supabaseQuery.in("id", websiteIds);
+            } else {
+                return [];
+            }
         }
 
         const { data, error } = await supabaseQuery;
 
         if (error) throw error;
+        if (!data) return [];
 
-        const uniqueWebsites = Array.from(new Set(data.map((w) => w.id))).map(
-            (id) => {
-                const website = data.find((w) => w.id === id);
-                return {
-                    ...website,
-                    tags: [
-                        ...new Set(
-                            website.website_tags.map((wt) => wt.tags.name)
-                        ),
-                    ],
-                };
-            }
-        );
-
-        return uniqueWebsites || [];
+        return data.map((website) => ({
+            ...website,
+            tags: website.website_tags?.map((wt) => wt.tags.name) || [],
+        }));
     } catch (error) {
         console.error("Search error:", error);
-        throw error;
+        return [];
     }
 }
 

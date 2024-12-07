@@ -118,7 +118,16 @@ function DirectoryContent() {
                                 <WebsiteCard
                                     name={website.name}
                                     href={website.href}
-                                    tags={website.tags}
+                                    tags={
+                                        tag
+                                            ? [
+                                                  tag,
+                                                  ...(
+                                                      website.tags || []
+                                                  ).filter((t) => t !== tag),
+                                              ]
+                                            : website.tags
+                                    }
                                 />
                             </div>
                         </WebsiteDialog>
