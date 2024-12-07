@@ -111,7 +111,8 @@ export function WebsiteCard({
                                             ? "h-4 w-4"
                                             : "h-3.5 w-3.5",
                                         "transition-all duration-100 ease-out",
-                                        "transform group-hover:translate-x-4 group-hover:-translate-y-2 group-hover:animate-arrow-move"
+                                        "transform group-hover:translate-x-4 group-hover:-translate-y-2",
+                                        "motion-safe:group-hover:animate-[arrow-move_0.5s_ease-out_forwards]"
                                     )}
                                 />
                             </button>
