@@ -112,6 +112,12 @@ function DirectoryContent() {
                         />
                     ))}
                 </div>
+            ) : websites.length === 0 ? (
+                <div className="flex flex-col items-center justify-center py-32 text-center">
+                    <p className="text-lg font-medium text-muted-foreground">
+                        No matching websites found
+                    </p>
+                </div>
             ) : (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {websites.map((website) => (

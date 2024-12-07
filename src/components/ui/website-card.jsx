@@ -1,11 +1,32 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { WebsiteDialog } from "@/components/ui/website-dialog";
 import Image from "next/image";
 import { ArrowUpRight, Info } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+
+function getPriorityTags(tags = [], maxTags) {
+    const priorityTags = [
+        "Design",
+        "Development",
+        "Portfolio",
+        "SaaS",
+        "Mobile",
+    ];
+
+    const sortedTags = [...tags].sort((a, b) => {
+        const aIndex = priorityTags.indexOf(a);
+        const bIndex = priorityTags.indexOf(b);
+        if (aIndex === -1 && bIndex === -1) return 0;
+        if (aIndex === -1) return 1;
+        if (bIndex === -1) return -1;
+        return aIndex - bIndex;
+    });
+
+    return sortedTags.slice(0, maxTags);
+}
 
 export function WebsiteCard({
     name,
@@ -19,6 +40,43 @@ export function WebsiteCard({
     const [isDialogOpen, setIsDialogOpen] = useState(false);
     const imagePath = `/images/${name.toLowerCase().replace(/\s+/g, "-")}.webp`;
     const hasImage = name !== "Featured Site";
+
+    const getMaxTags = () => {
+        if (size === "featured") {
+            return {
+                sm: 3,
+                md: 8,
+                lg: 12,
+            };
+        }
+        return {
+            sm: 3,
+            md: 6,
+            lg: 8,
+        };
+    };
+
+    const [visibleTags, setVisibleTags] = useState([]);
+    const [screenSize, setScreenSize] = useState("lg");
+
+    useEffect(() => {
+        const handleResize = () => {
+            const width = window.innerWidth;
+            const newSize = width < 640 ? "sm" : width < 768 ? "md" : "lg";
+            if (newSize !== screenSize) {
+                setScreenSize(newSize);
+                const maxTags = getMaxTags()[newSize];
+                setVisibleTags(getPriorityTags(tags, maxTags));
+            }
+        };
+
+        // Initial setup
+        const maxTags = getMaxTags()[screenSize];
+        setVisibleTags(getPriorityTags(tags, maxTags));
+
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, [tags, screenSize]);
 
     return (
         <>
@@ -117,7 +175,7 @@ export function WebsiteCard({
                                 />
                             </button>
 
-                            {tags?.length > 0 && (
+                            {visibleTags.length > 0 && (
                                 <div
                                     className={cn(
                                         "absolute bottom-0 left-0 right-0",
@@ -125,7 +183,7 @@ export function WebsiteCard({
                                         "flex flex-wrap gap-2"
                                     )}
                                 >
-                                    {tags.map((tag, index) => (
+                                    {visibleTags.map((tag, index) => (
                                         <span
                                             key={`${tag}-${index}`}
                                             style={{
@@ -133,22 +191,52 @@ export function WebsiteCard({
                                                     index * 50
                                                 }ms`,
                                                 "--exit-delay": `${
-                                                    (tags.length - 1 - index) *
+                                                    (visibleTags.length -
+                                                        1 -
+                                                        index) *
                                                     50
                                                 }ms`,
                                             }}
                                             className={cn(
-                                                "bg-white/90 backdrop-blur-sm px-3 py-1 rounded-2xl text-xs font-bold",
-                                                "opacity-0 translate-y-5 blur-md",
+                                                "bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-lg text-xs font-bold",
+                                                "sm:opacity-0 sm:translate-y-5 sm:blur-md",
                                                 "transition-all duration-300 ease-out",
-                                                "group-hover:[transition-delay:var(--enter-delay)]",
-                                                "group-hover:opacity-100 group-hover:translate-y-0 group-hover:blur-none",
-                                                "[transition-delay:var(--exit-delay)]"
+                                                "sm:group-hover:[transition-delay:var(--enter-delay)]",
+                                                "sm:group-hover:opacity-100 sm:group-hover:translate-y-0 sm:group-hover:blur-none",
+                                                "sm:[transition-delay:var(--exit-delay)]"
                                             )}
                                         >
                                             {tag}
                                         </span>
                                     ))}
+
+                                    <button
+                                        onClick={(e) => {
+                                            e.preventDefault();
+                                            e.stopPropagation();
+                                            setIsDialogOpen(true);
+                                        }}
+                                        style={{
+                                            "--enter-delay": `${
+                                                visibleTags.length * 50
+                                            }ms`,
+                                            "--exit-delay": `0ms`,
+                                        }}
+                                        className={cn(
+                                            "bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-lg text-xs font-bold",
+                                            "sm:opacity-0 sm:translate-y-5 sm:blur-md",
+                                            "transition-all duration-300 ease-out",
+                                            "sm:group-hover:[transition-delay:var(--enter-delay)]",
+                                            "sm:group-hover:opacity-100 sm:group-hover:translate-y-0 sm:group-hover:blur-none",
+                                            "sm:[transition-delay:var(--exit-delay)]",
+                                            "hover:bg-white",
+                                            "hover:scale-110",
+                                            "active:scale-95",
+                                            "transition-transform"
+                                        )}
+                                    >
+                                        +
+                                    </button>
                                 </div>
                             )}
                         </div>

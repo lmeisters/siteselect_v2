@@ -74,7 +74,7 @@ export function WebsiteDialog({ website, isOpen, onClose, children }) {
                         {website.tags?.map((tag) => (
                             <span
                                 key={tag}
-                                className="px-3 py-1 text-sm bg-gray-100 text-gray-800 rounded-full"
+                                className="px-3 py-1 text-sm bg-gray-100 text-gray-800 rounded-lg"
                             >
                                 {tag}
                             </span>
