@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { WebsiteDialog } from "@/components/ui/website-dialog";
 import Image from "next/image";
 import { ArrowUpRight, Info } from "lucide-react";
@@ -41,7 +41,7 @@ export function WebsiteCard({
     const imagePath = `/images/${name.toLowerCase().replace(/\s+/g, "-")}.webp`;
     const hasImage = name !== "Featured Site";
 
-    const getMaxTags = () => {
+    const getMaxTags = useCallback(() => {
         if (size === "featured") {
             return {
                 sm: 3,
@@ -54,7 +54,7 @@ export function WebsiteCard({
             md: 6,
             lg: 8,
         };
-    };
+    }, [size]);
 
     const [visibleTags, setVisibleTags] = useState([]);
     const [screenSize, setScreenSize] = useState("lg");
@@ -76,7 +76,7 @@ export function WebsiteCard({
 
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
-    }, [tags, screenSize]);
+    }, [tags, screenSize, getMaxTags]);
 
     return (
         <>
