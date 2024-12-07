@@ -41,7 +41,9 @@ function DirectoryContent() {
     const { query, type, tag, color, setSearch } = useSearchStore();
 
     const handleCategorySelect = (category, value) => {
-        setSearch({ [category]: value });
+        setSearch({
+            [category]: tag === value ? undefined : value,
+        });
     };
 
     useEffect(() => {
