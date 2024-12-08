@@ -113,7 +113,6 @@ export function WebsiteCard({
                     <WebsiteDialog
                         isOpen={isDialogOpen}
                         onClose={() => {
-                            console.log("Closing dialog");
                             setIsDialogOpen(false);
                         }}
                         website={{ name, href, description, tags }}
