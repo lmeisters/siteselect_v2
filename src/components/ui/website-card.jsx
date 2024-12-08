@@ -125,6 +125,7 @@ export function WebsiteCard({
                     rel="noopener noreferrer"
                     className={cn(
                         "group block relative w-full overflow-hidden rounded-xl",
+                        "bg-white/5 backdrop-blur-[2px] shadow-sm",
                         className
                     )}
                 >
@@ -136,18 +137,21 @@ export function WebsiteCard({
                     >
                         <div className="absolute inset-0">
                             {hasImage ? (
-                                <Image
-                                    src={imagePath}
-                                    alt={name}
-                                    fill
-                                    priority={size === "featured"}
-                                    className="object-cover transition-all duration-1000 ease-out group-hover:scale-110 group-hover:brightness-[0.85]"
-                                    sizes={
-                                        size === "featured"
-                                            ? "(max-width: 768px) 100vw, 50vw"
-                                            : "33vw"
-                                    }
-                                />
+                                <>
+                                    <div className="absolute inset-0 bg-black/5 z-10" />
+                                    <Image
+                                        src={imagePath}
+                                        alt={name}
+                                        fill
+                                        priority={size === "featured"}
+                                        className="object-cover transition-all duration-1000 ease-out group-hover:scale-110 group-hover:brightness-[0.85]"
+                                        sizes={
+                                            size === "featured"
+                                                ? "(max-width: 768px) 100vw, 50vw"
+                                                : "33vw"
+                                        }
+                                    />
+                                </>
                             ) : (
                                 <div className="w-full h-full bg-gray-100" />
                             )}
