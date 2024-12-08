@@ -6,6 +6,7 @@ import Image from "next/image";
 import { ArrowUpRight, Info } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { getRefUrl } from "@/lib/utils/url";
 
 function getPriorityTags(tags = [], maxTags) {
     const priorityTags = [
@@ -120,7 +121,7 @@ export function WebsiteCard({
                 )}
 
                 <Link
-                    href={href}
+                    href={getRefUrl(href)}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={cn(
@@ -144,7 +145,7 @@ export function WebsiteCard({
                                         alt={name}
                                         fill
                                         priority={size === "featured"}
-                                        className="object-cover transition-all duration-1000 ease-out group-hover:scale-110 group-hover:brightness-[0.85]"
+                                        className="object-cover transition-all duration-1000 ease-out group-hover:scale-110 group-hover:brightness-[0.90]"
                                         sizes={
                                             size === "featured"
                                                 ? "(max-width: 768px) 100vw, 50vw"
@@ -160,7 +161,7 @@ export function WebsiteCard({
                         <div className="absolute inset-0 p-4">
                             <button
                                 className={cn(
-                                    "absolute bg-white p-1.5 rounded-full overflow-hidden",
+                                    "z-20 absolute bg-white p-1.5 rounded-full overflow-hidden",
                                     size === "featured"
                                         ? "top-4 right-4"
                                         : "top-4 right-4",
@@ -202,7 +203,7 @@ export function WebsiteCard({
                                                 }ms`,
                                             }}
                                             className={cn(
-                                                "bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-lg text-xs font-bold",
+                                                "bg-white z-20 backdrop-blur-sm px-3 py-1.5 rounded-lg text-xs font-bold",
                                                 "sm:opacity-0 sm:translate-y-5 sm:blur-md",
                                                 "transition-all duration-300 ease-out",
                                                 "sm:group-hover:[transition-delay:var(--enter-delay)]",
@@ -227,7 +228,7 @@ export function WebsiteCard({
                                             "--exit-delay": `0ms`,
                                         }}
                                         className={cn(
-                                            "bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-lg text-xs font-bold",
+                                            "bg-white z-20 backdrop-blur-sm px-3 py-1.5 rounded-lg text-xs font-bold",
                                             "sm:opacity-0 sm:translate-y-5 sm:blur-md",
                                             "transition-all duration-300 ease-out",
                                             "sm:group-hover:[transition-delay:var(--enter-delay)]",

@@ -10,6 +10,7 @@ import {
 import { ArrowUpRight, Layout, Tag, Palette } from "lucide-react";
 import Image from "next/image";
 import { SEARCH_CATEGORIES } from "@/lib/constants";
+import { getRefUrl } from "@/lib/utils/url";
 
 const WebsiteStructuredData = ({ website }) => {
     const jsonLd = {
@@ -91,7 +92,7 @@ export function WebsiteDialog({ website, isOpen, onClose, children }) {
                         <article className="website-details">
                             <header className="flex items-center mb-4">
                                 <a
-                                    href={website.href}
+                                    href={getRefUrl(website.href)}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="group inline-flex items-center text-foreground hover:text-gray-700"
