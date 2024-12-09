@@ -134,37 +134,38 @@ body {
     .scrollbar-hide::-webkit-scrollbar {
         display: none;
     }
+}
 
-    .glass-card {
-        --glass-lightness: 100%;
-        --glass-alpha: 0.1;
+.gradient-title {
+    background: linear-gradient(
+        120deg,
+        hsl(0, 0%, 100%) 0%,
+        hsl(0, 0%, 85%) 50%,
+        hsl(0, 0%, 100%) 100%
+    );
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: all 0.2s ease;
+    cursor: default;
+}
+
+.gradient-title:hover {
+    background-position: calc(var(--mouse-x, 0.5) * 100%)
+        calc(var(--mouse-y, 0.5) * 100%);
+}
+
+@media (prefers-color-scheme: dark) {
+    .gradient-title {
         background: linear-gradient(
-            135deg,
-            hsla(0, 0%, var(--glass-lightness), var(--glass-alpha)),
-            hsla(0, 0%, var(--glass-lightness), calc(var(--glass-alpha) * 0.5))
+            120deg,
+            hsl(0, 0%, 100%) 0%,
+            hsl(0, 0%, 60%) 50%,
+            hsl(0, 0%, 100%) 100%
         );
-    }
-
-    .glass-card::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        border-radius: inherit;
-        padding: 1px;
-        background: linear-gradient(
-            135deg,
-            hsla(0, 0%, 100%, 0.2),
-            hsla(0, 0%, 100%, 0.05)
-        );
-        -webkit-mask: linear-gradient(black, black) content-box,
-            linear-gradient(black, black);
-        -webkit-mask-composite: xor;
-        mask-composite: exclude;
-        pointer-events: none;
-    }
-
-    .dark .glass-card {
-        --glass-lightness: 0%;
-        --glass-alpha: 0.15;
+        background-size: 200% 200%;
+        -webkit-background-clip: text;
+        background-clip: text;
     }
 }

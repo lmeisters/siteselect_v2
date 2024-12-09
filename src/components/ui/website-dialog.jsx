@@ -55,10 +55,10 @@ const WebsiteStructuredData = ({ website }) => {
         publisher: {
             "@type": "Organization",
             name: "SiteSelect",
-            url: "https://siteselect.dev",
+            url: "https://siteselect.dev", // TODO change
             logo: {
                 "@type": "ImageObject",
-                url: "https://siteselect.dev/logo.png",
+                url: "https://siteselect.dev/logo.png", //TODO change
             },
         },
 
@@ -131,42 +131,43 @@ export function WebsiteDialog({ website, isOpen, onClose, children }) {
                     <div className="flex-1">
                         <article className="website-details">
                             <header className="flex items-center justify-between mb-4">
-                                <div className="flex items-center">
+                                <div className="flex flex-col">
+                                    <div className="flex items-center">
+                                        <a
+                                            href={getRefUrl(website.href)}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="group inline-flex items-center text-foreground hover:text-gray-700"
+                                            aria-label={`Visit ${website.name} website`}
+                                        >
+                                            <DialogTitle className="text-2xl font-bold">
+                                                {website.name}
+                                            </DialogTitle>
+                                        </a>
+                                    </div>
                                     <a
                                         href={getRefUrl(website.href)}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="group inline-flex items-center text-foreground hover:text-gray-700"
-                                        aria-label={`Visit ${website.name} website`}
+                                        className="text-sm text-muted-foreground hover:text-foreground transition-colors mt-1"
                                     >
-                                        <DialogTitle className="text-2xl font-bold">
-                                            {website.name}
-                                        </DialogTitle>
-                                        <ArrowUpRight className="ml-2 h-4 w-4 -mt-1 group-hover:text-gray-700 transition-all duration-300 transform group-hover:translate-x-[2px] group-hover:-translate-y-[2px]" />
+                                        {website.href}
                                     </a>
                                 </div>
-                                <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                                    {website.dateAdded && (
-                                        <div className="flex items-center gap-1">
-                                            <Calendar className="h-4 w-4" />
-                                            <span>
-                                                Added{" "}
-                                                {formatDate(website.dateAdded)}
-                                            </span>
-                                        </div>
-                                    )}
-                                    {website.language && (
-                                        <div className="flex items-center gap-1">
-                                            <Globe className="h-4 w-4" />
-                                            <span>{website.language}</span>
-                                        </div>
-                                    )}
-                                </div>
                             </header>
-                            <DialogDescription className="text-lg text-muted-foreground mb-6">
-                                {website.description}
-                            </DialogDescription>
-                            <figure className="relative w-full aspect-video rounded-lg overflow-hidden mb-6">
+                            <div className="space-y-4 mb-2">
+                                <DialogDescription className="text-lg text-muted-foreground">
+                                    {website.description}
+                                </DialogDescription>
+                                <p className="text-sm text-muted-foreground">
+                                    Last updated:{" "}
+                                    {formatDate(
+                                        website.lastUpdated || "2024-01-01"
+                                    )}
+                                </p>
+                            </div>
+                            <figure className="relative w-full aspect-video rounded-lg overflow-hidden">
+                                <div className="absolute inset-0 bg-black/5 z-10" />
                                 <Image
                                     src={imagePath}
                                     alt={`Screenshot of ${website.name}'s homepage`}
@@ -176,20 +177,6 @@ export function WebsiteDialog({ website, isOpen, onClose, children }) {
                                     priority
                                 />
                             </figure>
-                            {website.features && (
-                                <div className="mt-6">
-                                    <h3 className="text-lg font-semibold mb-2">
-                                        Key Features
-                                    </h3>
-                                    <ul className="list-disc list-inside space-y-1 text-muted-foreground">
-                                        {website.features.map(
-                                            (feature, index) => (
-                                                <li key={index}>{feature}</li>
-                                            )
-                                        )}
-                                    </ul>
-                                </div>
-                            )}
                         </article>
                     </div>
                     <div className="w-64 border-l pl-6">
@@ -221,7 +208,13 @@ export function WebsiteDialog({ website, isOpen, onClose, children }) {
                                                 {relevantTags.map((tag) => (
                                                     <span
                                                         key={tag}
-                                                        className="text-xs px-2 py-0.5 bg-secondary text-secondary-foreground rounded-md"
+                                                        onClick={() =>
+                                                            handleTagClick(
+                                                                category,
+                                                                tag
+                                                            )
+                                                        }
+                                                        className="text-xs px-2 py-0.5 bg-secondary text-secondary-foreground rounded-md cursor-pointer hover:bg-primary/10 transition-colors"
                                                     >
                                                         {tag}
                                                     </span>
