@@ -14,6 +14,11 @@ import {
     Palette,
     Calendar,
     Globe,
+    Brush,
+    Briefcase,
+    Activity,
+    RefreshCcw,
+    Code,
 } from "lucide-react";
 import Image from "next/image";
 import { SEARCH_CATEGORIES } from "@/lib/constants";
@@ -91,14 +96,22 @@ const WebsiteStructuredData = ({ website }) => {
 
 const categoryIcons = {
     Type: Layout,
-    Tag: Tag,
+    Style: Brush,
+    Industry: Briefcase,
     Color: Palette,
+    Feature: Activity,
+    Layout: RefreshCcw,
+    Platform: Code,
 };
 
 const allCategories = {
     Type: SEARCH_CATEGORIES.types,
-    Tag: SEARCH_CATEGORIES.tags,
+    Style: SEARCH_CATEGORIES.styles,
+    Industry: SEARCH_CATEGORIES.industries,
     Color: SEARCH_CATEGORIES.colors,
+    Feature: SEARCH_CATEGORIES.features,
+    Layout: SEARCH_CATEGORIES.layouts,
+    Platform: SEARCH_CATEGORIES.platforms,
 };
 
 export function WebsiteDialog({ website, isOpen, onClose, children }) {
@@ -108,17 +121,29 @@ export function WebsiteDialog({ website, isOpen, onClose, children }) {
 
     const categorizedTags = {
         types: [],
-        tags: [],
+        styles: [],
+        industries: [],
         colors: [],
+        features: [],
+        layouts: [],
+        platforms: [],
     };
 
     website.tags?.forEach((tag) => {
         if (SEARCH_CATEGORIES.types.includes(tag)) {
             categorizedTags.types.push(tag);
+        } else if (SEARCH_CATEGORIES.styles.includes(tag)) {
+            categorizedTags.styles.push(tag);
+        } else if (SEARCH_CATEGORIES.industries.includes(tag)) {
+            categorizedTags.industries.push(tag);
         } else if (SEARCH_CATEGORIES.colors.includes(tag)) {
             categorizedTags.colors.push(tag);
-        } else if (SEARCH_CATEGORIES.tags.includes(tag)) {
-            categorizedTags.tags.push(tag);
+        } else if (SEARCH_CATEGORIES.features.includes(tag)) {
+            categorizedTags.features.push(tag);
+        } else if (SEARCH_CATEGORIES.layouts.includes(tag)) {
+            categorizedTags.layouts.push(tag);
+        } else if (SEARCH_CATEGORIES.platforms.includes(tag)) {
+            categorizedTags.platforms.push(tag);
         }
     });
 

@@ -7,16 +7,24 @@ function getSearchParamsObject(searchParams) {
     if (!searchParams)
         return {
             query: "",
-            type: "",
-            tag: "",
-            color: "",
+            type: undefined,
+            style: undefined,
+            industry: undefined,
+            color: undefined,
+            feature: undefined,
+            layout: undefined,
+            platform: undefined,
         };
 
     return {
         query: searchParams.get("query") || "",
-        type: searchParams.get("type") || "",
-        tag: searchParams.get("tag") || "",
-        color: searchParams.get("color") || "",
+        type: searchParams.get("type") || undefined,
+        style: searchParams.get("style") || undefined,
+        industry: searchParams.get("industry") || undefined,
+        color: searchParams.get("color") || undefined,
+        feature: searchParams.get("feature") || undefined,
+        layout: searchParams.get("layout") || undefined,
+        platform: searchParams.get("platform") || undefined,
     };
 }
 

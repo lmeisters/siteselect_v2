@@ -1,6 +1,15 @@
 "use client";
 
-import { Search, Layout, Tag, Palette } from "lucide-react";
+import {
+    Search,
+    Layout,
+    Palette,
+    Brush,
+    Briefcase,
+    Activity,
+    RefreshCcw,
+    Code,
+} from "lucide-react";
 import {
     Command,
     CommandEmpty,
@@ -42,15 +51,23 @@ export function SearchCommand() {
     const [suggestion, setSuggestion] = useState("");
 
     const categories = {
-        type: "Types",
-        tag: "Tags",
-        color: "Colors",
+        types: "Types",
+        styles: "Styles",
+        industries: "Industries",
+        colors: "Colors",
+        features: "Features",
+        layouts: "Layouts",
+        platforms: "Platforms",
     };
 
     const categoryIcons = {
-        type: Layout,
-        tag: Tag,
-        color: Palette,
+        types: Layout,
+        styles: Brush,
+        industries: Briefcase,
+        colors: Palette,
+        features: Activity,
+        layouts: RefreshCcw,
+        platforms: Code,
     };
 
     useEffect(() => {
@@ -74,7 +91,7 @@ export function SearchCommand() {
             setSearchValue("");
             setSearchResults([]);
         } else {
-            setSelectedCategory("type");
+            setSelectedCategory("types");
         }
     }, [isOpen]);
 
@@ -176,10 +193,12 @@ export function SearchCommand() {
 
     const handleCategorySelect = (category, value) => {
         setIsOpen(false);
-        setSearch({ [category]: value.toLowerCase() });
+        const categoryParam = category.slice(0, -1); // Remove 's' from plural form
+        setSearch({ [categoryParam]: value.toLowerCase() });
+
         if (window.location.pathname !== "/directory") {
             router.push(
-                `/directory?${category}=${encodeURIComponent(
+                `/directory?${categoryParam}=${encodeURIComponent(
                     value.toLowerCase()
                 )}`
             );
@@ -274,8 +293,8 @@ export function SearchCommand() {
                             </button>
                         )}
                     </div>
-                    <div className="flex flex-col sm:flex-row">
-                        <CommandList className="w-full sm:w-[30%] max-h-[300px] sm:max-h-[400px] overflow-y-auto border-b sm:border-b-0 sm:border-r">
+                    <div className="flex flex-col sm:flex-row h-[400px] sm:h-[245px]">
+                        <CommandList className="w-full sm:w-[30%] border-b sm:border-b-0 sm:border-r">
                             <CommandEmpty>
                                 {isLoading
                                     ? "Searching..."
@@ -336,11 +355,11 @@ export function SearchCommand() {
                         </CommandList>
 
                         {selectedCategory && (
-                            <div className="w-full sm:w-[70%] max-h-[200px] sm:max-h-[400px] overflow-y-auto">
+                            <div className="w-full sm:w-[70%] overflow-y-auto">
                                 <CommandList>
                                     <CommandGroup>
                                         {SEARCH_CATEGORIES[
-                                            `${selectedCategory}s`
+                                            selectedCategory
                                         ]?.map((item) => (
                                             <CommandItem
                                                 key={item}
@@ -357,7 +376,7 @@ export function SearchCommand() {
                                                 </span>
                                                 <span className="text-xs text-muted-foreground mr-2">
                                                     {filterCounts[
-                                                        `${selectedCategory}s`
+                                                        selectedCategory
                                                     ]?.[item.toLowerCase()] ||
                                                         0}
                                                 </span>
