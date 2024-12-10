@@ -84,22 +84,68 @@ export async function searchWebsites({ query, type, tag, color }) {
         }
 
         if (type) {
-            supabaseQuery = supabaseQuery
-                .eq("website_tags.tags.category", "type")
-                .ilike("website_tags.tags.name", `%${type}%`);
+            const { data: taggedWebsites } = await supabase
+                .from("website_tags")
+                .select(
+                    `
+                    website_id,
+                    tags!inner (
+                        name
+                    )
+                `
+                )
+                .eq("tags.category", "type")
+                .ilike("tags.name", `%${type}%`);
+
+            if (taggedWebsites?.length > 0) {
+                const websiteIds = taggedWebsites.map((w) => w.website_id);
+                supabaseQuery = supabaseQuery.in("id", websiteIds);
+            } else {
+                return [];
+            }
         }
 
         if (tag) {
-            supabaseQuery = supabaseQuery.ilike(
-                "website_tags.tags.name",
-                `%${tag}%`
-            );
+            const { data: taggedWebsites } = await supabase
+                .from("website_tags")
+                .select(
+                    `
+                    website_id,
+                    tags!inner (
+                        name
+                    )
+                `
+                )
+                .ilike("tags.name", `%${tag}%`);
+
+            if (taggedWebsites?.length > 0) {
+                const websiteIds = taggedWebsites.map((w) => w.website_id);
+                supabaseQuery = supabaseQuery.in("id", websiteIds);
+            } else {
+                return [];
+            }
         }
 
         if (color) {
-            supabaseQuery = supabaseQuery
-                .eq("website_tags.tags.category", "color")
-                .ilike("website_tags.tags.name", `%${color}%`);
+            const { data: taggedWebsites } = await supabase
+                .from("website_tags")
+                .select(
+                    `
+                    website_id,
+                    tags!inner (
+                        name
+                    )
+                `
+                )
+                .eq("tags.category", "color")
+                .ilike("tags.name", `%${color}%`);
+
+            if (taggedWebsites?.length > 0) {
+                const websiteIds = taggedWebsites.map((w) => w.website_id);
+                supabaseQuery = supabaseQuery.in("id", websiteIds);
+            } else {
+                return [];
+            }
         }
 
         const { data, error } = await supabaseQuery;
@@ -109,7 +155,11 @@ export async function searchWebsites({ query, type, tag, color }) {
 
         return data.map((website) => ({
             ...website,
-            tags: website.website_tags?.map((wt) => wt.tags.name) || [],
+            tags: [
+                ...new Set(
+                    website.website_tags?.map((wt) => wt.tags.name) || []
+                ),
+            ],
         }));
     } catch (error) {
         console.error("Search error:", error);

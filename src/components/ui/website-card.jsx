@@ -8,7 +8,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { getRefUrl } from "@/lib/utils/url";
 
-function getPriorityTags(tags = [], maxTags) {
+function getPriorityTags(tags = [], maxTags, searchedTag = null) {
     const priorityTags = [
         "Design",
         "Development",
@@ -18,6 +18,12 @@ function getPriorityTags(tags = [], maxTags) {
     ];
 
     const sortedTags = [...tags].sort((a, b) => {
+        // If there's a searched tag, it should always come first
+        if (searchedTag) {
+            if (a.toLowerCase() === searchedTag.toLowerCase()) return -1;
+            if (b.toLowerCase() === searchedTag.toLowerCase()) return 1;
+        }
+
         const aIndex = priorityTags.indexOf(a);
         const bIndex = priorityTags.indexOf(b);
         if (aIndex === -1 && bIndex === -1) return 0;
@@ -37,6 +43,7 @@ export function WebsiteCard({
     tags = [],
     onNameClick,
     description,
+    tag,
 }) {
     const [isDialogOpen, setIsDialogOpen] = useState(false);
     const imagePath = `/images/${name.toLowerCase().replace(/\s+/g, "-")}.webp`;
@@ -59,13 +66,13 @@ export function WebsiteCard({
     useEffect(() => {
         const handleResize = () => {
             const maxTags = getMaxTagsForSize(window.innerWidth, size);
-            setVisibleTags(getPriorityTags(tags, maxTags));
+            setVisibleTags(getPriorityTags(tags, maxTags, tag));
         };
 
         handleResize();
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
-    }, [size, tags]);
+    }, [size, tags, tag]);
 
     return (
         <>

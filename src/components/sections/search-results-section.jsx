@@ -35,6 +35,11 @@ export function SearchResultsSection() {
         setSearch({ [category]: value.toLowerCase() });
     };
 
+    console.log(
+        "Websites with tags:",
+        websites.map((w) => ({ name: w.name, tags: w.tags }))
+    );
+
     return (
         <SectionLayout>
             <div className="flex gap-8">
@@ -74,41 +79,15 @@ export function SearchResultsSection() {
                             {websites.map((website) => (
                                 <WebsiteDialog
                                     key={website.id}
-                                    website={{
-                                        ...website,
-                                        tags: tag
-                                            ? [
-                                                  tag,
-                                                  ...(
-                                                      website.tags || []
-                                                  ).filter(
-                                                      (t) =>
-                                                          t.toLowerCase() !==
-                                                          tag.toLowerCase()
-                                                  ),
-                                              ]
-                                            : website.tags,
-                                    }}
+                                    website={website}
                                 >
                                     <div className="cursor-pointer">
                                         <WebsiteCard
                                             name={website.name}
                                             href={website.href}
-                                            tags={
-                                                tag
-                                                    ? [
-                                                          tag,
-                                                          ...(
-                                                              website.tags || []
-                                                          ).filter(
-                                                              (t) =>
-                                                                  t.toLowerCase() !==
-                                                                  tag.toLowerCase()
-                                                          ),
-                                                      ]
-                                                    : website.tags
-                                            }
+                                            tags={website.tags}
                                             description={website.description}
+                                            tag={tag}
                                         />
                                     </div>
                                 </WebsiteDialog>
