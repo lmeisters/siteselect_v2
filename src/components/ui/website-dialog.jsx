@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import {
     Dialog,
     DialogContent,
@@ -8,12 +9,8 @@ import {
     DialogTrigger,
 } from "@/components/ui/dialog";
 import {
-    ArrowUpRight,
     Layout,
-    Tag,
     Palette,
-    Calendar,
-    Globe,
     Brush,
     Briefcase,
     Activity,
@@ -117,6 +114,19 @@ const allCategories = {
 };
 
 export function WebsiteDialog({ website, isOpen, onClose, children }) {
+    const [expandedCategories, setExpandedCategories] = useState({});
+
+    const getVisibleTags = (tags, category, maxRows = 2) => {
+        if (!tags?.length) return [];
+        if (expandedCategories[category]) return tags;
+
+        const containerWidth = 256;
+        const tagsPerRow = Math.floor(containerWidth / 100);
+        const maxTags = tagsPerRow * maxRows;
+
+        return tags.slice(0, maxTags);
+    };
+
     const imagePath = `/images/${website.name
         .toLowerCase()
         .replace(/\s+/g, "-")}.webp`;
@@ -248,7 +258,10 @@ export function WebsiteDialog({ website, isOpen, onClose, children }) {
                                                 </h4>
                                             </div>
                                             <div className="flex flex-wrap gap-1.5">
-                                                {relevantTags.map((tag) => (
+                                                {getVisibleTags(
+                                                    relevantTags,
+                                                    category
+                                                ).map((tag) => (
                                                     <span
                                                         key={tag}
                                                         onClick={() =>
@@ -262,6 +275,38 @@ export function WebsiteDialog({ website, isOpen, onClose, children }) {
                                                         {tag}
                                                     </span>
                                                 ))}
+                                                {relevantTags.length >
+                                                    getVisibleTags(
+                                                        relevantTags,
+                                                        category
+                                                    ).length && (
+                                                    <button
+                                                        onClick={() =>
+                                                            setExpandedCategories(
+                                                                (prev) => ({
+                                                                    ...prev,
+                                                                    [category]:
+                                                                        !prev[
+                                                                            category
+                                                                        ],
+                                                                })
+                                                            )
+                                                        }
+                                                        className="text-xs px-2 py-0.5 bg-secondary text-secondary-foreground rounded-md cursor-pointer hover:bg-primary/10 transition-colors"
+                                                    >
+                                                        {expandedCategories[
+                                                            category
+                                                        ]
+                                                            ? "−"
+                                                            : `+${
+                                                                  relevantTags.length -
+                                                                  getVisibleTags(
+                                                                      relevantTags,
+                                                                      category
+                                                                  ).length
+                                                              }`}
+                                                    </button>
+                                                )}
                                             </div>
                                         </div>
                                     );
