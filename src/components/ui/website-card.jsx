@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import { WebsiteDialog } from "@/components/ui/website-dialog";
 import Image from "next/image";
 import { ArrowUpRight, Info } from "lucide-react";
@@ -42,42 +42,30 @@ export function WebsiteCard({
     const imagePath = `/images/${name.toLowerCase().replace(/\s+/g, "-")}.webp`;
     const hasImage = name !== "Featured Site";
 
-    const getMaxTags = useCallback(() => {
-        if (size === "featured") {
-            return {
-                sm: 3,
-                md: 8,
-                lg: 12,
-            };
+    const getMaxTagsForSize = (screenWidth, componentSize) => {
+        if (screenWidth < 640) {
+            return 3;
         }
-        return {
-            sm: 3,
-            md: 6,
-            lg: 8,
-        };
-    }, [size]);
+
+        const isLarge = screenWidth >= 768;
+        if (componentSize === "featured") {
+            return isLarge ? 12 : 8;
+        }
+        return isLarge ? 8 : 6;
+    };
 
     const [visibleTags, setVisibleTags] = useState([]);
-    const [screenSize, setScreenSize] = useState("lg");
 
     useEffect(() => {
         const handleResize = () => {
-            const width = window.innerWidth;
-            const newSize = width < 640 ? "sm" : width < 768 ? "md" : "lg";
-            if (newSize !== screenSize) {
-                setScreenSize(newSize);
-                const maxTags = getMaxTags()[newSize];
-                setVisibleTags(getPriorityTags(tags, maxTags));
-            }
+            const maxTags = getMaxTagsForSize(window.innerWidth, size);
+            setVisibleTags(getPriorityTags(tags, maxTags));
         };
 
-        // Initial setup
-        const maxTags = getMaxTags()[screenSize];
-        setVisibleTags(getPriorityTags(tags, maxTags));
-
+        handleResize();
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
-    }, [tags, screenSize, getMaxTags]);
+    }, [size, tags]);
 
     return (
         <>
