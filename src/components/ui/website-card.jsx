@@ -228,10 +228,8 @@ export function WebsiteCard({
                                             "sm:group-hover:[transition-delay:var(--enter-delay)]",
                                             "sm:group-hover:opacity-100 sm:group-hover:translate-y-0 sm:group-hover:blur-none",
                                             "sm:[transition-delay:var(--exit-delay)]",
-                                            "hover:bg-white",
                                             "hover:scale-110",
-                                            "active:scale-95",
-                                            "transition-transform"
+                                            "active:scale-95"
                                         )}
                                     >
                                         +

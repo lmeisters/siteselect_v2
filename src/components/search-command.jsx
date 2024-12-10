@@ -358,7 +358,14 @@ export function SearchCommand() {
                                                     }`}
                                                 >
                                                     <Icon className="mr-2 h-4 w-4" />
-                                                    <span className="capitalize">
+                                                    <span
+                                                        className={`capitalize ${
+                                                            selectedCategory ===
+                                                            key
+                                                                ? "font-medium"
+                                                                : ""
+                                                        }`}
+                                                    >
                                                         {label}
                                                     </span>
                                                 </CommandItem>
@@ -387,9 +394,29 @@ export function SearchCommand() {
                                                         item
                                                     )
                                                 }
-                                                className="cursor-pointer mb-0.5 last:mb-0"
+                                                className={`cursor-pointer mb-0.5 last:mb-0 ${
+                                                    type?.toLowerCase() ===
+                                                        item.toLowerCase() ||
+                                                    tag?.toLowerCase() ===
+                                                        item.toLowerCase() ||
+                                                    color?.toLowerCase() ===
+                                                        item.toLowerCase()
+                                                        ? "bg-accent"
+                                                        : ""
+                                                }`}
                                             >
-                                                <span className="flex-1 truncate">
+                                                <span
+                                                    className={`flex-1 truncate ${
+                                                        type?.toLowerCase() ===
+                                                            item.toLowerCase() ||
+                                                        tag?.toLowerCase() ===
+                                                            item.toLowerCase() ||
+                                                        color?.toLowerCase() ===
+                                                            item.toLowerCase()
+                                                            ? "font-medium"
+                                                            : ""
+                                                    }`}
+                                                >
                                                     {item}
                                                 </span>
                                                 <span className="text-xs text-muted-foreground mr-2">

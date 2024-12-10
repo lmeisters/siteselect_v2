@@ -1,5 +1,6 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import {
     Dialog,
@@ -16,12 +17,12 @@ import {
     Activity,
     RefreshCcw,
     Code,
+    X,
 } from "lucide-react";
 import Image from "next/image";
 import { SEARCH_CATEGORIES } from "@/lib/constants";
 import { getRefUrl } from "@/lib/utils/url";
 import { formatDate } from "@/lib/utils/date";
-import { useRouter } from "next/navigation";
 
 const WebsiteStructuredData = ({ website }) => {
     const jsonLd = {
@@ -185,6 +186,14 @@ export function WebsiteDialog({ website, isOpen, onClose, children }) {
         <Dialog open={isOpen} onOpenChange={onClose}>
             <DialogTrigger asChild>{children}</DialogTrigger>
             <DialogContent className="w-[90vw] max-w-4xl p-0 rounded-xl h-[90vh] sm:h-auto overflow-hidden">
+                <button
+                    onClick={onClose}
+                    className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary z-50"
+                >
+                    <X className="h-4 w-4" />
+                    <span className="sr-only">Close</span>
+                </button>
+
                 <WebsiteStructuredData website={website} />
 
                 <div className="h-full overflow-y-auto p-4 sm:p-6">
@@ -298,7 +307,9 @@ export function WebsiteDialog({ website, isOpen, onClose, children }) {
                                                             category
                                                         ).length && (
                                                         <button
-                                                            onClick={() =>
+                                                            onClick={(e) => {
+                                                                e.preventDefault();
+                                                                e.stopPropagation();
                                                                 setExpandedCategories(
                                                                     (prev) => ({
                                                                         ...prev,
@@ -307,8 +318,8 @@ export function WebsiteDialog({ website, isOpen, onClose, children }) {
                                                                                 category
                                                                             ],
                                                                     })
-                                                                )
-                                                            }
+                                                                );
+                                                            }}
                                                             className="text-xs px-2 py-0.5 bg-secondary text-secondary-foreground rounded-md cursor-pointer hover:bg-primary/10 transition-colors"
                                                         >
                                                             {expandedCategories[
