@@ -81,7 +81,7 @@ export function WebsiteCard({
 
     return (
         <>
-            <div className="relative">
+            <div className="relative group/card">
                 <button
                     onClick={(e) => {
                         e.stopPropagation();
@@ -91,10 +91,10 @@ export function WebsiteCard({
                     className={cn(
                         "z-20 bg-white rounded-2xl font-bold inline-flex items-center",
                         "transition-all duration-200 ease-out",
-                        "group/info absolute top-4 left-4",
+                        "absolute top-4 left-4",
                         size === "featured" ? "text-base" : "text-sm",
                         "px-3 py-1",
-                        "hover:pr-7"
+                        "group-hover/card:pr-7"
                     )}
                 >
                     <span>{name}</span>
@@ -103,7 +103,7 @@ export function WebsiteCard({
                             "absolute right-2",
                             "transition-all duration-200 ease-out",
                             "-translate-x-1 opacity-0 pointer-events-none",
-                            "group-hover/info:translate-x-0 group-hover/info:opacity-100",
+                            "group-hover/card:translate-x-0 group-hover/card:opacity-100",
                             size === "featured" ? "w-4 h-4 ml-1" : "w-3.5 h-3.5"
                         )}
                     />

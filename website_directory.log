@@ -1,0 +1,2159 @@
+2024-12-10 13:02:56,965 - INFO: Starting scraping of 9 websites
+2024-12-10 13:02:57,126 - INFO: Processing selector 1/23: Found 2 links
+2024-12-10 13:02:57,130 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:02:57,133 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:02:57,136 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:02:57,139 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:02:57,142 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:02:57,145 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:02:57,149 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:02:57,153 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:02:57,156 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:02:57,158 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:02:57,162 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:02:57,167 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:02:57,170 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:02:57,173 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:02:57,175 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:02:57,177 - INFO: Processing selector 17/23: Found 0 links
+2024-12-10 13:02:57,180 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:02:57,185 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:02:57,188 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:02:57,190 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:02:57,194 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:02:57,198 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:02:57,198 - INFO: Found 2 raw categories before deduplication
+2024-12-10 13:02:57,198 - INFO: Reduced to 2 unique categories
+2024-12-10 13:02:57,209 - INFO: Processing selector 1/23: Found 0 links
+2024-12-10 13:02:57,210 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:02:57,211 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:02:57,211 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:02:57,213 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:02:57,215 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:02:57,216 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:02:57,217 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:02:57,218 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:02:57,218 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:02:57,219 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:02:57,221 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:02:57,221 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:02:57,222 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:02:57,223 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:02:57,223 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:02:57,224 - INFO: Processing selector 17/23: Found 1 links
+2024-12-10 13:02:57,225 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:02:57,225 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:02:57,226 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:02:57,227 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:02:57,228 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:02:57,228 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:02:57,228 - INFO: Found 1 raw categories before deduplication
+2024-12-10 13:02:57,228 - INFO: Reduced to 1 unique categories
+2024-12-10 13:02:57,341 - INFO: Processing selector 1/23: Found 2 links
+2024-12-10 13:02:57,344 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:02:57,348 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:02:57,351 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:02:57,353 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:02:57,356 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:02:57,359 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:02:57,363 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:02:57,367 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:02:57,369 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:02:57,371 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:02:57,374 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:02:57,377 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:02:57,380 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:02:57,383 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:02:57,386 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:02:57,388 - INFO: Processing selector 17/23: Found 0 links
+2024-12-10 13:02:57,391 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:02:57,394 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:02:57,396 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:02:57,399 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:02:57,402 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:02:57,406 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:02:57,406 - INFO: Found 2 raw categories before deduplication
+2024-12-10 13:02:57,407 - INFO: Reduced to 2 unique categories
+2024-12-10 13:02:57,407 - INFO: Found 2 categories from https://godly.website/
+2024-12-10 13:02:57,407 - INFO: Processed link 1/10
+2024-12-10 13:02:57,448 - INFO: Processing selector 1/23: Found 0 links
+2024-12-10 13:02:57,448 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:02:57,449 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:02:57,450 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:02:57,451 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:02:57,451 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:02:57,452 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:02:57,453 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:02:57,453 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:02:57,454 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:02:57,455 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:02:57,456 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:02:57,457 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:02:57,458 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:02:57,458 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:02:57,459 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:02:57,460 - INFO: Processing selector 17/23: Found 1 links
+2024-12-10 13:02:57,461 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:02:57,461 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:02:57,462 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:02:57,464 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:02:57,464 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:02:57,465 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:02:57,465 - INFO: Found 1 raw categories before deduplication
+2024-12-10 13:02:57,465 - INFO: Reduced to 1 unique categories
+2024-12-10 13:02:57,465 - INFO: Found 1 categories from https://www.storefront.design/
+2024-12-10 13:02:57,465 - INFO: Processed link 1/10
+2024-12-10 13:02:57,465 - INFO: Skipping external link 2/10
+2024-12-10 13:02:57,465 - INFO: Skipping external link 3/10
+2024-12-10 13:02:57,466 - INFO: Scraped 1 categories from storefront.design
+2024-12-10 13:02:57,466 - INFO: Successfully scraped https://www.storefront.design/ - Found 1 categories
+2024-12-10 13:02:57,466 - INFO: Completed 1/9 websites
+2024-12-10 13:02:57,562 - INFO: Processing selector 1/23: Found 2 links
+2024-12-10 13:02:57,575 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:02:57,582 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:02:57,592 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:02:57,601 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:02:57,609 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:02:57,618 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:02:57,628 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:02:57,637 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:02:57,642 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:02:57,648 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:02:57,657 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:02:57,667 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:02:57,678 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:02:57,689 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:02:57,697 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:02:57,704 - INFO: Processing selector 17/23: Found 0 links
+2024-12-10 13:02:57,716 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:02:57,727 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:02:57,734 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:02:57,747 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:02:57,758 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:02:57,779 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:02:57,801 - INFO: Found 2 raw categories before deduplication
+2024-12-10 13:02:57,816 - INFO: Reduced to 2 unique categories
+2024-12-10 13:02:57,831 - INFO: Found 2 categories from https://godly.website/directory
+2024-12-10 13:02:57,833 - INFO: Processing selector 1/23: Found 0 links
+2024-12-10 13:02:57,833 - INFO: Processed link 2/10
+2024-12-10 13:02:57,935 - INFO: Processing selector 1/23: Found 12 links
+2024-12-10 13:02:57,942 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:02:57,960 - INFO: Processing selector 1/23: Found 10 links
+2024-12-10 13:02:57,972 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:02:57,978 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:02:57,995 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:02:58,004 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:02:58,012 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:02:58,023 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:02:58,036 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:02:58,043 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:02:58,057 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:02:58,066 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:02:58,072 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:02:58,082 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:02:58,092 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:02:58,111 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:02:58,144 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:02:58,193 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:02:58,210 - INFO: Processing selector 1/23: Found 0 links
+2024-12-10 13:02:58,219 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:02:58,241 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:02:58,244 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:02:58,272 - INFO: Processing selector 2/23: Found 27 links
+2024-12-10 13:02:58,281 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:02:58,294 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:02:58,307 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:02:58,323 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:02:58,327 - INFO: Processing selector 1/23: Found 2 links
+2024-12-10 13:02:58,331 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:02:58,338 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:02:58,350 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:02:58,374 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:02:58,375 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:02:58,379 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:02:58,385 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:02:58,389 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:02:58,390 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:02:58,405 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:02:58,411 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:02:58,426 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:02:58,430 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:02:58,431 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:02:58,446 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:02:58,453 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:02:58,463 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:02:58,472 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:02:58,473 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:02:58,497 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:02:58,506 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:02:58,517 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:02:58,531 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:02:58,532 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:02:58,556 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:02:58,564 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:02:58,577 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:02:58,590 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:02:58,591 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:02:58,614 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:02:58,624 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:02:58,635 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:02:58,654 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:02:58,655 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:02:58,663 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:02:58,672 - INFO: Processing selector 17/23: Found 2 links
+2024-12-10 13:02:58,683 - INFO: Processing selector 17/23: Found 12 links
+2024-12-10 13:02:58,693 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:02:58,694 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:02:58,704 - INFO: Processing selector 11/23: Found 12 links
+2024-12-10 13:02:58,712 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:02:58,728 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:02:58,740 - INFO: Processing selector 17/23: Found 11 links
+2024-12-10 13:02:58,741 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:02:58,758 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:02:58,766 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:02:58,801 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:02:58,803 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:02:58,804 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:02:58,826 - INFO: Processing selector 20/23: Found 20 links
+2024-12-10 13:02:58,908 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:02:58,913 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:02:58,917 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:02:58,918 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:02:58,927 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:02:58,963 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:02:58,964 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:02:58,976 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:02:58,977 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:02:58,985 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:02:58,999 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:02:59,026 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:02:59,039 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:02:59,040 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:02:59,048 - INFO: Processing selector 23/23: Found 20 links
+2024-12-10 13:02:59,062 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:02:59,087 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:02:59,090 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:02:59,091 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:02:59,091 - INFO: Found 34 raw categories before deduplication
+2024-12-10 13:02:59,104 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:02:59,104 - INFO: Found 12 raw categories before deduplication
+2024-12-10 13:02:59,120 - INFO: Processing selector 17/23: Found 0 links
+2024-12-10 13:02:59,121 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:02:59,121 - INFO: Reduced to 10 unique categories
+2024-12-10 13:02:59,121 - INFO: Found 17 raw categories before deduplication
+2024-12-10 13:02:59,121 - INFO: Reduced to 3 unique categories
+2024-12-10 13:02:59,146 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:02:59,147 - INFO: Processing selector 17/23: Found 0 links
+2024-12-10 13:02:59,149 - INFO: Reduced to 15 unique categories
+2024-12-10 13:02:59,176 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:02:59,177 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:02:59,203 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:02:59,216 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:02:59,217 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:02:59,246 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:02:59,248 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:02:59,275 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:02:59,276 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:02:59,295 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:02:59,295 - INFO: Found 2 raw categories before deduplication
+2024-12-10 13:02:59,295 - INFO: Processing selector 23/23: Found 163 links
+2024-12-10 13:02:59,296 - INFO: Reduced to 2 unique categories
+2024-12-10 13:02:59,301 - INFO: Found 191 raw categories before deduplication
+2024-12-10 13:02:59,302 - INFO: Found 2 categories from https://godly.website/info
+2024-12-10 13:02:59,302 - INFO: Reduced to 102 unique categories
+2024-12-10 13:02:59,302 - INFO: Processed link 3/10
+2024-12-10 13:02:59,307 - INFO: Skipping external link 4/10
+2024-12-10 13:02:59,455 - INFO: Processing selector 1/23: Found 2 links
+2024-12-10 13:02:59,458 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:02:59,460 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:02:59,463 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:02:59,465 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:02:59,468 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:02:59,471 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:02:59,474 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:02:59,477 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:02:59,478 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:02:59,480 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:02:59,482 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:02:59,485 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:02:59,488 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:02:59,491 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:02:59,493 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:02:59,495 - INFO: Processing selector 17/23: Found 0 links
+2024-12-10 13:02:59,499 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:02:59,502 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:02:59,504 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:02:59,508 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:02:59,511 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:02:59,515 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:02:59,515 - INFO: Found 2 raw categories before deduplication
+2024-12-10 13:02:59,515 - INFO: Reduced to 2 unique categories
+2024-12-10 13:02:59,515 - INFO: Found 2 categories from https://godly.website/website/roasted-1018
+2024-12-10 13:02:59,515 - INFO: Processed link 5/10
+2024-12-10 13:02:59,515 - INFO: Skipping external link 6/10
+2024-12-10 13:02:59,600 - INFO: Processing selector 1/23: Found 12 links
+2024-12-10 13:02:59,611 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:02:59,619 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:02:59,629 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:02:59,638 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:02:59,646 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:02:59,657 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:02:59,667 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:02:59,678 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:02:59,685 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:02:59,692 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:02:59,708 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:02:59,719 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:02:59,736 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:02:59,747 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:02:59,756 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:02:59,765 - INFO: Processing selector 17/23: Found 12 links
+2024-12-10 13:02:59,776 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:02:59,786 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:02:59,795 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:02:59,807 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:02:59,818 - INFO: Processing selector 1/23: Found 2 links
+2024-12-10 13:02:59,831 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:02:59,835 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:02:59,851 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:02:59,854 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:02:59,854 - INFO: Found 12 raw categories before deduplication
+2024-12-10 13:02:59,858 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:02:59,858 - INFO: Reduced to 3 unique categories
+2024-12-10 13:02:59,861 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:02:59,890 - INFO: Found 3 categories from https://browsingmode.com/
+2024-12-10 13:02:59,941 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:02:59,941 - INFO: Processed link 1/10
+2024-12-10 13:02:59,945 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:02:59,950 - INFO: Processing selector 1/23: Found 0 links
+2024-12-10 13:02:59,994 - INFO: Processing selector 1/23: Found 0 links
+2024-12-10 13:02:59,999 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:00,024 - INFO: Processing selector 2/23: Found 27 links
+2024-12-10 13:03:00,034 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:03:00,039 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:00,058 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:00,068 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:00,070 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:00,100 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:00,109 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:00,111 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:00,130 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:00,134 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:00,137 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:00,144 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:00,174 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:00,182 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:00,214 - INFO: Processing selector 1/23: Found 10 links
+2024-12-10 13:03:00,226 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:00,229 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:00,252 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:00,268 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:03:00,277 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:00,281 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:00,305 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:00,315 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:00,327 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:00,329 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:00,353 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:00,369 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:00,374 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:00,376 - INFO: Processing selector 17/23: Found 0 links
+2024-12-10 13:03:00,384 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:00,394 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:00,401 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:00,404 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:00,411 - INFO: Processing selector 11/23: Found 12 links
+2024-12-10 13:03:00,423 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:00,433 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:00,442 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:00,499 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:00,554 - INFO: Processing selector 1/23: Found 12 links
+2024-12-10 13:03:00,555 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:00,562 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:00,566 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:00,592 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:00,604 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:03:00,620 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:00,629 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:00,633 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:00,660 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:00,670 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:00,684 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:00,692 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:00,696 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:00,722 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:00,733 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:00,738 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:00,744 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:00,747 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:03:00,762 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:00,771 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:00,776 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:00,786 - INFO: Processing selector 17/23: Found 2 links
+2024-12-10 13:03:00,786 - INFO: Found 2 raw categories before deduplication
+2024-12-10 13:03:00,803 - INFO: Processing selector 17/23: Found 0 links
+2024-12-10 13:03:00,814 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:00,820 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:00,829 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:00,829 - INFO: Reduced to 2 unique categories
+2024-12-10 13:03:00,865 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:00,866 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:00,882 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:00,891 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:00,891 - INFO: Found 2 categories from https://godly.website/website/konstantin-1017
+2024-12-10 13:03:00,902 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:00,927 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:00,945 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:00,952 - INFO: Processing selector 20/23: Found 20 links
+2024-12-10 13:03:00,952 - INFO: Processed link 7/10
+2024-12-10 13:03:00,963 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:00,992 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:01,003 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:01,013 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:01,013 - INFO: Skipping external link 8/10
+2024-12-10 13:03:01,020 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:01,035 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:01,066 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:01,070 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:01,078 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:01,093 - INFO: Processing selector 17/23: Found 11 links
+2024-12-10 13:03:01,101 - INFO: Processing selector 23/23: Found 20 links
+2024-12-10 13:03:01,142 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:01,158 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:01,159 - INFO: Found 34 raw categories before deduplication
+2024-12-10 13:03:01,162 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:01,179 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:01,190 - INFO: Processing selector 23/23: Found 163 links
+2024-12-10 13:03:01,190 - INFO: Reduced to 10 unique categories
+2024-12-10 13:03:01,207 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:01,221 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:01,227 - INFO: Found 191 raw categories before deduplication
+2024-12-10 13:03:01,227 - INFO: Found 10 categories from https://minimal.gallery/
+2024-12-10 13:03:01,243 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:01,260 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:01,261 - INFO: Reduced to 102 unique categories
+2024-12-10 13:03:01,261 - INFO: Processed link 1/10
+2024-12-10 13:03:01,275 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:01,285 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:01,285 - INFO: Found 102 categories from https://www.lapa.ninja/
+2024-12-10 13:03:01,300 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:01,310 - INFO: Processing selector 17/23: Found 12 links
+2024-12-10 13:03:01,310 - INFO: Processed link 1/10
+2024-12-10 13:03:01,324 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:03:01,336 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:01,338 - INFO: Found 17 raw categories before deduplication
+2024-12-10 13:03:01,349 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:01,350 - INFO: Reduced to 15 unique categories
+2024-12-10 13:03:01,359 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:01,359 - INFO: Found 15 categories from https://www.siteinspire.com/
+2024-12-10 13:03:01,371 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:01,371 - INFO: Processed link 1/10
+2024-12-10 13:03:01,384 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:01,396 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:03:01,396 - INFO: Found 12 raw categories before deduplication
+2024-12-10 13:03:01,396 - INFO: Reduced to 3 unique categories
+2024-12-10 13:03:01,396 - INFO: Found 3 categories from https://browsingmode.com/
+2024-12-10 13:03:01,396 - INFO: Processed link 2/10
+2024-12-10 13:03:01,414 - INFO: Processing selector 1/23: Found 2 links
+2024-12-10 13:03:01,418 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:03:01,420 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:01,424 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:01,426 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:01,428 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:01,431 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:01,435 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:01,439 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:01,440 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:01,442 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:01,444 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:01,447 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:01,451 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:01,454 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:01,457 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:01,459 - INFO: Processing selector 17/23: Found 0 links
+2024-12-10 13:03:01,462 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:01,466 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:01,470 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:01,473 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:01,478 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:01,481 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:03:01,481 - INFO: Found 2 raw categories before deduplication
+2024-12-10 13:03:01,481 - INFO: Reduced to 2 unique categories
+2024-12-10 13:03:01,481 - INFO: Found 2 categories from https://godly.website/website/unveil-1016
+2024-12-10 13:03:01,481 - INFO: Processed link 9/10
+2024-12-10 13:03:01,482 - INFO: Skipping external link 10/10
+2024-12-10 13:03:01,482 - INFO: Scraped 2 categories from godly.website
+2024-12-10 13:03:01,482 - INFO: Successfully scraped https://godly.website/ - Found 2 categories
+2024-12-10 13:03:01,483 - INFO: Completed 2/9 websites
+2024-12-10 13:03:01,678 - INFO: Processing selector 1/23: Found 0 links
+2024-12-10 13:03:01,700 - INFO: Processing selector 2/23: Found 27 links
+2024-12-10 13:03:01,715 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:01,737 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:01,751 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:01,765 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:01,785 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:01,807 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:01,829 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:01,835 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:01,842 - INFO: Processing selector 11/23: Found 12 links
+2024-12-10 13:03:01,852 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:01,876 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:01,902 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:01,923 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:01,938 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:01,953 - INFO: Processing selector 17/23: Found 0 links
+2024-12-10 13:03:01,975 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:01,998 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:02,041 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:02,130 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:02,138 - INFO: Processing selector 1/23: Found 12 links
+2024-12-10 13:03:02,155 - INFO: Processing selector 1/23: Found 10 links
+2024-12-10 13:03:02,168 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:03:02,173 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:02,194 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:03:02,247 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:02,318 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:02,333 - INFO: Processing selector 1/23: Found 8 links
+2024-12-10 13:03:02,335 - INFO: Processing selector 23/23: Found 163 links
+2024-12-10 13:03:02,338 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:02,351 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:02,380 - INFO: Processing selector 2/23: Found 2 links
+2024-12-10 13:03:02,385 - INFO: Found 191 raw categories before deduplication
+2024-12-10 13:03:02,388 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:02,398 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:02,417 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:02,417 - INFO: Reduced to 102 unique categories
+2024-12-10 13:03:02,420 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:02,429 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:02,457 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:02,457 - INFO: Found 102 categories from https://www.lapa.ninja/category/3d-websites/
+2024-12-10 13:03:02,460 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:02,473 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:02,490 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:02,490 - INFO: Processed link 2/10
+2024-12-10 13:03:02,493 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:02,506 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:02,525 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:02,529 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:02,569 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:02,598 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:02,632 - INFO: Processing selector 1/23: Found 0 links
+2024-12-10 13:03:02,634 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:02,638 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:02,678 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:03:02,681 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:02,683 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:02,687 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:02,724 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:02,727 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:02,730 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:02,736 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:02,745 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:02,759 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:02,761 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:02,773 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:02,781 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:02,792 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:02,796 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:02,817 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:02,821 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:02,832 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:02,835 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:02,862 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:02,874 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:02,887 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:02,889 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:02,923 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:02,928 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:02,941 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:02,943 - INFO: Processing selector 17/23: Found 12 links
+2024-12-10 13:03:02,952 - INFO: Processing selector 17/23: Found 11 links
+2024-12-10 13:03:02,986 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:02,995 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:02,998 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:03,012 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:03,018 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:03,037 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:03,040 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:03,052 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:03,058 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:03,069 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:03,079 - INFO: Processing selector 17/23: Found 9 links
+2024-12-10 13:03:03,092 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:03,103 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:03,106 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:03,124 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:03,146 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:03,159 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:03,162 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:03,175 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:03,201 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:03,223 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:03:03,223 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:03,235 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:03:03,250 - INFO: Found 12 raw categories before deduplication
+2024-12-10 13:03:03,269 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:03,325 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:03,353 - INFO: Processing selector 1/23: Found 0 links
+2024-12-10 13:03:03,353 - INFO: Found 17 raw categories before deduplication
+2024-12-10 13:03:03,354 - INFO: Reduced to 3 unique categories
+2024-12-10 13:03:03,385 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:03,397 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:03,406 - INFO: Reduced to 15 unique categories
+2024-12-10 13:03:03,417 - INFO: Processing selector 2/23: Found 27 links
+2024-12-10 13:03:03,418 - INFO: Found 3 categories from https://browsingmode.com/about
+2024-12-10 13:03:03,463 - INFO: Processing selector 17/23: Found 2 links
+2024-12-10 13:03:03,472 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:03,472 - INFO: Found 15 categories from https://www.siteinspire.com/websites
+2024-12-10 13:03:03,487 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:03,487 - INFO: Processed link 3/10
+2024-12-10 13:03:03,502 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:03,513 - INFO: Processed link 2/10
+2024-12-10 13:03:03,535 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:03:03,557 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:03,570 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:03,571 - INFO: Found 12 raw categories before deduplication
+2024-12-10 13:03:03,585 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:03,598 - INFO: Processing selector 20/23: Found 20 links
+2024-12-10 13:03:03,599 - INFO: Reduced to 12 unique categories
+2024-12-10 13:03:03,621 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:03,628 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:03,647 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:03,667 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:03,679 - INFO: Processing selector 23/23: Found 20 links
+2024-12-10 13:03:03,700 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:03,701 - INFO: Found 34 raw categories before deduplication
+2024-12-10 13:03:03,723 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:03,723 - INFO: Reduced to 10 unique categories
+2024-12-10 13:03:03,730 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:03,731 - INFO: Found 10 categories from https://minimal.gallery/templates/
+2024-12-10 13:03:03,740 - INFO: Processing selector 11/23: Found 12 links
+2024-12-10 13:03:03,740 - INFO: Processed link 2/10
+2024-12-10 13:03:03,753 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:03,775 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:03,797 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:03,820 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:03,835 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:03,851 - INFO: Processing selector 17/23: Found 0 links
+2024-12-10 13:03:03,873 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:03,895 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:03,919 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:03,942 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:03,966 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:03,981 - INFO: Processing selector 23/23: Found 163 links
+2024-12-10 13:03:03,986 - INFO: Found 191 raw categories before deduplication
+2024-12-10 13:03:03,986 - INFO: Reduced to 102 unique categories
+2024-12-10 13:03:03,987 - INFO: Found 102 categories from https://www.lapa.ninja/category/saas/
+2024-12-10 13:03:03,987 - INFO: Processed link 3/10
+2024-12-10 13:03:04,134 - INFO: Processing selector 1/23: Found 12 links
+2024-12-10 13:03:04,146 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:03:04,154 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:04,165 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:04,175 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:04,184 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:04,196 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:04,209 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:04,220 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:04,227 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:04,234 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:04,249 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:04,261 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:04,271 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:04,282 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:04,290 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:04,298 - INFO: Processing selector 17/23: Found 12 links
+2024-12-10 13:03:04,309 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:04,320 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:04,328 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:04,339 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:04,350 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:04,361 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:03:04,361 - INFO: Found 12 raw categories before deduplication
+2024-12-10 13:03:04,361 - INFO: Reduced to 3 unique categories
+2024-12-10 13:03:04,362 - INFO: Found 3 categories from https://browsingmode.com/
+2024-12-10 13:03:04,362 - INFO: Processed link 4/10
+2024-12-10 13:03:04,459 - INFO: Processing selector 1/23: Found 8 links
+2024-12-10 13:03:04,487 - INFO: Processing selector 2/23: Found 2 links
+2024-12-10 13:03:04,505 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:04,541 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:04,560 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:04,580 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:04,611 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:04,654 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:04,769 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:04,778 - INFO: Processing selector 1/23: Found 0 links
+2024-12-10 13:03:04,789 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:04,805 - INFO: Processing selector 1/23: Found 10 links
+2024-12-10 13:03:04,827 - INFO: Processing selector 2/23: Found 27 links
+2024-12-10 13:03:04,836 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:04,841 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:03:04,857 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:04,871 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:04,875 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:04,898 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:04,926 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:04,930 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:04,951 - INFO: Processing selector 1/23: Found 0 links
+2024-12-10 13:03:04,967 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:04,970 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:04,989 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:03:05,005 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:05,018 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:05,022 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:05,025 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:05,048 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:05,101 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:05,103 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:05,164 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:05,230 - INFO: Processing selector 1/23: Found 12 links
+2024-12-10 13:03:05,238 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:05,242 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:05,261 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:05,264 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:05,278 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:03:05,300 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:05,303 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:05,328 - INFO: Processing selector 17/23: Found 9 links
+2024-12-10 13:03:05,331 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:05,340 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:05,347 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:05,349 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:05,384 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:05,387 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:05,400 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:05,408 - INFO: Processing selector 11/23: Found 12 links
+2024-12-10 13:03:05,409 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:05,413 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:05,453 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:05,454 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:05,466 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:05,469 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:05,472 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:05,482 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:05,530 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:05,538 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:05,543 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:05,545 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:05,557 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:05,612 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:05,615 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:05,619 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:05,621 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:05,632 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:05,655 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:05,670 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:05,689 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:05,693 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:05,703 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:05,717 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:05,721 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:05,749 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:05,756 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:03:05,764 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:05,767 - INFO: Processing selector 17/23: Found 11 links
+2024-12-10 13:03:05,782 - INFO: Processing selector 17/23: Found 0 links
+2024-12-10 13:03:05,785 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:05,786 - INFO: Found 12 raw categories before deduplication
+2024-12-10 13:03:05,793 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:05,798 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:05,813 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:05,822 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:05,822 - INFO: Reduced to 12 unique categories
+2024-12-10 13:03:05,839 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:05,843 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:05,846 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:05,867 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:05,868 - INFO: Found 12 categories from https://land-book.com/
+2024-12-10 13:03:05,878 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:05,884 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:05,887 - INFO: Processing selector 17/23: Found 2 links
+2024-12-10 13:03:05,916 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:05,916 - INFO: Processed link 1/10
+2024-12-10 13:03:05,927 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:05,930 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:05,933 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:05,958 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:05,971 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:05,974 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:05,978 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:06,013 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:06,016 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:06,019 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:03:06,023 - INFO: Processing selector 20/23: Found 20 links
+2024-12-10 13:03:06,033 - INFO: Processing selector 17/23: Found 12 links
+2024-12-10 13:03:06,049 - INFO: Processing selector 23/23: Found 163 links
+2024-12-10 13:03:06,049 - INFO: Found 17 raw categories before deduplication
+2024-12-10 13:03:06,053 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:06,064 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:06,071 - INFO: Found 191 raw categories before deduplication
+2024-12-10 13:03:06,072 - INFO: Reduced to 15 unique categories
+2024-12-10 13:03:06,075 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:06,086 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:06,086 - INFO: Reduced to 102 unique categories
+2024-12-10 13:03:06,086 - INFO: Found 15 categories from https://www.siteinspire.com/directory
+2024-12-10 13:03:06,089 - INFO: Processing selector 23/23: Found 20 links
+2024-12-10 13:03:06,097 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:06,098 - INFO: Found 102 categories from https://www.lapa.ninja/category/ecommerce/
+2024-12-10 13:03:06,098 - INFO: Processed link 3/10
+2024-12-10 13:03:06,099 - INFO: Found 34 raw categories before deduplication
+2024-12-10 13:03:06,112 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:06,112 - INFO: Processed link 4/10
+2024-12-10 13:03:06,113 - INFO: Reduced to 10 unique categories
+2024-12-10 13:03:06,125 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:06,126 - INFO: Found 10 categories from https://minimal.gallery/talents/
+2024-12-10 13:03:06,142 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:03:06,143 - INFO: Processed link 3/10
+2024-12-10 13:03:06,143 - INFO: Found 12 raw categories before deduplication
+2024-12-10 13:03:06,145 - INFO: Reduced to 3 unique categories
+2024-12-10 13:03:06,146 - INFO: Found 3 categories from https://browsingmode.com/
+2024-12-10 13:03:06,146 - INFO: Processed link 5/10
+2024-12-10 13:03:06,427 - INFO: Processing selector 1/23: Found 0 links
+2024-12-10 13:03:06,451 - INFO: Processing selector 2/23: Found 27 links
+2024-12-10 13:03:06,467 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:06,492 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:06,509 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:06,529 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:06,565 - INFO: Processing selector 1/23: Found 12 links
+2024-12-10 13:03:06,578 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:06,581 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:03:06,608 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:06,610 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:06,668 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:06,670 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:06,713 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:06,752 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:06,758 - INFO: Processing selector 1/23: Found 8 links
+2024-12-10 13:03:06,766 - INFO: Processing selector 11/23: Found 12 links
+2024-12-10 13:03:06,768 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:06,776 - INFO: Processing selector 1/23: Found 10 links
+2024-12-10 13:03:06,810 - INFO: Processing selector 2/23: Found 2 links
+2024-12-10 13:03:06,822 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:06,825 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:06,828 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:03:06,863 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:06,873 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:06,876 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:06,878 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:06,916 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:06,941 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:06,948 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:06,951 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:06,972 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:06,974 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:07,003 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:07,009 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:07,052 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:07,094 - INFO: Processing selector 1/23: Found 0 links
+2024-12-10 13:03:07,105 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:07,107 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:07,138 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:07,147 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:07,159 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:03:07,189 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:07,203 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:07,224 - INFO: Processing selector 17/23: Found 0 links
+2024-12-10 13:03:07,228 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:07,233 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:07,237 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:07,284 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:07,293 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:07,296 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:07,303 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:07,305 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:07,351 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:07,360 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:07,363 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:07,369 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:07,371 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:07,382 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:07,412 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:07,415 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:07,421 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:07,422 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:07,432 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:07,435 - INFO: Processing selector 17/23: Found 12 links
+2024-12-10 13:03:07,463 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:07,471 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:07,473 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:07,494 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:07,497 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:07,504 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:07,536 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:07,537 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:07,569 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:07,574 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:07,581 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:07,584 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:07,605 - INFO: Processing selector 23/23: Found 163 links
+2024-12-10 13:03:07,608 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:07,639 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:07,644 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:07,647 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:07,653 - INFO: Found 191 raw categories before deduplication
+2024-12-10 13:03:07,656 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:07,687 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:07,691 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:07,693 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:07,693 - INFO: Reduced to 102 unique categories
+2024-12-10 13:03:07,696 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:07,714 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:07,720 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:07,723 - INFO: Processing selector 17/23: Found 11 links
+2024-12-10 13:03:07,723 - INFO: Found 102 categories from https://www.lapa.ninja/color/black/
+2024-12-10 13:03:07,726 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:03:07,746 - INFO: Processing selector 17/23: Found 9 links
+2024-12-10 13:03:07,752 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:07,755 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:07,755 - INFO: Processed link 5/10
+2024-12-10 13:03:07,755 - INFO: Found 12 raw categories before deduplication
+2024-12-10 13:03:07,789 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:07,792 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:07,794 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:07,794 - INFO: Reduced to 3 unique categories
+2024-12-10 13:03:07,800 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:07,832 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:07,835 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:07,835 - INFO: Found 3 categories from https://browsingmode.com/about
+2024-12-10 13:03:07,842 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:07,844 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:07,869 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:07,869 - INFO: Processed link 6/10
+2024-12-10 13:03:07,877 - INFO: Processing selector 17/23: Found 2 links
+2024-12-10 13:03:07,879 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:07,916 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:07,924 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:07,926 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:03:07,958 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:07,959 - INFO: Found 17 raw categories before deduplication
+2024-12-10 13:03:07,967 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:07,974 - INFO: Processing selector 20/23: Found 20 links
+2024-12-10 13:03:07,974 - INFO: Reduced to 15 unique categories
+2024-12-10 13:03:08,004 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:08,011 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:03:08,011 - INFO: Found 15 categories from https://www.siteinspire.com/about
+2024-12-10 13:03:08,019 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:08,019 - INFO: Found 12 raw categories before deduplication
+2024-12-10 13:03:08,019 - INFO: Processed link 4/10
+2024-12-10 13:03:08,025 - INFO: Processing selector 23/23: Found 20 links
+2024-12-10 13:03:08,025 - INFO: Reduced to 12 unique categories
+2024-12-10 13:03:08,026 - INFO: Found 34 raw categories before deduplication
+2024-12-10 13:03:08,026 - INFO: Found 12 categories from https://land-book.com/
+2024-12-10 13:03:08,027 - INFO: Reduced to 10 unique categories
+2024-12-10 13:03:08,027 - INFO: Processed link 2/10
+2024-12-10 13:03:08,027 - INFO: Found 10 categories from https://minimal.gallery/tools/
+2024-12-10 13:03:08,028 - INFO: Processed link 4/10
+2024-12-10 13:03:08,328 - INFO: Processing selector 1/23: Found 12 links
+2024-12-10 13:03:08,341 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:03:08,350 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:08,362 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:08,373 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:08,382 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:08,394 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:08,406 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:08,414 - INFO: Processing selector 1/23: Found 10 links
+2024-12-10 13:03:08,426 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:08,428 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:03:08,436 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:08,438 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:08,447 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:08,450 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:08,468 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:08,470 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:08,484 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:08,486 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:08,503 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:08,505 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:08,523 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:08,526 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:08,573 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:08,577 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:08,632 - INFO: Processing selector 17/23: Found 12 links
+2024-12-10 13:03:08,665 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:08,683 - INFO: Processing selector 1/23: Found 8 links
+2024-12-10 13:03:08,694 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:08,696 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:08,720 - INFO: Processing selector 2/23: Found 2 links
+2024-12-10 13:03:08,733 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:08,735 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:08,751 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:08,760 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:08,762 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:08,792 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:08,798 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:08,810 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:08,813 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:08,860 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:08,875 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:08,895 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:08,940 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:08,942 - INFO: Processing selector 1/23: Found 0 links
+2024-12-10 13:03:08,943 - INFO: Processing selector 17/23: Found 11 links
+2024-12-10 13:03:08,955 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:03:09,010 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:09,018 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:03:09,067 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:09,105 - INFO: Processing selector 1/23: Found 0 links
+2024-12-10 13:03:09,105 - INFO: Found 12 raw categories before deduplication
+2024-12-10 13:03:09,132 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:09,136 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:09,138 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:09,158 - INFO: Processing selector 2/23: Found 27 links
+2024-12-10 13:03:09,158 - INFO: Reduced to 3 unique categories
+2024-12-10 13:03:09,166 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:09,191 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:09,197 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:09,215 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:09,216 - INFO: Found 3 categories from https://browsingmode.com/
+2024-12-10 13:03:09,221 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:09,223 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:09,231 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:09,252 - INFO: Processed link 7/10
+2024-12-10 13:03:09,255 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:09,260 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:09,263 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:09,271 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:09,287 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:09,294 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:09,296 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:03:09,316 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:09,334 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:09,341 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:09,342 - INFO: Found 17 raw categories before deduplication
+2024-12-10 13:03:09,367 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:09,391 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:09,397 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:09,397 - INFO: Reduced to 15 unique categories
+2024-12-10 13:03:09,446 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:09,449 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:09,453 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:09,453 - INFO: Found 15 categories from https://www.siteinspire.com/sponsorship
+2024-12-10 13:03:09,494 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:09,502 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:09,506 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:09,506 - INFO: Processed link 5/10
+2024-12-10 13:03:09,533 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:09,533 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:09,541 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:09,559 - INFO: Processing selector 17/23: Found 9 links
+2024-12-10 13:03:09,567 - INFO: Processing selector 11/23: Found 12 links
+2024-12-10 13:03:09,574 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:09,601 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:09,613 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:09,620 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:09,644 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:09,668 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:09,675 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:09,697 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:09,728 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:09,736 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:09,787 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:09,793 - INFO: Processing selector 17/23: Found 2 links
+2024-12-10 13:03:09,795 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:09,817 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:09,827 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:09,854 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:09,890 - INFO: Processing selector 17/23: Found 0 links
+2024-12-10 13:03:09,933 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:09,957 - INFO: Processing selector 1/23: Found 12 links
+2024-12-10 13:03:09,982 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:03:10,008 - INFO: Processing selector 20/23: Found 20 links
+2024-12-10 13:03:10,019 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:10,029 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:03:10,029 - INFO: Found 12 raw categories before deduplication
+2024-12-10 13:03:10,037 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:10,063 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:10,072 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:10,072 - INFO: Reduced to 12 unique categories
+2024-12-10 13:03:10,080 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:10,108 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:10,116 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:10,116 - INFO: Found 12 categories from https://land-book.com/sections
+2024-12-10 13:03:10,125 - INFO: Processing selector 1/23: Found 10 links
+2024-12-10 13:03:10,131 - INFO: Processing selector 23/23: Found 20 links
+2024-12-10 13:03:10,140 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:10,160 - INFO: Processed link 3/10
+2024-12-10 13:03:10,163 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:10,165 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:03:10,166 - INFO: Found 34 raw categories before deduplication
+2024-12-10 13:03:10,174 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:10,198 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:10,199 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:10,200 - INFO: Reduced to 10 unique categories
+2024-12-10 13:03:10,213 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:10,230 - INFO: Processing selector 23/23: Found 163 links
+2024-12-10 13:03:10,232 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:10,232 - INFO: Found 10 categories from https://minimal.gallery/domains/
+2024-12-10 13:03:10,244 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:10,249 - INFO: Found 191 raw categories before deduplication
+2024-12-10 13:03:10,251 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:10,251 - INFO: Processed link 5/10
+2024-12-10 13:03:10,262 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:10,262 - INFO: Reduced to 102 unique categories
+2024-12-10 13:03:10,265 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:10,271 - INFO: Found 102 categories from https://www.lapa.ninja/category/agency/
+2024-12-10 13:03:10,272 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:10,274 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:10,274 - INFO: Processed link 6/10
+2024-12-10 13:03:10,281 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:10,283 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:10,299 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:10,302 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:10,313 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:10,314 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:10,326 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:10,327 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:10,338 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:10,340 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:10,349 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:10,351 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:10,362 - INFO: Processing selector 17/23: Found 12 links
+2024-12-10 13:03:10,365 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:10,377 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:10,380 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:10,391 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:10,393 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:10,402 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:10,404 - INFO: Processing selector 17/23: Found 11 links
+2024-12-10 13:03:10,416 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:10,418 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:10,429 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:10,432 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:10,443 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:03:10,446 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:10,446 - INFO: Found 12 raw categories before deduplication
+2024-12-10 13:03:10,449 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:10,449 - INFO: Reduced to 3 unique categories
+2024-12-10 13:03:10,451 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:10,451 - INFO: Found 3 categories from https://browsingmode.com/
+2024-12-10 13:03:10,454 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:03:10,454 - INFO: Processed link 8/10
+2024-12-10 13:03:10,454 - INFO: Found 17 raw categories before deduplication
+2024-12-10 13:03:10,455 - INFO: Reduced to 15 unique categories
+2024-12-10 13:03:10,455 - INFO: Found 15 categories from https://www.siteinspire.com/categories/styles
+2024-12-10 13:03:10,455 - INFO: Processed link 6/10
+2024-12-10 13:03:10,660 - INFO: Processing selector 1/23: Found 0 links
+2024-12-10 13:03:10,682 - INFO: Processing selector 2/23: Found 27 links
+2024-12-10 13:03:10,698 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:10,720 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:10,736 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:10,753 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:10,776 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:10,799 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:10,822 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:10,831 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:10,838 - INFO: Processing selector 11/23: Found 12 links
+2024-12-10 13:03:10,848 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:10,878 - INFO: Processing selector 1/23: Found 10 links
+2024-12-10 13:03:10,882 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:03:10,885 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:10,888 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:10,934 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:10,949 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:10,952 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:10,956 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:10,983 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:10,987 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:10,989 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:10,990 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:11,024 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:11,025 - INFO: Processing selector 1/23: Found 12 links
+2024-12-10 13:03:11,028 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:11,058 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:11,072 - INFO: Processing selector 1/23: Found 8 links
+2024-12-10 13:03:11,075 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:03:11,096 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:11,099 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:11,129 - INFO: Processing selector 2/23: Found 2 links
+2024-12-10 13:03:11,131 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:11,147 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:11,150 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:11,168 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:11,186 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:11,187 - INFO: Processing selector 17/23: Found 0 links
+2024-12-10 13:03:11,190 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:11,192 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:11,239 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:11,249 - INFO: Processing selector 17/23: Found 11 links
+2024-12-10 13:03:11,253 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:11,256 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:11,265 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:11,280 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:11,304 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:11,308 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:11,329 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:11,351 - INFO: Processing selector 1/23: Found 0 links
+2024-12-10 13:03:11,387 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:11,394 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:11,397 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:11,402 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:11,410 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:03:11,455 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:11,463 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:11,466 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:11,469 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:11,475 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:11,521 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:11,523 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:11,531 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:11,535 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:11,542 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:11,568 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:11,577 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:11,594 - INFO: Processing selector 23/23: Found 163 links
+2024-12-10 13:03:11,598 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:03:11,604 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:11,607 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:11,619 - INFO: Found 191 raw categories before deduplication
+2024-12-10 13:03:11,623 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:11,624 - INFO: Found 17 raw categories before deduplication
+2024-12-10 13:03:11,630 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:11,633 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:11,633 - INFO: Reduced to 102 unique categories
+2024-12-10 13:03:11,642 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:11,642 - INFO: Reduced to 15 unique categories
+2024-12-10 13:03:11,649 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:11,652 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:11,652 - INFO: Found 102 categories from https://www.lapa.ninja/category/portfolio/
+2024-12-10 13:03:11,668 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:11,668 - INFO: Found 15 categories from https://www.siteinspire.com/categories/types
+2024-12-10 13:03:11,675 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:11,679 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:11,679 - INFO: Processed link 7/10
+2024-12-10 13:03:11,690 - INFO: Processed link 7/10
+2024-12-10 13:03:11,712 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:11,720 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:11,722 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:11,739 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:11,757 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:11,760 - INFO: Processing selector 17/23: Found 12 links
+2024-12-10 13:03:11,766 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:11,796 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:11,799 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:11,805 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:11,826 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:11,830 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:11,837 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:11,857 - INFO: Processing selector 17/23: Found 9 links
+2024-12-10 13:03:11,860 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:11,867 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:11,898 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:11,901 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:11,908 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:11,940 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:11,943 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:11,949 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:11,973 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:11,976 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:03:11,982 - INFO: Processing selector 17/23: Found 2 links
+2024-12-10 13:03:12,015 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:12,015 - INFO: Found 12 raw categories before deduplication
+2024-12-10 13:03:12,022 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:12,059 - INFO: Reduced to 3 unique categories
+2024-12-10 13:03:12,065 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:12,071 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:12,072 - INFO: Found 3 categories from https://browsingmode.com/about
+2024-12-10 13:03:12,104 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:03:12,112 - INFO: Processing selector 20/23: Found 20 links
+2024-12-10 13:03:12,112 - INFO: Processed link 9/10
+2024-12-10 13:03:12,112 - INFO: Found 12 raw categories before deduplication
+2024-12-10 13:03:12,119 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:12,120 - INFO: Reduced to 12 unique categories
+2024-12-10 13:03:12,128 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:12,129 - INFO: Found 12 categories from https://land-book.com/design/template
+2024-12-10 13:03:12,137 - INFO: Processing selector 23/23: Found 20 links
+2024-12-10 13:03:12,137 - INFO: Processed link 4/10
+2024-12-10 13:03:12,138 - INFO: Found 34 raw categories before deduplication
+2024-12-10 13:03:12,139 - INFO: Reduced to 10 unique categories
+2024-12-10 13:03:12,140 - INFO: Found 10 categories from https://minimal.gallery/
+2024-12-10 13:03:12,140 - INFO: Processed link 6/10
+2024-12-10 13:03:12,140 - INFO: Skipping external link 7/10
+2024-12-10 13:03:12,232 - INFO: Processing selector 1/23: Found 0 links
+2024-12-10 13:03:12,254 - INFO: Processing selector 2/23: Found 27 links
+2024-12-10 13:03:12,276 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:12,301 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:12,316 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:12,332 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:12,358 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:12,387 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:12,409 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:12,415 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:12,425 - INFO: Processing selector 11/23: Found 12 links
+2024-12-10 13:03:12,437 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:12,459 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:12,483 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:12,521 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:12,541 - INFO: Processing selector 1/23: Found 10 links
+2024-12-10 13:03:12,545 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:03:12,549 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:12,562 - INFO: Processing selector 1/23: Found 8 links
+2024-12-10 13:03:12,565 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:12,582 - INFO: Processing selector 17/23: Found 0 links
+2024-12-10 13:03:12,585 - INFO: Processing selector 2/23: Found 2 links
+2024-12-10 13:03:12,590 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:12,611 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:12,612 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:12,615 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:12,637 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:12,640 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:12,643 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:12,668 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:12,669 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:12,674 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:12,694 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:12,699 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:12,704 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:12,707 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:12,731 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:12,744 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:12,772 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:12,817 - INFO: Processing selector 1/23: Found 12 links
+2024-12-10 13:03:12,834 - INFO: Processing selector 23/23: Found 163 links
+2024-12-10 13:03:12,836 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:12,839 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:12,862 - INFO: Found 191 raw categories before deduplication
+2024-12-10 13:03:12,866 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:03:12,868 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:12,869 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:12,869 - INFO: Reduced to 102 unique categories
+2024-12-10 13:03:12,878 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:12,881 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:12,883 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:12,883 - INFO: Found 102 categories from https://www.lapa.ninja/category/app/
+2024-12-10 13:03:12,894 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:12,899 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:12,901 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:12,901 - INFO: Processed link 8/10
+2024-12-10 13:03:12,910 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:12,915 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:12,919 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:12,929 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:12,934 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:12,936 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:12,947 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:12,951 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:12,960 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:13,025 - INFO: Processing selector 17/23: Found 11 links
+2024-12-10 13:03:13,063 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:13,065 - INFO: Processing selector 1/23: Found 0 links
+2024-12-10 13:03:13,067 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:13,072 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:13,094 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:03:13,095 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:13,096 - INFO: Processing selector 17/23: Found 9 links
+2024-12-10 13:03:13,100 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:13,106 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:13,113 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:13,116 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:13,122 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:13,128 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:13,136 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:13,138 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:13,142 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:13,149 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:13,164 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:13,166 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:13,170 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:13,175 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:13,191 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:13,193 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:13,198 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:03:13,206 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:13,222 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:13,225 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:13,225 - INFO: Found 17 raw categories before deduplication
+2024-12-10 13:03:13,232 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:13,244 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:13,247 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:03:13,247 - INFO: Reduced to 15 unique categories
+2024-12-10 13:03:13,255 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:13,263 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:13,263 - INFO: Found 12 raw categories before deduplication
+2024-12-10 13:03:13,263 - INFO: Found 15 categories from https://www.siteinspire.com/categories/subjects
+2024-12-10 13:03:13,268 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:13,277 - INFO: Processing selector 17/23: Found 12 links
+2024-12-10 13:03:13,277 - INFO: Reduced to 12 unique categories
+2024-12-10 13:03:13,277 - INFO: Processed link 8/10
+2024-12-10 13:03:13,281 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:13,293 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:13,293 - INFO: Found 12 categories from https://land-book.com/webflow-partnership
+2024-12-10 13:03:13,300 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:13,311 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:13,311 - INFO: Processed link 5/10
+2024-12-10 13:03:13,319 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:13,328 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:13,336 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:13,354 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:13,361 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:13,364 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:13,375 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:13,385 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:03:13,385 - INFO: Found 12 raw categories before deduplication
+2024-12-10 13:03:13,385 - INFO: Reduced to 3 unique categories
+2024-12-10 13:03:13,385 - INFO: Found 3 categories from https://browsingmode.com/
+2024-12-10 13:03:13,385 - INFO: Processed link 10/10
+2024-12-10 13:03:13,386 - INFO: Scraped 3 categories from browsingmode.com
+2024-12-10 13:03:13,390 - INFO: Processing selector 17/23: Found 2 links
+2024-12-10 13:03:13,398 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:13,405 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:13,412 - INFO: Processing selector 20/23: Found 20 links
+2024-12-10 13:03:13,420 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:13,424 - INFO: Successfully scraped https://browsingmode.com/ - Found 3 categories
+2024-12-10 13:03:13,424 - INFO: Completed 3/9 websites
+2024-12-10 13:03:13,429 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:13,437 - INFO: Processing selector 23/23: Found 20 links
+2024-12-10 13:03:13,438 - INFO: Found 34 raw categories before deduplication
+2024-12-10 13:03:13,438 - INFO: Reduced to 10 unique categories
+2024-12-10 13:03:13,438 - INFO: Found 10 categories from https://minimal.gallery#about
+2024-12-10 13:03:13,438 - INFO: Processed link 8/10
+2024-12-10 13:03:13,514 - INFO: Processing selector 1/23: Found 0 links
+2024-12-10 13:03:13,541 - INFO: Processing selector 2/23: Found 27 links
+2024-12-10 13:03:13,555 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:13,578 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:13,592 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:13,606 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:13,626 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:13,647 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:13,669 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:13,676 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:13,682 - INFO: Processing selector 11/23: Found 12 links
+2024-12-10 13:03:13,693 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:13,720 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:13,742 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:13,756 - INFO: Processing selector 1/23: Found 10 links
+2024-12-10 13:03:13,758 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:03:13,759 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:13,761 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:13,775 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:13,776 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:13,798 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:13,800 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:13,801 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:13,803 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:13,804 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:13,804 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:13,805 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:13,807 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:13,808 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:13,810 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:13,812 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:13,815 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:13,830 - INFO: Processing selector 17/23: Found 0 links
+2024-12-10 13:03:13,831 - INFO: Processing selector 17/23: Found 11 links
+2024-12-10 13:03:13,857 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:13,859 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:13,879 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:13,881 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:13,883 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:13,884 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:13,886 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:03:13,886 - INFO: Found 17 raw categories before deduplication
+2024-12-10 13:03:13,893 - INFO: Reduced to 15 unique categories
+2024-12-10 13:03:13,893 - INFO: Found 15 categories from https://www.siteinspire.com/categories/platforms
+2024-12-10 13:03:13,893 - INFO: Processed link 9/10
+2024-12-10 13:03:13,896 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:13,920 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:13,943 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:13,969 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:13,987 - INFO: Processing selector 23/23: Found 163 links
+2024-12-10 13:03:13,994 - INFO: Found 191 raw categories before deduplication
+2024-12-10 13:03:13,994 - INFO: Reduced to 102 unique categories
+2024-12-10 13:03:13,995 - INFO: Found 102 categories from https://www.lapa.ninja/category/artificial-intelligence/
+2024-12-10 13:03:13,995 - INFO: Processed link 9/10
+2024-12-10 13:03:14,002 - INFO: Processing selector 1/23: Found 0 links
+2024-12-10 13:03:14,003 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:03:14,003 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:14,004 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:14,005 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:14,006 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:14,007 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:14,007 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:14,009 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:14,009 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:14,010 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:14,011 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:14,011 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:14,012 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:14,012 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:14,013 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:14,014 - INFO: Processing selector 17/23: Found 0 links
+2024-12-10 13:03:14,015 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:14,015 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:14,016 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:14,016 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:14,017 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:14,018 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:03:14,018 - INFO: Found 0 raw categories before deduplication
+2024-12-10 13:03:14,018 - INFO: Reduced to 0 unique categories
+2024-12-10 13:03:14,018 - INFO: Found 0 categories from https://land-book.com/websites/new
+2024-12-10 13:03:14,018 - INFO: Processed link 6/10
+2024-12-10 13:03:14,180 - INFO: Processing selector 1/23: Found 0 links
+2024-12-10 13:03:14,228 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:03:14,257 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:14,301 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:14,329 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:14,345 - INFO: Processing selector 1/23: Found 0 links
+2024-12-10 13:03:14,358 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:03:14,361 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:14,362 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:14,388 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:14,404 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:14,405 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:14,406 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:14,408 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:14,409 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:14,420 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:14,421 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:14,421 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:14,422 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:14,422 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:14,423 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:14,423 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:14,424 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:14,424 - INFO: Processing selector 17/23: Found 0 links
+2024-12-10 13:03:14,425 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:14,425 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:14,426 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:14,426 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:14,427 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:14,427 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:03:14,428 - INFO: Found 0 raw categories before deduplication
+2024-12-10 13:03:14,428 - INFO: Reduced to 0 unique categories
+2024-12-10 13:03:14,428 - INFO: Found 0 categories from https://land-book.com/login
+2024-12-10 13:03:14,428 - INFO: Processed link 7/10
+2024-12-10 13:03:14,491 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:14,543 - INFO: Processing selector 1/23: Found 0 links
+2024-12-10 13:03:14,551 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:03:14,553 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:14,559 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:14,574 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:14,582 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:14,601 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:14,607 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:14,614 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:14,621 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:14,629 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:14,633 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:14,637 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:14,643 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:14,659 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:14,680 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:14,690 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:14,721 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:14,742 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:14,750 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:14,757 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:14,794 - INFO: Processing selector 17/23: Found 2 links
+2024-12-10 13:03:14,815 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:14,823 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:14,887 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:14,943 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:14,950 - INFO: Processing selector 20/23: Found 20 links
+2024-12-10 13:03:14,972 - INFO: Processing selector 1/23: Found 0 links
+2024-12-10 13:03:14,974 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:14,999 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:15,004 - INFO: Processing selector 1/23: Found 0 links
+2024-12-10 13:03:15,011 - INFO: Processing selector 2/23: Found 27 links
+2024-12-10 13:03:15,018 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:15,046 - INFO: Processing selector 17/23: Found 0 links
+2024-12-10 13:03:15,066 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:03:15,083 - INFO: Processing selector 1/23: Found 10 links
+2024-12-10 13:03:15,097 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:15,104 - INFO: Processing selector 23/23: Found 20 links
+2024-12-10 13:03:15,130 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:15,145 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:15,158 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:03:15,179 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:15,179 - INFO: Found 34 raw categories before deduplication
+2024-12-10 13:03:15,180 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:15,220 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:15,232 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:15,247 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:15,247 - INFO: Reduced to 10 unique categories
+2024-12-10 13:03:15,247 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:15,260 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:15,302 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:15,306 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:15,306 - INFO: Found 10 categories from https://minimal.gallery#sponsor
+2024-12-10 13:03:15,306 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:15,315 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:15,336 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:15,366 - INFO: Processed link 9/10
+2024-12-10 13:03:15,386 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:15,386 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:15,396 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:15,418 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:15,430 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:15,474 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:15,496 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:15,496 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:15,500 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:15,513 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:15,525 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:15,563 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:15,570 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:03:15,582 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:15,583 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:15,589 - INFO: Found 0 raw categories before deduplication
+2024-12-10 13:03:15,590 - INFO: Processing selector 11/23: Found 12 links
+2024-12-10 13:03:15,594 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:15,595 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:15,595 - INFO: Reduced to 0 unique categories
+2024-12-10 13:03:15,606 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:15,611 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:15,611 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:15,617 - INFO: Skipping external link 1/10
+2024-12-10 13:03:15,645 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:15,651 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:15,652 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:15,652 - INFO: Skipping external link 2/10
+2024-12-10 13:03:15,674 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:15,686 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:15,686 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:15,687 - INFO: Skipping external link 3/10
+2024-12-10 13:03:15,708 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:15,720 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:15,721 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:15,721 - INFO: Skipping external link 4/10
+2024-12-10 13:03:15,736 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:15,748 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:15,749 - INFO: Processing selector 17/23: Found 0 links
+2024-12-10 13:03:15,749 - INFO: Skipping external link 5/10
+2024-12-10 13:03:15,764 - INFO: Processing selector 17/23: Found 0 links
+2024-12-10 13:03:15,774 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:15,775 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:15,775 - INFO: Skipping external link 6/10
+2024-12-10 13:03:15,790 - INFO: Processing selector 17/23: Found 11 links
+2024-12-10 13:03:15,807 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:15,807 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:15,821 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:15,828 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:15,845 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:15,858 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:15,859 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:15,885 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:15,893 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:15,900 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:15,907 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:03:15,936 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:15,937 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:15,937 - INFO: Found 0 raw categories before deduplication
+2024-12-10 13:03:15,949 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:15,973 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:15,973 - INFO: Reduced to 0 unique categories
+2024-12-10 13:03:16,000 - INFO: Processing selector 23/23: Found 163 links
+2024-12-10 13:03:16,000 - INFO: Found 0 categories from https://land-book.com/register
+2024-12-10 13:03:16,001 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:03:16,006 - INFO: Found 191 raw categories before deduplication
+2024-12-10 13:03:16,006 - INFO: Processed link 8/10
+2024-12-10 13:03:16,007 - INFO: Found 17 raw categories before deduplication
+2024-12-10 13:03:16,007 - INFO: Reduced to 102 unique categories
+2024-12-10 13:03:16,007 - INFO: Reduced to 15 unique categories
+2024-12-10 13:03:16,007 - INFO: Found 102 categories from https://www.lapa.ninja/category/beauty/
+2024-12-10 13:03:16,008 - INFO: Found 15 categories from https://www.siteinspire.com
+2024-12-10 13:03:16,008 - INFO: Processed link 10/10
+2024-12-10 13:03:16,008 - INFO: Processed link 10/10
+2024-12-10 13:03:16,009 - INFO: Scraped 102 categories from lapa.ninja
+2024-12-10 13:03:16,011 - INFO: Scraped 15 categories from siteinspire.com
+2024-12-10 13:03:16,011 - INFO: Successfully scraped https://www.lapa.ninja/ - Found 102 categories
+2024-12-10 13:03:16,011 - INFO: Completed 4/9 websites
+2024-12-10 13:03:16,012 - INFO: Successfully scraped https://www.siteinspire.com/ - Found 15 categories
+2024-12-10 13:03:16,012 - INFO: Completed 5/9 websites
+2024-12-10 13:03:16,294 - INFO: Processing selector 1/23: Found 0 links
+2024-12-10 13:03:16,398 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:03:16,436 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:16,449 - INFO: Processing selector 1/23: Found 0 links
+2024-12-10 13:03:16,465 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:03:16,471 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:16,494 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:16,499 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:16,520 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:16,527 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:16,541 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:16,542 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:16,572 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:16,579 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:16,608 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:16,612 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:16,656 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:16,660 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:16,748 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:16,758 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:16,766 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:16,843 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:16,850 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:16,887 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:16,893 - INFO: Processing selector 17/23: Found 2 links
+2024-12-10 13:03:16,901 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:16,909 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:16,925 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:16,926 - INFO: Processing selector 1/23: Found 8 links
+2024-12-10 13:03:16,929 - INFO: Processing selector 20/23: Found 20 links
+2024-12-10 13:03:16,944 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:16,986 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:16,989 - INFO: Processing selector 2/23: Found 2 links
+2024-12-10 13:03:17,004 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:17,012 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:17,029 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:17,068 - INFO: Processing selector 23/23: Found 20 links
+2024-12-10 13:03:17,070 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:17,114 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:17,138 - INFO: Found 34 raw categories before deduplication
+2024-12-10 13:03:17,179 - INFO: Processing selector 1/23: Found 52 links
+2024-12-10 13:03:17,240 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:17,247 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:17,247 - INFO: Reduced to 10 unique categories
+2024-12-10 13:03:17,267 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:03:17,326 - INFO: Found 10 categories from https://minimal.gallery#submit
+2024-12-10 13:03:17,334 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:17,335 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:17,349 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:17,349 - INFO: Processed link 10/10
+2024-12-10 13:03:17,425 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:17,437 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:17,439 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:17,468 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:17,468 - INFO: Scraped 10 categories from minimal.gallery
+2024-12-10 13:03:17,496 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:17,516 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:17,544 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:17,583 - INFO: Processing selector 17/23: Found 0 links
+2024-12-10 13:03:17,584 - INFO: Successfully scraped https://minimal.gallery/ - Found 10 categories
+2024-12-10 13:03:17,597 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:17,606 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:17,627 - INFO: Completed 6/9 websites
+2024-12-10 13:03:17,675 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:17,676 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:17,686 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:17,703 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:17,749 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:17,762 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:17,782 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:17,833 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:17,851 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:17,858 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:17,891 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:17,901 - INFO: Processing selector 11/23: Found 23 links
+2024-12-10 13:03:17,949 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:17,965 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:17,997 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:18,014 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:18,066 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:18,079 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:18,100 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:18,115 - INFO: Processing selector 17/23: Found 9 links
+2024-12-10 13:03:18,144 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:18,181 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:18,189 - INFO: Processing selector 17/23: Found 23 links
+2024-12-10 13:03:18,209 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:18,258 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:18,275 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:18,313 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:18,319 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:03:18,353 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:18,368 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:18,368 - INFO: Found 0 raw categories before deduplication
+2024-12-10 13:03:18,393 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:18,400 - INFO: Reduced to 0 unique categories
+2024-12-10 13:03:18,422 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:18,446 - INFO: Found 0 categories from https://www.landingfolio.com/
+2024-12-10 13:03:18,451 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:18,462 - INFO: Processed link 7/10
+2024-12-10 13:03:18,478 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:03:18,505 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:18,506 - INFO: Found 12 raw categories before deduplication
+2024-12-10 13:03:18,523 - INFO: Reduced to 12 unique categories
+2024-12-10 13:03:18,523 - INFO: Found 12 categories from https://land-book.com/design/landing-page
+2024-12-10 13:03:18,523 - INFO: Processed link 9/10
+2024-12-10 13:03:18,530 - INFO: Processing selector 23/23: Found 17 links
+2024-12-10 13:03:18,530 - INFO: Found 92 raw categories before deduplication
+2024-12-10 13:03:18,530 - INFO: Reduced to 57 unique categories
+2024-12-10 13:03:18,890 - INFO: Processing selector 1/23: Found 3 links
+2024-12-10 13:03:18,933 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:03:18,960 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:19,008 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:19,036 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:19,064 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:19,106 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:19,183 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:19,304 - INFO: Processing selector 1/23: Found 8 links
+2024-12-10 13:03:19,312 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:19,326 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:19,340 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:19,382 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:19,393 - INFO: Processing selector 2/23: Found 2 links
+2024-12-10 13:03:19,426 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:19,467 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:19,509 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:19,522 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:19,580 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:19,595 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:19,628 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:19,632 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:19,663 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:19,690 - INFO: Processing selector 17/23: Found 17 links
+2024-12-10 13:03:19,766 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:19,836 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:19,861 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:19,870 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:19,874 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:19,899 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:19,954 - INFO: Processing selector 1/23: Found 52 links
+2024-12-10 13:03:19,960 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:19,971 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:19,991 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:03:20,034 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:20,047 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:20,062 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:20,091 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:20,109 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:20,170 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:20,201 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:20,203 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:20,222 - INFO: Processing selector 17/23: Found 9 links
+2024-12-10 13:03:20,235 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:20,298 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:20,311 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:20,328 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:20,422 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:20,426 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:03:20,428 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:20,449 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:20,449 - INFO: Found 15 raw categories before deduplication
+2024-12-10 13:03:20,467 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:20,490 - INFO: Reduced to 14 unique categories
+2024-12-10 13:03:20,496 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:20,506 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:20,555 - INFO: Processing selector 11/23: Found 23 links
+2024-12-10 13:03:20,506 - INFO: Found 14 categories from https://www.landingfolio.com/inspiration/landing-page
+2024-12-10 13:03:20,580 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:20,586 - INFO: Processed link 8/10
+2024-12-10 13:03:20,588 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:20,618 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:03:20,642 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:20,642 - INFO: Found 12 raw categories before deduplication
+2024-12-10 13:03:20,659 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:20,659 - INFO: Reduced to 12 unique categories
+2024-12-10 13:03:20,682 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:20,683 - INFO: Found 12 categories from https://land-book.com/design/portfolio
+2024-12-10 13:03:20,696 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:20,696 - INFO: Processed link 10/10
+2024-12-10 13:03:20,710 - INFO: Processing selector 17/23: Found 23 links
+2024-12-10 13:03:20,711 - INFO: Scraped 12 categories from land-book.com
+2024-12-10 13:03:20,731 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:20,750 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:20,750 - INFO: Successfully scraped https://land-book.com/ - Found 12 categories
+2024-12-10 13:03:20,761 - INFO: Completed 7/9 websites
+2024-12-10 13:03:20,774 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:20,793 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:20,812 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:20,829 - INFO: Processing selector 23/23: Found 17 links
+2024-12-10 13:03:20,830 - INFO: Found 92 raw categories before deduplication
+2024-12-10 13:03:20,830 - INFO: Reduced to 57 unique categories
+2024-12-10 13:03:20,830 - INFO: Found 57 categories from https://www.awwwards.com/
+2024-12-10 13:03:20,830 - INFO: Processed link 1/10
+2024-12-10 13:03:21,114 - INFO: Processing selector 1/23: Found 3 links
+2024-12-10 13:03:21,157 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:03:21,184 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:21,230 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:21,258 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:21,286 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:21,333 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:21,376 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:21,418 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:21,432 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:21,446 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:21,473 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:21,515 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:21,561 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:21,604 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:21,632 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:21,660 - INFO: Processing selector 17/23: Found 17 links
+2024-12-10 13:03:21,715 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:21,770 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:21,801 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:21,899 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:21,992 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:22,065 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:03:22,065 - INFO: Found 15 raw categories before deduplication
+2024-12-10 13:03:22,065 - INFO: Reduced to 14 unique categories
+2024-12-10 13:03:22,065 - INFO: Found 14 categories from https://www.landingfolio.com/inspiration/landing-page
+2024-12-10 13:03:22,065 - INFO: Processed link 9/10
+2024-12-10 13:03:22,121 - INFO: Processing selector 1/23: Found 476 links
+2024-12-10 13:03:22,183 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:03:22,219 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:22,290 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:22,324 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:22,359 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:22,408 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:22,458 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:22,513 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:22,527 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:22,541 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:22,564 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:22,615 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:22,665 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:22,714 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:22,751 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:22,785 - INFO: Processing selector 17/23: Found 23 links
+2024-12-10 13:03:22,837 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:22,917 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:23,065 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:23,093 - INFO: Processing selector 1/23: Found 2 links
+2024-12-10 13:03:23,148 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:03:23,163 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:23,182 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:23,223 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:23,257 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:23,264 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:23,281 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:23,346 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:23,367 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:03:23,367 - INFO: Found 331 raw categories before deduplication
+2024-12-10 13:03:23,367 - INFO: Reduced to 304 unique categories
+2024-12-10 13:03:23,384 - INFO: Found 304 categories from https://www.awwwards.com/websites/
+2024-12-10 13:03:23,384 - INFO: Processed link 2/10
+2024-12-10 13:03:23,387 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:23,411 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:23,421 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:23,431 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:23,455 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:23,480 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:23,506 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:23,530 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:23,548 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:23,565 - INFO: Processing selector 17/23: Found 17 links
+2024-12-10 13:03:23,591 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:23,616 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:23,637 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:23,664 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:23,691 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:23,717 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:03:23,717 - INFO: Found 14 raw categories before deduplication
+2024-12-10 13:03:23,717 - INFO: Reduced to 14 unique categories
+2024-12-10 13:03:23,717 - INFO: Found 14 categories from https://www.landingfolio.com/components
+2024-12-10 13:03:23,717 - INFO: Processed link 10/10
+2024-12-10 13:03:23,717 - INFO: Scraped 15 categories from landingfolio.com
+2024-12-10 13:03:23,717 - INFO: Successfully scraped https://www.landingfolio.com/ - Found 15 categories
+2024-12-10 13:03:23,718 - INFO: Completed 8/9 websites
+2024-12-10 13:03:24,914 - INFO: Processing selector 1/23: Found 492 links
+2024-12-10 13:03:24,980 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:03:25,037 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:25,098 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:25,137 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:25,176 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:25,249 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:25,316 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:25,372 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:25,390 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:25,413 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:25,445 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:25,523 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:25,601 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:25,678 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:25,734 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:25,790 - INFO: Processing selector 17/23: Found 23 links
+2024-12-10 13:03:25,854 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:25,913 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:26,040 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:26,120 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:26,200 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:26,287 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:03:26,287 - INFO: Found 329 raw categories before deduplication
+2024-12-10 13:03:26,287 - INFO: Reduced to 301 unique categories
+2024-12-10 13:03:26,287 - INFO: Found 301 categories from https://www.awwwards.com/websites/nominees/
+2024-12-10 13:03:26,287 - INFO: Processed link 3/10
+2024-12-10 13:03:27,146 - INFO: Processing selector 1/23: Found 495 links
+2024-12-10 13:03:27,213 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:03:27,249 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:27,300 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:27,335 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:27,370 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:27,419 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:27,471 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:27,522 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:27,537 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:27,552 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:27,576 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:27,627 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:27,678 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:27,728 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:27,766 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:27,811 - INFO: Processing selector 17/23: Found 23 links
+2024-12-10 13:03:27,862 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:27,913 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:27,994 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:28,046 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:28,101 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:28,152 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:03:28,153 - INFO: Found 382 raw categories before deduplication
+2024-12-10 13:03:28,153 - INFO: Reduced to 354 unique categories
+2024-12-10 13:03:28,153 - INFO: Found 354 categories from https://www.awwwards.com/websites/sites_of_the_day/
+2024-12-10 13:03:28,153 - INFO: Processed link 4/10
+2024-12-10 13:03:29,366 - INFO: Processing selector 1/23: Found 255 links
+2024-12-10 13:03:29,406 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:03:29,429 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:29,461 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:29,484 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:29,508 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:29,540 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:29,572 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:29,605 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:29,616 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:29,626 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:29,644 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:29,677 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:29,710 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:29,743 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:29,767 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:29,791 - INFO: Processing selector 17/23: Found 23 links
+2024-12-10 13:03:29,825 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:29,857 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:29,907 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:29,940 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:29,974 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:30,009 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:03:30,009 - INFO: Found 199 raw categories before deduplication
+2024-12-10 13:03:30,009 - INFO: Reduced to 175 unique categories
+2024-12-10 13:03:30,010 - INFO: Found 175 categories from https://www.awwwards.com/websites/sites_of_the_month/
+2024-12-10 13:03:30,010 - INFO: Processed link 5/10
+2024-12-10 13:03:30,875 - INFO: Processing selector 1/23: Found 206 links
+2024-12-10 13:03:30,910 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:03:30,930 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:30,957 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:30,977 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:30,997 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:31,024 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:31,052 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:31,080 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:31,090 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:31,099 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:31,115 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:31,143 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:31,172 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:31,202 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:31,223 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:31,244 - INFO: Processing selector 17/23: Found 23 links
+2024-12-10 13:03:31,274 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:31,303 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:31,346 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:31,375 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:31,405 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:31,432 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:03:31,432 - INFO: Found 163 raw categories before deduplication
+2024-12-10 13:03:31,432 - INFO: Reduced to 140 unique categories
+2024-12-10 13:03:31,432 - INFO: Found 140 categories from https://www.awwwards.com/websites/sites_of_the_year/
+2024-12-10 13:03:31,432 - INFO: Processed link 6/10
+2024-12-10 13:03:32,093 - INFO: Processing selector 1/23: Found 52 links
+2024-12-10 13:03:32,109 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:03:32,117 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:32,130 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:32,142 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:32,152 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:32,164 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:32,178 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:32,190 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:32,194 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:32,198 - INFO: Processing selector 11/23: Found 18 links
+2024-12-10 13:03:32,210 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:32,233 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:32,247 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:32,261 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:32,270 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:32,280 - INFO: Processing selector 17/23: Found 23 links
+2024-12-10 13:03:32,294 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:32,307 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:32,327 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:32,341 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:32,356 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:32,368 - INFO: Processing selector 23/23: Found 17 links
+2024-12-10 13:03:32,369 - INFO: Found 87 raw categories before deduplication
+2024-12-10 13:03:32,369 - INFO: Reduced to 57 unique categories
+2024-12-10 13:03:32,369 - INFO: Found 57 categories from https://www.awwwards.com/honors/winners
+2024-12-10 13:03:32,369 - INFO: Processed link 7/10
+2024-12-10 13:03:33,515 - INFO: Processing selector 1/23: Found 52 links
+2024-12-10 13:03:33,532 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:03:33,544 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:33,559 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:33,570 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:33,582 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:33,597 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:33,612 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:33,627 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:33,634 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:33,641 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:33,652 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:33,667 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:33,683 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:33,698 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:33,710 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:33,721 - INFO: Processing selector 17/23: Found 23 links
+2024-12-10 13:03:33,738 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:33,754 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:33,776 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:33,792 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:33,807 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:33,822 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:03:33,822 - INFO: Found 53 raw categories before deduplication
+2024-12-10 13:03:33,822 - INFO: Reduced to 47 unique categories
+2024-12-10 13:03:33,822 - INFO: Found 47 categories from https://www.awwwards.com/winner-list/
+2024-12-10 13:03:33,822 - INFO: Processed link 8/10
+2024-12-10 13:03:34,957 - INFO: Processing selector 1/23: Found 133 links
+2024-12-10 13:03:34,994 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:03:35,018 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:35,051 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:35,075 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:35,099 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:35,133 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:35,166 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:35,199 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:35,211 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:35,223 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:35,241 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:35,275 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:35,309 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:35,342 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:35,367 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:35,392 - INFO: Processing selector 17/23: Found 23 links
+2024-12-10 13:03:35,426 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:35,460 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:35,509 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:35,545 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:35,582 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:35,616 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:03:35,617 - INFO: Found 59 raw categories before deduplication
+2024-12-10 13:03:35,617 - INFO: Reduced to 53 unique categories
+2024-12-10 13:03:35,617 - INFO: Found 53 categories from https://www.awwwards.com/jury/2024/
+2024-12-10 13:03:35,617 - INFO: Processed link 9/10
+2024-12-10 13:03:36,501 - INFO: Processing selector 1/23: Found 525 links
+2024-12-10 13:03:36,569 - INFO: Processing selector 2/23: Found 0 links
+2024-12-10 13:03:36,606 - INFO: Processing selector 3/23: Found 0 links
+2024-12-10 13:03:36,659 - INFO: Processing selector 4/23: Found 0 links
+2024-12-10 13:03:36,693 - INFO: Processing selector 5/23: Found 0 links
+2024-12-10 13:03:36,730 - INFO: Processing selector 6/23: Found 0 links
+2024-12-10 13:03:36,784 - INFO: Processing selector 7/23: Found 0 links
+2024-12-10 13:03:36,837 - INFO: Processing selector 8/23: Found 0 links
+2024-12-10 13:03:36,890 - INFO: Processing selector 9/23: Found 0 links
+2024-12-10 13:03:36,904 - INFO: Processing selector 10/23: Found 0 links
+2024-12-10 13:03:36,919 - INFO: Processing selector 11/23: Found 0 links
+2024-12-10 13:03:36,941 - INFO: Processing selector 12/23: Found 0 links
+2024-12-10 13:03:36,995 - INFO: Processing selector 13/23: Found 0 links
+2024-12-10 13:03:37,048 - INFO: Processing selector 14/23: Found 0 links
+2024-12-10 13:03:37,101 - INFO: Processing selector 15/23: Found 0 links
+2024-12-10 13:03:37,138 - INFO: Processing selector 16/23: Found 0 links
+2024-12-10 13:03:37,174 - INFO: Processing selector 17/23: Found 23 links
+2024-12-10 13:03:37,228 - INFO: Processing selector 18/23: Found 0 links
+2024-12-10 13:03:37,283 - INFO: Processing selector 19/23: Found 0 links
+2024-12-10 13:03:37,368 - INFO: Processing selector 20/23: Found 0 links
+2024-12-10 13:03:37,422 - INFO: Processing selector 21/23: Found 0 links
+2024-12-10 13:03:37,478 - INFO: Processing selector 22/23: Found 0 links
+2024-12-10 13:03:37,531 - INFO: Processing selector 23/23: Found 0 links
+2024-12-10 13:03:37,531 - INFO: Found 384 raw categories before deduplication
+2024-12-10 13:03:37,531 - INFO: Reduced to 356 unique categories
+2024-12-10 13:03:37,531 - INFO: Found 356 categories from https://www.awwwards.com/websites/portfolio/
+2024-12-10 13:03:37,531 - INFO: Processed link 10/10
+2024-12-10 13:03:37,532 - INFO: Scraped 437 categories from awwwards.com
+2024-12-10 13:03:37,532 - INFO: Successfully scraped https://www.awwwards.com/ - Found 437 categories
+2024-12-10 13:03:37,532 - INFO: Completed 9/9 websites
+2024-12-10 13:03:37,532 - INFO: Completed scraping. Found categories for 9 websites
+2024-12-10 13:03:37,539 - INFO: Saved JSON directory to website_directory_20241210-130337.json
+2024-12-10 13:03:37,540 - INFO: Saved CSV directory to website_directory_20241210-130337.csv
