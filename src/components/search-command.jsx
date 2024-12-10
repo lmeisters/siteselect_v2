@@ -25,7 +25,7 @@ import {
     DialogDescription,
     DialogTrigger,
 } from "@/components/ui/dialog";
-import { useEffect, useState, useMemo } from "react";
+import { useEffect, useState, useMemo, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { searchWebsites, getFilterCounts } from "@/lib/api";
 import { useSearchStore } from "@/lib/search-store";
@@ -49,6 +49,7 @@ export function SearchCommand() {
     });
     const [currentSuggestion, setCurrentSuggestion] = useState("");
     const [suggestion, setSuggestion] = useState("");
+    const scrollRef = useRef(null);
 
     const categories = {
         types: "Types",
@@ -196,6 +197,11 @@ export function SearchCommand() {
         const categoryParam = category.slice(0, -1); // Remove 's' from plural form
         setSearch({ [categoryParam]: value.toLowerCase() });
 
+        // Reset scroll position
+        if (scrollRef.current) {
+            scrollRef.current.scrollTop = 0;
+        }
+
         if (window.location.pathname !== "/directory") {
             router.push(
                 `/directory?${categoryParam}=${encodeURIComponent(
@@ -333,9 +339,14 @@ export function SearchCommand() {
                                             return (
                                                 <CommandItem
                                                     key={key}
-                                                    onSelect={() =>
-                                                        setSelectedCategory(key)
-                                                    }
+                                                    onSelect={() => {
+                                                        setSelectedCategory(
+                                                            key
+                                                        );
+                                                        if (scrollRef.current) {
+                                                            scrollRef.current.scrollTop = 0;
+                                                        }
+                                                    }}
                                                     className={`cursor-pointer mb-0.5 last:mb-0 ${
                                                         selectedCategory === key
                                                             ? "bg-accent"
@@ -355,7 +366,10 @@ export function SearchCommand() {
                         </CommandList>
 
                         {selectedCategory && (
-                            <div className="w-full sm:w-[70%] overflow-y-auto">
+                            <div
+                                ref={scrollRef}
+                                className="w-full sm:w-[70%] overflow-y-auto"
+                            >
                                 <CommandList>
                                     <CommandGroup>
                                         {SEARCH_CATEGORIES[
