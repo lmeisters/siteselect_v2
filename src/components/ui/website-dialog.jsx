@@ -21,6 +21,7 @@ import Image from "next/image";
 import { SEARCH_CATEGORIES } from "@/lib/constants";
 import { getRefUrl } from "@/lib/utils/url";
 import { formatDate } from "@/lib/utils/date";
+import { useRouter } from "next/navigation";
 
 const WebsiteStructuredData = ({ website }) => {
     const jsonLd = {
@@ -115,6 +116,15 @@ const allCategories = {
 
 export function WebsiteDialog({ website, isOpen, onClose, children }) {
     const [expandedCategories, setExpandedCategories] = useState({});
+    const router = useRouter();
+
+    const handleTagClick = (category, tag) => {
+        onClose();
+        const searchParam = category.toLowerCase().slice(0, -1); // Remove 's' from plural
+        router.push(
+            `/directory?${searchParam}=${encodeURIComponent(tag.toLowerCase())}`
+        );
+    };
 
     const getVisibleTags = (tags, category, maxRows = 2) => {
         if (!tags?.length) return [];

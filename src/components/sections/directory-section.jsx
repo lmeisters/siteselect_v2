@@ -37,11 +37,22 @@ const COMMON_TAGS = [
 function DirectoryContent() {
     const [websites, setWebsites] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
+    const [currentPage, setCurrentPage] = useState(1);
+    const [totalPages, setTotalPages] = useState(1);
+    const itemsPerPage = 9; // 3x3 grid
     const { query, type, tag, color, setSearch } = useSearchStore();
 
     const handleCategorySelect = (category, value) => {
         setSearch({
             [category]: value === type ? undefined : value,
+        });
+    };
+
+    const handlePageChange = (newPage) => {
+        setCurrentPage(newPage);
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
         });
     };
 
@@ -52,6 +63,8 @@ function DirectoryContent() {
                 const searchParams = { query, type, tag, color };
                 const results = await searchWebsites(searchParams);
                 setWebsites(results);
+                setTotalPages(Math.ceil(results.length / itemsPerPage));
+                setCurrentPage(1); // Reset to first page on new search
             } catch (error) {
                 console.error("Error fetching websites:", error);
             } finally {
@@ -61,6 +74,11 @@ function DirectoryContent() {
 
         fetchWebsites();
     }, [query, type, tag, color]);
+
+    const paginatedWebsites = websites.slice(
+        (currentPage - 1) * itemsPerPage,
+        currentPage * itemsPerPage
+    );
 
     return (
         <SectionLayout>
@@ -118,28 +136,74 @@ function DirectoryContent() {
                     </p>
                 </div>
             ) : (
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {websites.map((website) => (
-                        <WebsiteCard
-                            key={website.id}
-                            name={website.name}
-                            href={website.href}
-                            tags={
-                                tag
-                                    ? [
-                                          tag,
-                                          ...(website.tags || []).filter(
-                                              (t) =>
-                                                  t.toLowerCase() !==
-                                                  tag.toLowerCase()
-                                          ),
-                                      ]
-                                    : website.tags
-                            }
-                            description={website.description}
-                        />
-                    ))}
-                </div>
+                <>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+                        {paginatedWebsites.map((website) => (
+                            <WebsiteCard
+                                key={website.id}
+                                name={website.name}
+                                href={website.href}
+                                tags={
+                                    tag
+                                        ? [
+                                              tag,
+                                              ...(website.tags || []).filter(
+                                                  (t) =>
+                                                      t.toLowerCase() !==
+                                                      tag.toLowerCase()
+                                              ),
+                                          ]
+                                        : website.tags
+                                }
+                                description={website.description}
+                            />
+                        ))}
+                    </div>
+
+                    {totalPages > 1 && (
+                        <div className="flex justify-center items-center gap-2 mt-8">
+                            <button
+                                onClick={() =>
+                                    handlePageChange(currentPage - 1)
+                                }
+                                disabled={currentPage === 1}
+                                className="p-2 rounded-lg border border-border/50 bg-secondary text-muted-foreground hover:bg-secondary/80 hover:text-foreground disabled:opacity-50 disabled:pointer-events-none"
+                                aria-label="Previous page"
+                            >
+                                ←
+                            </button>
+
+                            <div className="flex items-center gap-2">
+                                {[...Array(totalPages)].map((_, i) => (
+                                    <button
+                                        key={i}
+                                        onClick={() => handlePageChange(i + 1)}
+                                        className={cn(
+                                            "w-8 h-8 rounded-lg text-sm font-medium transition-colors",
+                                            "border border-border/50",
+                                            currentPage === i + 1
+                                                ? "bg-primary text-primary-foreground"
+                                                : "bg-secondary text-muted-foreground hover:bg-secondary/80 hover:text-foreground"
+                                        )}
+                                    >
+                                        {i + 1}
+                                    </button>
+                                ))}
+                            </div>
+
+                            <button
+                                onClick={() =>
+                                    handlePageChange(currentPage + 1)
+                                }
+                                disabled={currentPage === totalPages}
+                                className="p-2 rounded-lg border border-border/50 bg-secondary text-muted-foreground hover:bg-secondary/80 hover:text-foreground disabled:opacity-50 disabled:pointer-events-none"
+                                aria-label="Next page"
+                            >
+                                →
+                            </button>
+                        </div>
+                    )}
+                </>
             )}
         </SectionLayout>
     );
