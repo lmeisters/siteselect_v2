@@ -199,6 +199,9 @@ export function SearchCommand() {
     const handleCategorySelect = (category, value) => {
         setIsOpen(false);
         const categoryParam = category.slice(0, -1); // Remove 's' from plural form
+
+        // Reset all other search parameters and set only the selected category
+        resetSearch();
         setSearch({ [categoryParam]: value.toLowerCase() });
 
         // Reset scroll position

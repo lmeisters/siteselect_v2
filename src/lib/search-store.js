@@ -37,11 +37,15 @@ export function useSearchStore() {
             const url = new URL(window.location.href);
             const newParams = new URLSearchParams(searchParams?.toString());
 
+            // Clear all existing search parameters
+            for (const key of newParams.keys()) {
+                newParams.delete(key);
+            }
+
+            // Set the new parameter
             const [[key, value]] = Object.entries(params);
             if (value) {
                 newParams.set(key, value.toLowerCase());
-            } else {
-                newParams.delete(key);
             }
 
             router.replace(`${url.pathname}?${newParams.toString()}`, {
