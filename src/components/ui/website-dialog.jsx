@@ -94,23 +94,23 @@ const WebsiteStructuredData = ({ website }) => {
 };
 
 const categoryIcons = {
-    Type: Layout,
-    Style: Brush,
-    Industry: Briefcase,
-    Color: Palette,
-    Feature: Activity,
-    Layout: RefreshCcw,
-    Platform: Code,
+    Types: Layout,
+    Styles: Brush,
+    Industries: Briefcase,
+    Colors: Palette,
+    Features: Activity,
+    Layouts: RefreshCcw,
+    Platforms: Code,
 };
 
 const allCategories = {
-    Type: SEARCH_CATEGORIES.types,
-    Style: SEARCH_CATEGORIES.styles,
-    Industry: SEARCH_CATEGORIES.industries,
-    Color: SEARCH_CATEGORIES.colors,
-    Feature: SEARCH_CATEGORIES.features,
-    Layout: SEARCH_CATEGORIES.layouts,
-    Platform: SEARCH_CATEGORIES.platforms,
+    Types: SEARCH_CATEGORIES.types,
+    Styles: SEARCH_CATEGORIES.styles,
+    Industries: SEARCH_CATEGORIES.industries,
+    Colors: SEARCH_CATEGORIES.colors,
+    Features: SEARCH_CATEGORIES.features,
+    Layouts: SEARCH_CATEGORIES.layouts,
+    Platforms: SEARCH_CATEGORIES.platforms,
 };
 
 export function WebsiteDialog({ website, isOpen, onClose, children }) {
@@ -174,144 +174,152 @@ export function WebsiteDialog({ website, isOpen, onClose, children }) {
     return (
         <Dialog open={isOpen} onOpenChange={onClose}>
             <DialogTrigger asChild>{children}</DialogTrigger>
-            <DialogContent className="sm:max-w-4xl">
+            <DialogContent className="w-[90vw] max-w-4xl p-0 rounded-xl h-[90vh] sm:h-auto overflow-hidden">
                 <WebsiteStructuredData website={website} />
-                <div className="flex gap-6">
-                    <div className="flex-1">
-                        <article className="website-details">
-                            <header className="flex items-center justify-between mb-4">
-                                <div className="flex flex-col">
-                                    <div className="flex items-center">
+
+                <div className="h-full overflow-y-auto p-4 sm:p-6">
+                    <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
+                        <div className="flex-1">
+                            <article className="website-details">
+                                <header className="flex items-center justify-between mb-4">
+                                    <div className="flex flex-col">
+                                        <div className="flex items-center">
+                                            <a
+                                                href={getRefUrl(website.href)}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="group inline-flex items-center text-foreground hover:text-gray-700"
+                                                aria-label={`Visit ${website.name} website`}
+                                            >
+                                                <DialogTitle className="text-2xl font-bold">
+                                                    {website.name}
+                                                </DialogTitle>
+                                            </a>
+                                        </div>
                                         <a
                                             href={getRefUrl(website.href)}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="group inline-flex items-center text-foreground hover:text-gray-700"
-                                            aria-label={`Visit ${website.name} website`}
+                                            className="text-sm text-muted-foreground hover:text-foreground transition-colors mt-1"
                                         >
-                                            <DialogTitle className="text-2xl font-bold">
-                                                {website.name}
-                                            </DialogTitle>
+                                            {website.href}
                                         </a>
                                     </div>
-                                    <a
-                                        href={getRefUrl(website.href)}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="text-sm text-muted-foreground hover:text-foreground transition-colors mt-1"
-                                    >
-                                        {website.href}
-                                    </a>
+                                </header>
+                                <div className="space-y-4 mb-2">
+                                    <DialogDescription className="text-lg text-muted-foreground">
+                                        {website.description}
+                                    </DialogDescription>
+                                    <p className="text-sm text-muted-foreground">
+                                        Last updated:{" "}
+                                        {formatDate(
+                                            website.lastUpdated || "2024-01-01"
+                                        )}
+                                    </p>
                                 </div>
-                            </header>
-                            <div className="space-y-4 mb-2">
-                                <DialogDescription className="text-lg text-muted-foreground">
-                                    {website.description}
-                                </DialogDescription>
-                                <p className="text-sm text-muted-foreground">
-                                    Last updated:{" "}
-                                    {formatDate(
-                                        website.lastUpdated || "2024-01-01"
-                                    )}
-                                </p>
-                            </div>
-                            <figure className="relative w-full aspect-video rounded-lg overflow-hidden">
-                                <div className="absolute inset-0 bg-black/5 z-10" />
-                                <Image
-                                    src={imagePath}
-                                    alt={`Screenshot of ${website.name}'s homepage`}
-                                    fill
-                                    className="object-cover"
-                                    sizes="(max-width: 768px) 100vw, 768px"
-                                    priority
-                                />
-                            </figure>
-                        </article>
-                    </div>
-                    <div className="w-64 border-l pl-6">
-                        <h3 className="text-sm font-medium text-muted-foreground mb-4">
-                            Categories & Tags
-                        </h3>
-                        <div className="space-y-4">
-                            {Object.entries(allCategories).map(
-                                ([category, items]) => {
-                                    const relevantTags = items.filter((item) =>
-                                        website.tags
-                                            ?.map((t) =>
-                                                typeof t === "string"
-                                                    ? t.toLowerCase()
-                                                    : t.name.toLowerCase()
-                                            )
-                                            .includes(item.toLowerCase())
-                                    );
+                                <figure className="relative w-full aspect-video rounded-lg overflow-hidden">
+                                    <div className="absolute inset-0 bg-black/5 z-10" />
+                                    <Image
+                                        src={imagePath}
+                                        alt={`Screenshot of ${website.name}'s homepage`}
+                                        fill
+                                        className="object-cover"
+                                        sizes="(max-width: 768px) 100vw, 768px"
+                                        priority
+                                    />
+                                </figure>
+                            </article>
+                        </div>
 
-                                    if (relevantTags.length === 0) return null;
+                        <div className="w-full sm:w-64 border-t sm:border-t-0 sm:border-l pt-4 sm:pt-0 sm:pl-6">
+                            <h3 className="text-sm font-medium text-muted-foreground mb-4">
+                                Categories & Tags
+                            </h3>
+                            <div className="space-y-4 pb-4 sm:pb-0">
+                                {Object.entries(allCategories).map(
+                                    ([category, items]) => {
+                                        const relevantTags = items.filter(
+                                            (item) =>
+                                                website.tags
+                                                    ?.map((t) =>
+                                                        typeof t === "string"
+                                                            ? t.toLowerCase()
+                                                            : t.name.toLowerCase()
+                                                    )
+                                                    .includes(
+                                                        item.toLowerCase()
+                                                    )
+                                        );
 
-                                    const Icon = categoryIcons[category];
+                                        if (relevantTags.length === 0)
+                                            return null;
 
-                                    return (
-                                        <div key={category}>
-                                            <div className="flex items-center gap-2 mb-2">
-                                                <Icon className="h-4 w-4 text-muted-foreground" />
-                                                <h4 className="text-sm font-medium capitalize">
-                                                    {category}
-                                                </h4>
-                                            </div>
-                                            <div className="flex flex-wrap gap-1.5">
-                                                {getVisibleTags(
-                                                    relevantTags,
-                                                    category
-                                                ).map((tag) => (
-                                                    <span
-                                                        key={tag}
-                                                        onClick={() =>
-                                                            handleTagClick(
-                                                                category,
-                                                                tag
-                                                            )
-                                                        }
-                                                        className="text-xs px-2 py-0.5 bg-secondary text-secondary-foreground rounded-md cursor-pointer hover:bg-primary/10 transition-colors"
-                                                    >
-                                                        {tag}
-                                                    </span>
-                                                ))}
-                                                {relevantTags.length >
-                                                    getVisibleTags(
+                                        const Icon = categoryIcons[category];
+
+                                        return (
+                                            <div key={category}>
+                                                <div className="flex items-center gap-2 mb-2">
+                                                    <Icon className="h-4 w-4 text-muted-foreground" />
+                                                    <h4 className="text-sm font-medium capitalize">
+                                                        {category}
+                                                    </h4>
+                                                </div>
+                                                <div className="flex flex-wrap gap-1.5">
+                                                    {getVisibleTags(
                                                         relevantTags,
                                                         category
-                                                    ).length && (
-                                                    <button
-                                                        onClick={() =>
-                                                            setExpandedCategories(
-                                                                (prev) => ({
-                                                                    ...prev,
-                                                                    [category]:
-                                                                        !prev[
-                                                                            category
-                                                                        ],
-                                                                })
-                                                            )
-                                                        }
-                                                        className="text-xs px-2 py-0.5 bg-secondary text-secondary-foreground rounded-md cursor-pointer hover:bg-primary/10 transition-colors"
-                                                    >
-                                                        {expandedCategories[
+                                                    ).map((tag) => (
+                                                        <span
+                                                            key={tag}
+                                                            onClick={() =>
+                                                                handleTagClick(
+                                                                    category,
+                                                                    tag
+                                                                )
+                                                            }
+                                                            className="text-xs px-2 py-0.5 bg-secondary text-secondary-foreground rounded-md cursor-pointer hover:bg-primary/10 transition-colors"
+                                                        >
+                                                            {tag}
+                                                        </span>
+                                                    ))}
+                                                    {relevantTags.length >
+                                                        getVisibleTags(
+                                                            relevantTags,
                                                             category
-                                                        ]
-                                                            ? "−"
-                                                            : `+${
-                                                                  relevantTags.length -
-                                                                  getVisibleTags(
-                                                                      relevantTags,
-                                                                      category
-                                                                  ).length
-                                                              }`}
-                                                    </button>
-                                                )}
+                                                        ).length && (
+                                                        <button
+                                                            onClick={() =>
+                                                                setExpandedCategories(
+                                                                    (prev) => ({
+                                                                        ...prev,
+                                                                        [category]:
+                                                                            !prev[
+                                                                                category
+                                                                            ],
+                                                                    })
+                                                                )
+                                                            }
+                                                            className="text-xs px-2 py-0.5 bg-secondary text-secondary-foreground rounded-md cursor-pointer hover:bg-primary/10 transition-colors"
+                                                        >
+                                                            {expandedCategories[
+                                                                category
+                                                            ]
+                                                                ? "−"
+                                                                : `+${
+                                                                      relevantTags.length -
+                                                                      getVisibleTags(
+                                                                          relevantTags,
+                                                                          category
+                                                                      ).length
+                                                                  }`}
+                                                        </button>
+                                                    )}
+                                                </div>
                                             </div>
-                                        </div>
-                                    );
-                                }
-                            )}
+                                        );
+                                    }
+                                )}
+                            </div>
                         </div>
                     </div>
                 </div>
