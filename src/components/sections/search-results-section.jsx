@@ -8,8 +8,18 @@ import { SectionLayout } from "@/components/layouts/section-layout";
 import { useSearchStore } from "@/lib/search-store";
 
 export function SearchResultsSection() {
-    const { query, type, tag, color, style, framework, category, resetSearch } =
-        useSearchStore();
+    const {
+        query,
+        type,
+        style,
+        industry,
+        color,
+        feature,
+        layout,
+        platform,
+        resetSearch,
+    } = useSearchStore();
+
     const [websites, setWebsites] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
@@ -17,7 +27,16 @@ export function SearchResultsSection() {
         async function fetchWebsites() {
             setIsLoading(true);
             try {
-                const searchParams = { query, type, tag, color };
+                const searchParams = {
+                    query,
+                    type,
+                    style,
+                    industry,
+                    color,
+                    feature,
+                    layout,
+                    platform,
+                };
                 const results = await searchWebsites(searchParams);
                 setWebsites(results);
             } catch (error) {
@@ -28,7 +47,7 @@ export function SearchResultsSection() {
         }
 
         fetchWebsites();
-    }, [query, type, tag, color]);
+    }, [query, type, style, industry, color, feature, layout, platform]);
 
     return (
         <SectionLayout>
@@ -45,11 +64,12 @@ export function SearchResultsSection() {
                     </div>
                     {(query ||
                         type ||
-                        tag ||
-                        color ||
                         style ||
-                        framework ||
-                        category) && (
+                        industry ||
+                        color ||
+                        feature ||
+                        layout ||
+                        platform) && (
                         <button
                             onClick={resetSearch}
                             className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground bg-secondary hover:bg-secondary/80 rounded-md transition-colors"
@@ -78,7 +98,7 @@ export function SearchResultsSection() {
                                         href={website.href}
                                         tags={website.tags}
                                         description={website.description}
-                                        tag={tag}
+                                        tag={style}
                                     />
                                 </div>
                             </WebsiteDialog>

@@ -34,8 +34,18 @@ import { debounce, find } from "lodash";
 
 export function SearchCommand() {
     const router = useRouter();
-    const { query, type, tag, color, setSearch, resetSearch } =
-        useSearchStore();
+    const {
+        query,
+        type,
+        style,
+        industry,
+        color,
+        feature,
+        layout,
+        platform,
+        setSearch,
+        resetSearch,
+    } = useSearchStore();
     const [isMac, setIsMac] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
     const [searchValue, setSearchValue] = useState("");
@@ -154,14 +164,16 @@ export function SearchCommand() {
 
             if (matchingResult) {
                 possibleSuggestion = matchingResult.name;
-            } else if (selectedCategory) {
-                const categoryItems =
-                    SEARCH_CATEGORIES[`${selectedCategory}s`] || [];
-                const matchingCategory = find(categoryItems, (item) =>
-                    item.toLowerCase().startsWith(value.toLowerCase())
-                );
-                if (matchingCategory) {
-                    possibleSuggestion = matchingCategory;
+            } else {
+                for (const categoryKey of Object.keys(SEARCH_CATEGORIES)) {
+                    const categoryItems = SEARCH_CATEGORIES[categoryKey] || [];
+                    const matchingCategory = find(categoryItems, (item) =>
+                        item.toLowerCase().startsWith(value.toLowerCase())
+                    );
+                    if (matchingCategory) {
+                        possibleSuggestion = matchingCategory;
+                        break;
+                    }
                 }
             }
 
@@ -202,7 +214,36 @@ export function SearchCommand() {
 
         // Reset all other search parameters and set only the selected category
         resetSearch();
-        setSearch({ [categoryParam]: value.toLowerCase() });
+
+        // Map the category to the correct search parameter
+        let searchParam;
+        switch (categoryParam) {
+            case "type":
+                searchParam = { type: value.toLowerCase() };
+                break;
+            case "style":
+                searchParam = { style: value.toLowerCase() };
+                break;
+            case "industry":
+                searchParam = { industry: value.toLowerCase() };
+                break;
+            case "color":
+                searchParam = { color: value.toLowerCase() };
+                break;
+            case "feature":
+                searchParam = { feature: value.toLowerCase() };
+                break;
+            case "layout":
+                searchParam = { layout: value.toLowerCase() };
+                break;
+            case "platform":
+                searchParam = { platform: value.toLowerCase() };
+                break;
+            default:
+                searchParam = { tag: value.toLowerCase() };
+        }
+
+        setSearch(searchParam);
 
         // Reset scroll position
         if (scrollRef.current) {
@@ -210,8 +251,9 @@ export function SearchCommand() {
         }
 
         if (window.location.pathname !== "/directory") {
+            const paramKey = Object.keys(searchParam)[0];
             router.push(
-                `/directory?${categoryParam}=${encodeURIComponent(
+                `/directory?${paramKey}=${encodeURIComponent(
                     value.toLowerCase()
                 )}`
             );
@@ -228,10 +270,18 @@ export function SearchCommand() {
                             ? query
                             : type
                             ? `Type: ${type}`
-                            : tag
-                            ? `Tag: ${tag}`
+                            : style
+                            ? `Style: ${style}`
+                            : industry
+                            ? `Industry: ${industry}`
                             : color
                             ? `Color: ${color}`
+                            : feature
+                            ? `Feature: ${feature}`
+                            : layout
+                            ? `Layout: ${layout}`
+                            : platform
+                            ? `Platform: ${platform}`
                             : "Search for designs..."}
                     </span>
                     <kbd className="pointer-events-none hidden sm:inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[12px] font-medium opacity-100">
@@ -255,10 +305,18 @@ export function SearchCommand() {
                                             ? query
                                             : type
                                             ? `Type: ${type}`
-                                            : tag
-                                            ? `Tag: ${tag}`
+                                            : style
+                                            ? `Style: ${style}`
+                                            : industry
+                                            ? `Industry: ${industry}`
                                             : color
                                             ? `Color: ${color}`
+                                            : feature
+                                            ? `Feature: ${feature}`
+                                            : layout
+                                            ? `Layout: ${layout}`
+                                            : platform
+                                            ? `Platform: ${platform}`
                                             : "Search designs..."
                                     }
                                     value={searchValue}
@@ -314,31 +372,64 @@ export function SearchCommand() {
                                     : "No results found."}
                             </CommandEmpty>
 
-                            {/* {searchResults.length > 0 && (
-                                <CommandGroup heading="Search Results">
-                                    {searchResults.map((website) => (
-                                        <CommandItem
-                                            key={website.id}
-                                            onSelect={() =>
-                                                handleSelect(website)
-                                            }
-                                            className="cursor-pointer"
-                                        >
-                                            <Search className="mr-2 h-4 w-4" />
-                                            <div className="flex flex-col overflow-hidden">
-                                                <span className="truncate">
-                                                    {website.name}
-                                                </span>
-                                                <span className="text-sm text-muted-foreground truncate">
-                                                    {website.tags.join(", ")}
-                                                </span>
-                                            </div>
-                                        </CommandItem>
-                                    ))}
-                                </CommandGroup>
-                            )} */}
+                            {searchValue ? (
+                                <>
+                                    {Object.entries(SEARCH_CATEGORIES).map(
+                                        ([categoryKey, items]) => {
+                                            const matchingItems = items.filter(
+                                                (item) =>
+                                                    item
+                                                        .toLowerCase()
+                                                        .includes(
+                                                            searchValue.toLowerCase()
+                                                        )
+                                            );
 
-                            {!searchValue && (
+                                            if (matchingItems.length === 0)
+                                                return null;
+
+                                            const Icon =
+                                                categoryIcons[categoryKey];
+
+                                            return (
+                                                <CommandGroup
+                                                    key={categoryKey}
+                                                    heading={
+                                                        categories[categoryKey]
+                                                    }
+                                                >
+                                                    {matchingItems.map(
+                                                        (item) => (
+                                                            <CommandItem
+                                                                key={`${categoryKey}-${item}`}
+                                                                onSelect={() =>
+                                                                    handleCategorySelect(
+                                                                        categoryKey,
+                                                                        item
+                                                                    )
+                                                                }
+                                                                className="cursor-pointer"
+                                                            >
+                                                                <Icon className="mr-2 h-4 w-4" />
+                                                                <span className="flex-1 truncate">
+                                                                    {item}
+                                                                </span>
+                                                                <span className="text-xs text-muted-foreground mr-2">
+                                                                    {filterCounts[
+                                                                        categoryKey
+                                                                    ]?.[
+                                                                        item.toLowerCase()
+                                                                    ] || 0}
+                                                                </span>
+                                                            </CommandItem>
+                                                        )
+                                                    )}
+                                                </CommandGroup>
+                                            );
+                                        }
+                                    )}
+                                </>
+                            ) : (
                                 <CommandGroup>
                                     {Object.entries(categories).map(
                                         ([key, label]) => {
@@ -379,7 +470,7 @@ export function SearchCommand() {
                             )}
                         </CommandList>
 
-                        {selectedCategory && (
+                        {!searchValue && selectedCategory && (
                             <div
                                 ref={scrollRef}
                                 className="w-full sm:w-[70%] overflow-y-auto"
@@ -400,9 +491,17 @@ export function SearchCommand() {
                                                 className={`cursor-pointer mb-0.5 last:mb-0 ${
                                                     type?.toLowerCase() ===
                                                         item.toLowerCase() ||
-                                                    tag?.toLowerCase() ===
+                                                    style?.toLowerCase() ===
+                                                        item.toLowerCase() ||
+                                                    industry?.toLowerCase() ===
                                                         item.toLowerCase() ||
                                                     color?.toLowerCase() ===
+                                                        item.toLowerCase() ||
+                                                    feature?.toLowerCase() ===
+                                                        item.toLowerCase() ||
+                                                    layout?.toLowerCase() ===
+                                                        item.toLowerCase() ||
+                                                    platform?.toLowerCase() ===
                                                         item.toLowerCase()
                                                         ? "bg-accent"
                                                         : ""
@@ -412,9 +511,17 @@ export function SearchCommand() {
                                                     className={`flex-1 truncate ${
                                                         type?.toLowerCase() ===
                                                             item.toLowerCase() ||
-                                                        tag?.toLowerCase() ===
+                                                        style?.toLowerCase() ===
+                                                            item.toLowerCase() ||
+                                                        industry?.toLowerCase() ===
                                                             item.toLowerCase() ||
                                                         color?.toLowerCase() ===
+                                                            item.toLowerCase() ||
+                                                        feature?.toLowerCase() ===
+                                                            item.toLowerCase() ||
+                                                        layout?.toLowerCase() ===
+                                                            item.toLowerCase() ||
+                                                        platform?.toLowerCase() ===
                                                             item.toLowerCase()
                                                             ? "font-medium"
                                                             : ""

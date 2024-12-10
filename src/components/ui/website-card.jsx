@@ -107,9 +107,7 @@ export function WebsiteCard({
                 {isDialogOpen && (
                     <WebsiteDialog
                         isOpen={isDialogOpen}
-                        onClose={() => {
-                            setIsDialogOpen(false);
-                        }}
+                        onClose={() => setIsDialogOpen(false)}
                         website={{ name, href, description, tags }}
                     />
                 )}

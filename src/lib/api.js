@@ -65,7 +65,16 @@ export async function getAllWebsites() {
     }));
 }
 
-export async function searchWebsites({ query, type, tag, color }) {
+export async function searchWebsites({
+    query,
+    type,
+    style,
+    industry,
+    color,
+    feature,
+    layout,
+    platform,
+}) {
     try {
         let supabaseQuery = supabase.from("websites").select(`
             *,
@@ -77,74 +86,56 @@ export async function searchWebsites({ query, type, tag, color }) {
             )
         `);
 
+        // Handle general search query
         if (query) {
+            const { data: taggedWebsites } = await supabase
+                .from("website_tags")
+                .select(`website_id, tags!inner(name)`)
+                .ilike("tags.name", `%${query}%`);
+
+            const websiteIds = taggedWebsites?.map((w) => w.website_id) || [];
             supabaseQuery = supabaseQuery.or(
-                `name.ilike.%${query}%,description.ilike.%${query}%`
+                `name.ilike.%${query}%,description.ilike.%${query}%,id.in.(${websiteIds.join(
+                    ","
+                )})`
             );
         }
 
-        if (type) {
-            const { data: taggedWebsites } = await supabase
-                .from("website_tags")
-                .select(
+        // Map of parameter names to their corresponding categories in the database
+        const categoryMap = {
+            type: "type",
+            style: "style",
+            industry: "industry",
+            color: "color",
+            feature: "feature",
+            layout: "layout",
+            platform: "platform",
+        };
+
+        // Handle all category-based filters
+        for (const [param, category] of Object.entries(categoryMap)) {
+            if (eval(param)) {
+                // Using eval to dynamically access the parameter
+                const { data: taggedWebsites } = await supabase
+                    .from("website_tags")
+                    .select(
+                        `
+                        website_id,
+                        tags!inner (
+                            name,
+                            category
+                        )
                     `
-                    website_id,
-                    tags!inner (
-                        name
                     )
-                `
-                )
-                .eq("tags.category", "type")
-                .ilike("tags.name", `%${type}%`);
+                    .eq("tags.category", category)
+                    .ilike("tags.name", `%${eval(param)}%`);
 
-            if (taggedWebsites?.length > 0) {
-                const websiteIds = taggedWebsites.map((w) => w.website_id);
-                supabaseQuery = supabaseQuery.in("id", websiteIds);
-            } else {
-                return [];
-            }
-        }
-
-        if (tag) {
-            const { data: taggedWebsites } = await supabase
-                .from("website_tags")
-                .select(
-                    `
-                    website_id,
-                    tags!inner (
-                        name
-                    )
-                `
-                )
-                .ilike("tags.name", `%${tag}%`);
-
-            if (taggedWebsites?.length > 0) {
-                const websiteIds = taggedWebsites.map((w) => w.website_id);
-                supabaseQuery = supabaseQuery.in("id", websiteIds);
-            } else {
-                return [];
-            }
-        }
-
-        if (color) {
-            const { data: taggedWebsites } = await supabase
-                .from("website_tags")
-                .select(
-                    `
-                    website_id,
-                    tags!inner (
-                        name
-                    )
-                `
-                )
-                .eq("tags.category", "color")
-                .ilike("tags.name", `%${color}%`);
-
-            if (taggedWebsites?.length > 0) {
-                const websiteIds = taggedWebsites.map((w) => w.website_id);
-                supabaseQuery = supabaseQuery.in("id", websiteIds);
-            } else {
-                return [];
+                if (taggedWebsites?.length > 0) {
+                    const websiteIds = taggedWebsites.map((w) => w.website_id);
+                    supabaseQuery = supabaseQuery.in("id", websiteIds);
+                } else {
+                    return [];
+                }
             }
         }
 

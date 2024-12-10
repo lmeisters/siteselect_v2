@@ -23,6 +23,7 @@ import Image from "next/image";
 import { SEARCH_CATEGORIES } from "@/lib/constants";
 import { getRefUrl } from "@/lib/utils/url";
 import { formatDate } from "@/lib/utils/date";
+import { useSearchStore } from "@/lib/search-store";
 
 const WebsiteStructuredData = ({ website }) => {
     const jsonLd = {
@@ -118,10 +119,34 @@ const allCategories = {
 export function WebsiteDialog({ website, isOpen, onClose, children }) {
     const [expandedCategories, setExpandedCategories] = useState({});
     const router = useRouter();
+    const { resetSearch, setSearch } = useSearchStore();
 
-    const handleTagClick = (category, tag) => {
-        onClose();
-        const searchParam = category.toLowerCase().slice(0, -1); // Remove 's' from plural
+    const handleTagClick = async (category, tag) => {
+        // Map the plural category to singular search parameter
+        const categoryMap = {
+            Types: "type",
+            Styles: "style",
+            Industries: "industry",
+            Colors: "color",
+            Features: "feature",
+            Layouts: "layout",
+            Platforms: "platform",
+        };
+
+        const searchParam = categoryMap[category];
+
+        if (!searchParam) return;
+
+        // Reset other search parameters and set the selected one
+        resetSearch();
+        setSearch({ [searchParam]: tag.toLowerCase() });
+
+        // Close the dialog
+        if (typeof onClose === "function") {
+            onClose();
+        }
+
+        // Navigate after state updates
         router.push(
             `/directory?${searchParam}=${encodeURIComponent(tag.toLowerCase())}`
         );

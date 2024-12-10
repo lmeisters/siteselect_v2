@@ -2,6 +2,7 @@
 
 import { useRouter, useSearchParams } from "next/navigation";
 import { useCallback } from "react";
+import { create } from "zustand";
 
 function getSearchParamsObject(searchParams) {
     if (!searchParams)
@@ -28,43 +29,29 @@ function getSearchParamsObject(searchParams) {
     };
 }
 
-export function useSearchStore() {
-    const router = useRouter();
-    const searchParams = useSearchParams();
-
-    const setSearch = useCallback(
-        (params) => {
-            const url = new URL(window.location.href);
-            const newParams = new URLSearchParams(searchParams?.toString());
-
-            // Clear all existing search parameters
-            for (const key of newParams.keys()) {
-                newParams.delete(key);
-            }
-
-            // Set the new parameter
-            const [[key, value]] = Object.entries(params);
-            if (value) {
-                newParams.set(key, value.toLowerCase());
-            }
-
-            router.replace(`${url.pathname}?${newParams.toString()}`, {
-                scroll: false,
-            });
-        },
-        [router, searchParams]
-    );
-
-    const resetSearch = useCallback(() => {
-        const url = new URL(window.location.href);
-        router.replace(url.pathname, {
-            scroll: false,
-        });
-    }, [router]);
-
-    return {
-        ...getSearchParamsObject(searchParams),
-        setSearch,
-        resetSearch,
-    };
-}
+export const useSearchStore = create((set) => ({
+    query: "",
+    type: "",
+    style: "",
+    industry: "",
+    color: "",
+    feature: "",
+    layout: "",
+    platform: "",
+    setSearch: (params) =>
+        set((state) => ({
+            ...state,
+            ...params,
+        })),
+    resetSearch: () =>
+        set({
+            query: "",
+            type: "",
+            style: "",
+            industry: "",
+            color: "",
+            feature: "",
+            layout: "",
+            platform: "",
+        }),
+}));
