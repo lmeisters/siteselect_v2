@@ -26,7 +26,7 @@ import {
     DialogTrigger,
 } from "@/components/ui/dialog";
 import { useEffect, useState, useMemo, useRef } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { searchWebsites, getFilterCounts } from "@/lib/api";
 import { useSearchStore } from "@/lib/search-store";
 import { SEARCH_CATEGORIES } from "@/lib/constants";
@@ -34,6 +34,7 @@ import { debounce, find } from "lodash";
 
 export function SearchCommand() {
     const router = useRouter();
+    const pathname = usePathname();
     const {
         query,
         type,
@@ -84,6 +85,12 @@ export function SearchCommand() {
         layouts: RefreshCcw,
         platforms: Code,
     };
+
+    useEffect(() => {
+        if (pathname === "/") {
+            resetSearch();
+        }
+    }, [pathname, resetSearch]);
 
     useEffect(() => {
         setIsMac(navigator?.platform?.includes("Mac"));
@@ -205,7 +212,7 @@ export function SearchCommand() {
 
     const handleSelect = (website) => {
         setIsOpen(false);
-        setSearch({ query: website.name });
+        setSearch({ query: website.name.toLowerCase() });
     };
 
     const handleCategorySelect = (category, value) => {
