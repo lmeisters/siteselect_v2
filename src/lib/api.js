@@ -71,12 +71,8 @@ export async function searchWebsites({ query, type, tag, color }) {
             *,
             website_tags!inner (
                 tags!inner (
-                    name
-                )
-            ),
-            website_colors (
-                colors (
-                    name
+                    name,
+                    category
                 )
             )
         `);
@@ -88,49 +84,22 @@ export async function searchWebsites({ query, type, tag, color }) {
         }
 
         if (type) {
-            supabaseQuery = supabaseQuery.eq("type", type.toLowerCase());
-        }
-
-        if (color) {
-            const { data: coloredWebsites } = await supabase
-                .from("website_colors")
-                .select(
-                    `
-                    website_id,
-                    colors!inner (
-                        name
-                    )
-                `
-                )
-                .eq("colors.name", color);
-
-            if (coloredWebsites?.length > 0) {
-                const websiteIds = coloredWebsites.map((w) => w.website_id);
-                supabaseQuery = supabaseQuery.in("id", websiteIds);
-            } else {
-                return [];
-            }
+            supabaseQuery = supabaseQuery
+                .eq("website_tags.tags.category", "type")
+                .ilike("website_tags.tags.name", `%${type}%`);
         }
 
         if (tag) {
-            const { data: taggedWebsites } = await supabase
-                .from("website_tags")
-                .select(
-                    `
-                    website_id,
-                    tags!inner (
-                        name
-                    )
-                `
-                )
-                .eq("tags.name", tag);
+            supabaseQuery = supabaseQuery.ilike(
+                "website_tags.tags.name",
+                `%${tag}%`
+            );
+        }
 
-            if (taggedWebsites?.length > 0) {
-                const websiteIds = taggedWebsites.map((w) => w.website_id);
-                supabaseQuery = supabaseQuery.in("id", websiteIds);
-            } else {
-                return [];
-            }
+        if (color) {
+            supabaseQuery = supabaseQuery
+                .eq("website_tags.tags.category", "color")
+                .ilike("website_tags.tags.name", `%${color}%`);
         }
 
         const { data, error } = await supabaseQuery;
@@ -140,10 +109,7 @@ export async function searchWebsites({ query, type, tag, color }) {
 
         return data.map((website) => ({
             ...website,
-            tags: [
-                ...(website.website_tags?.map((wt) => wt.tags.name) || []),
-                ...(website.website_colors?.map((wc) => wc.colors.name) || []),
-            ],
+            tags: website.website_tags?.map((wt) => wt.tags.name) || [],
         }));
     } catch (error) {
         console.error("Search error:", error);
@@ -153,64 +119,54 @@ export async function searchWebsites({ query, type, tag, color }) {
 
 export async function getFilterCounts() {
     try {
-        const { data: typeData } = await supabase
-            .from("websites")
-            .select("type", { count: "exact" })
-            .not("type", "is", null);
-
-        const { data: colorData } = await supabase
-            .from("website_colors")
-            .select(
-                `
-                colors (
-                    name
-                )
-            `
-            )
-            .not("colors.name", "is", null);
-
         const { data: tagData } = await supabase
             .from("website_tags")
             .select(
                 `
                 tags (
-                    name
+                    name,
+                    category
                 )
             `
             )
-            .not("tags.name", "is", null);
+            .not("tags.name", "eq", null);
 
-        // Count occurrences of each type
-        const typeCounts =
-            typeData?.reduce((acc, item) => {
-                acc[item.type] = (acc[item.type] || 0) + 1;
-                return acc;
-            }, {}) || {};
-
-        // Count occurrences of each color
-        const colorCounts =
-            colorData?.reduce((acc, item) => {
-                const colorName = item.colors.name;
-                acc[colorName] = (acc[colorName] || 0) + 1;
-                return acc;
-            }, {}) || {};
-
-        // Count occurrences of each tag
-        const tagCounts =
-            tagData?.reduce((acc, item) => {
-                const tagName = item.tags.name;
-                acc[tagName] = (acc[tagName] || 0) + 1;
-                return acc;
-            }, {}) || {};
-
-        return {
-            types: typeCounts,
-            colors: colorCounts,
-            tags: tagCounts,
+        // Initialize counts object with all categories
+        const counts = {
+            types: {},
+            styles: {},
+            industries: {},
+            colors: {},
+            features: {},
+            layouts: {},
+            platforms: {},
         };
+
+        // Count tags by category
+        tagData?.forEach((item) => {
+            const tag = item.tags;
+            if (tag?.name && tag?.category) {
+                const category = `${tag.category}s`; // Convert to plural form
+                if (counts[category]) {
+                    const normalizedName = tag.name.toLowerCase();
+                    counts[category][normalizedName] =
+                        (counts[category][normalizedName] || 0) + 1;
+                }
+            }
+        });
+
+        return counts;
     } catch (error) {
         console.error("Error getting filter counts:", error);
-        throw error;
+        return {
+            types: {},
+            styles: {},
+            industries: {},
+            colors: {},
+            features: {},
+            layouts: {},
+            platforms: {},
+        };
     }
 }
 

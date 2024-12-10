@@ -41,7 +41,7 @@ function DirectoryContent() {
 
     const handleCategorySelect = (category, value) => {
         setSearch({
-            [category]: tag === value ? undefined : value,
+            [category]: value === type ? undefined : value,
         });
     };
 
@@ -76,7 +76,7 @@ function DirectoryContent() {
                                     onClick={(e) => {
                                         e.preventDefault();
                                         handleCategorySelect(
-                                            "tag",
+                                            "type",
                                             commonTag.id
                                         );
                                     }}
@@ -86,7 +86,7 @@ function DirectoryContent() {
                                         "border border-border/50",
                                         "flex items-center gap-1.5",
                                         "text-muted-foreground",
-                                        tag === commonTag.id
+                                        type === commonTag.id
                                             ? "bg-primary text-primary-foreground"
                                             : "hover:bg-secondary/80 hover:text-foreground"
                                     )}
@@ -129,7 +129,9 @@ function DirectoryContent() {
                                     ? [
                                           tag,
                                           ...(website.tags || []).filter(
-                                              (t) => t !== tag
+                                              (t) =>
+                                                  t.toLowerCase() !==
+                                                  tag.toLowerCase()
                                           ),
                                       ]
                                     : website.tags

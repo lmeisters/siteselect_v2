@@ -35,8 +35,10 @@ const WebsiteStructuredData = ({ website }) => {
         name: website.name,
         description: website.description,
         url: website.href,
-        // Comma-separated list of tags for SEO keywords
-        keywords: website.tags.join(", "),
+        // Convert tag objects to strings if necessary
+        keywords: website.tags
+            .map((tag) => (typeof tag === "string" ? tag : tag.name))
+            .join(", "),
         // Main image URL, converting site name to kebab-case for the filename
         image: `/images/${website.name
             .toLowerCase()
@@ -130,20 +132,32 @@ export function WebsiteDialog({ website, isOpen, onClose, children }) {
     };
 
     website.tags?.forEach((tag) => {
-        if (SEARCH_CATEGORIES.types.includes(tag)) {
-            categorizedTags.types.push(tag);
-        } else if (SEARCH_CATEGORIES.styles.includes(tag)) {
-            categorizedTags.styles.push(tag);
-        } else if (SEARCH_CATEGORIES.industries.includes(tag)) {
-            categorizedTags.industries.push(tag);
-        } else if (SEARCH_CATEGORIES.colors.includes(tag)) {
-            categorizedTags.colors.push(tag);
-        } else if (SEARCH_CATEGORIES.features.includes(tag)) {
-            categorizedTags.features.push(tag);
-        } else if (SEARCH_CATEGORIES.layouts.includes(tag)) {
-            categorizedTags.layouts.push(tag);
-        } else if (SEARCH_CATEGORIES.platforms.includes(tag)) {
-            categorizedTags.platforms.push(tag);
+        // Handle tag whether it's a string or an object
+        const tagName = typeof tag === "string" ? tag : tag.name;
+        const category = typeof tag === "string" ? null : tag.category;
+
+        // Categorize based on tag category if available, otherwise use the old logic
+        if (category) {
+            const categoryKey = `${category}s`.toLowerCase();
+            if (categorizedTags[categoryKey]) {
+                categorizedTags[categoryKey].push(tagName);
+            }
+        } else {
+            if (SEARCH_CATEGORIES.types.includes(tagName)) {
+                categorizedTags.types.push(tagName);
+            } else if (SEARCH_CATEGORIES.styles.includes(tagName)) {
+                categorizedTags.styles.push(tagName);
+            } else if (SEARCH_CATEGORIES.industries.includes(tagName)) {
+                categorizedTags.industries.push(tagName);
+            } else if (SEARCH_CATEGORIES.colors.includes(tagName)) {
+                categorizedTags.colors.push(tagName);
+            } else if (SEARCH_CATEGORIES.features.includes(tagName)) {
+                categorizedTags.features.push(tagName);
+            } else if (SEARCH_CATEGORIES.layouts.includes(tagName)) {
+                categorizedTags.layouts.push(tagName);
+            } else if (SEARCH_CATEGORIES.platforms.includes(tagName)) {
+                categorizedTags.platforms.push(tagName);
+            }
         }
     });
 
@@ -213,7 +227,11 @@ export function WebsiteDialog({ website, isOpen, onClose, children }) {
                                 ([category, items]) => {
                                     const relevantTags = items.filter((item) =>
                                         website.tags
-                                            ?.map((t) => t.toLowerCase())
+                                            ?.map((t) =>
+                                                typeof t === "string"
+                                                    ? t.toLowerCase()
+                                                    : t.name.toLowerCase()
+                                            )
                                             .includes(item.toLowerCase())
                                     );
 

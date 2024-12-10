@@ -74,13 +74,40 @@ export function SearchResultsSection() {
                             {websites.map((website) => (
                                 <WebsiteDialog
                                     key={website.id}
-                                    website={website}
+                                    website={{
+                                        ...website,
+                                        tags: tag
+                                            ? [
+                                                  tag,
+                                                  ...(
+                                                      website.tags || []
+                                                  ).filter(
+                                                      (t) =>
+                                                          t.toLowerCase() !==
+                                                          tag.toLowerCase()
+                                                  ),
+                                              ]
+                                            : website.tags,
+                                    }}
                                 >
                                     <div className="cursor-pointer">
                                         <WebsiteCard
                                             name={website.name}
                                             href={website.href}
-                                            tags={website.tags}
+                                            tags={
+                                                tag
+                                                    ? [
+                                                          tag,
+                                                          ...(
+                                                              website.tags || []
+                                                          ).filter(
+                                                              (t) =>
+                                                                  t.toLowerCase() !==
+                                                                  tag.toLowerCase()
+                                                          ),
+                                                      ]
+                                                    : website.tags
+                                            }
                                             description={website.description}
                                         />
                                     </div>

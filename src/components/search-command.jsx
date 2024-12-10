@@ -44,8 +44,12 @@ export function SearchCommand() {
     const [selectedCategory, setSelectedCategory] = useState("type");
     const [filterCounts, setFilterCounts] = useState({
         types: {},
+        styles: {},
+        industries: {},
         colors: {},
-        tags: {},
+        features: {},
+        layouts: {},
+        platforms: {},
     });
     const [currentSuggestion, setCurrentSuggestion] = useState("");
     const [suggestion, setSuggestion] = useState("");
@@ -307,7 +311,7 @@ export function SearchCommand() {
                                     : "No results found."}
                             </CommandEmpty>
 
-                            {searchResults.length > 0 && (
+                            {/* {searchResults.length > 0 && (
                                 <CommandGroup heading="Search Results">
                                     {searchResults.map((website) => (
                                         <CommandItem
@@ -329,7 +333,7 @@ export function SearchCommand() {
                                         </CommandItem>
                                     ))}
                                 </CommandGroup>
-                            )}
+                            )} */}
 
                             {!searchValue && (
                                 <CommandGroup>
