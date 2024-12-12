@@ -373,65 +373,70 @@ export function SearchCommand() {
                     </div>
                     <div className="flex flex-col sm:flex-row h-[400px] sm:h-[245px]">
                         {searchValue ? (
-                            // Full-width search results
-                            <CommandList className="w-full">
-                                <CommandEmpty>
-                                    {isLoading
-                                        ? "Searching..."
-                                        : "No results found."}
-                                </CommandEmpty>
-                                {Object.entries(SEARCH_CATEGORIES).map(
-                                    ([categoryKey, items]) => {
-                                        const matchingItems = items.filter(
-                                            (item) =>
-                                                item
-                                                    .toLowerCase()
-                                                    .includes(
-                                                        searchValue.toLowerCase()
-                                                    )
-                                        );
+                            // Full-width search results with scroll
+                            <div className="w-full overflow-y-auto">
+                                <CommandList>
+                                    <CommandEmpty>
+                                        {isLoading
+                                            ? "Searching..."
+                                            : "No results found."}
+                                    </CommandEmpty>
+                                    {Object.entries(SEARCH_CATEGORIES).map(
+                                        ([categoryKey, items]) => {
+                                            const matchingItems = items.filter(
+                                                (item) =>
+                                                    item
+                                                        .toLowerCase()
+                                                        .includes(
+                                                            searchValue.toLowerCase()
+                                                        )
+                                            );
 
-                                        if (matchingItems.length === 0)
-                                            return null;
+                                            if (matchingItems.length === 0)
+                                                return null;
 
-                                        const Icon = categoryIcons[categoryKey];
+                                            const Icon =
+                                                categoryIcons[categoryKey];
 
-                                        return (
-                                            <CommandGroup
-                                                key={categoryKey}
-                                                heading={
-                                                    categories[categoryKey]
-                                                }
-                                            >
-                                                {matchingItems.map((item) => (
-                                                    <CommandItem
-                                                        key={`${categoryKey}-${item}`}
-                                                        onSelect={() =>
-                                                            handleCategorySelect(
-                                                                categoryKey,
-                                                                item
-                                                            )
-                                                        }
-                                                        className="cursor-pointer"
-                                                    >
-                                                        <Icon className="mr-2 h-4 w-4" />
-                                                        <span className="flex-1 truncate">
-                                                            {item}
-                                                        </span>
-                                                        <span className="text-xs text-muted-foreground mr-2">
-                                                            {filterCounts[
-                                                                categoryKey
-                                                            ]?.[
-                                                                item.toLowerCase()
-                                                            ] || 0}
-                                                        </span>
-                                                    </CommandItem>
-                                                ))}
-                                            </CommandGroup>
-                                        );
-                                    }
-                                )}
-                            </CommandList>
+                                            return (
+                                                <CommandGroup
+                                                    key={categoryKey}
+                                                    heading={
+                                                        categories[categoryKey]
+                                                    }
+                                                >
+                                                    {matchingItems.map(
+                                                        (item) => (
+                                                            <CommandItem
+                                                                key={`${categoryKey}-${item}`}
+                                                                onSelect={() =>
+                                                                    handleCategorySelect(
+                                                                        categoryKey,
+                                                                        item
+                                                                    )
+                                                                }
+                                                                className="cursor-pointer"
+                                                            >
+                                                                <Icon className="mr-2 h-4 w-4" />
+                                                                <span className="flex-1 truncate">
+                                                                    {item}
+                                                                </span>
+                                                                <span className="text-xs text-muted-foreground mr-2">
+                                                                    {filterCounts[
+                                                                        categoryKey
+                                                                    ]?.[
+                                                                        item.toLowerCase()
+                                                                    ] || 0}
+                                                                </span>
+                                                            </CommandItem>
+                                                        )
+                                                    )}
+                                                </CommandGroup>
+                                            );
+                                        }
+                                    )}
+                                </CommandList>
+                            </div>
                         ) : (
                             // Original split view for categories and tags
                             <>
