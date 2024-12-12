@@ -18,13 +18,15 @@ export function AboutSheet() {
             </SheetTrigger>
             <SheetContent>
                 <SheetHeader>
-                    <SheetTitle>About SiteSelect</SheetTitle>
-                    <SheetDescription>
+                    <SheetTitle className="text-left">
+                        About SiteSelect
+                    </SheetTitle>
+                    <SheetDescription className="text-left">
                         Your gateway to discovering exceptional website designs
                         and creative inspiration.
                     </SheetDescription>
                 </SheetHeader>
-                <div className="mt-6 space-y-4">
+                <div className="flex flex-col h-[calc(100vh-8rem)] mt-6">
                     <p className="text-sm text-muted-foreground">
                         Explore our handpicked collection of the web&apos;s
                         finest designs. From stunning layouts to innovative
@@ -33,19 +35,21 @@ export function AboutSheet() {
                         creative professionals seeking fresh inspiration for
                         their next project.
                     </p>
-                    <div className="border-t pt-4">
-                        <p className="text-sm font-medium">
-                            Want your website featured?
-                        </p>
-                        <p className="text-sm text-muted-foreground">
-                            Submit at{" "}
-                            <a
-                                href="mailto:siteselect@gmail.com"
-                                className="text-primary hover:opacity-80"
-                            >
-                                siteselect@gmail.com
-                            </a>
-                        </p>
+                    <div className="mt-auto border-t pt-4 mb-6">
+                        <div>
+                            <p className="text-sm font-medium">
+                                Want your website featured?
+                            </p>
+                            <p className="text-sm text-muted-foreground">
+                                Submit at{" "}
+                                <a
+                                    href="mailto:siteselect@gmail.com"
+                                    className="text-primary hover:opacity-80"
+                                >
+                                    siteselect@gmail.com
+                                </a>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </SheetContent>
