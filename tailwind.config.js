@@ -74,9 +74,24 @@ module.exports = {
                         transform: "translate(0, 0)",
                     },
                 },
+                shimmer: {
+                    "0%": {
+                        backgroundPosition: "200% 0",
+                        opacity: "0.5",
+                    },
+                    "50%": {
+                        opacity: "0.8",
+                    },
+                    "100%": {
+                        backgroundPosition: "-200% 0",
+                        opacity: "0.5",
+                    },
+                },
             },
             animation: {
                 "arrow-move": "arrow-move 1.1s cubic-bezier(0.16, 1, 0.3, 1)",
+                shimmer: "shimmer 2s linear infinite",
+                "shimmer-dark": "shimmer 2s linear infinite",
             },
             borderRadius: {
                 lg: "var(--radius)",

@@ -50,10 +50,6 @@ function DirectoryContent() {
 
     const handlePageChange = (newPage) => {
         setCurrentPage(newPage);
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-        });
     };
 
     useEffect(() => {
@@ -85,7 +81,7 @@ function DirectoryContent() {
             <div className="flex flex-row mb-6 gap-4 items-center justify-between">
                 <h1 className="text-xl font-medium">Directory</h1>
                 <div className="relative w-full sm:w-auto overflow-x-auto">
-                    <div className="flex gap-2 overflow-x-auto scrollbar-hide relative">
+                    <div className="flex gap-1.5 overflow-x-auto scrollbar-hide relative">
                         {COMMON_TAGS.map((commonTag) => {
                             const Icon = commonTag.icon;
                             return (
@@ -121,40 +117,29 @@ function DirectoryContent() {
             </div>
 
             {isLoading ? (
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {[...Array(6)].map((_, i) => (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 h-fit lg:min-h-[900px]">
+                    {[...Array(9)].map((_, i) => (
                         <div
                             key={i}
-                            className="h-[300px] rounded-xl bg-muted animate-pulse"
+                            className="h-[300px] rounded-xl bg-gradient-to-r from-muted via-muted/30 to-muted bg-[length:200%_100%] animate-shimmer-dark"
                         />
                     ))}
                 </div>
             ) : websites.length === 0 ? (
-                <div className="flex flex-col items-center justify-center py-32 text-center">
+                <div className="h-fit lg:min-h-[900px] flex flex-col items-center justify-center py-32 text-center">
                     <p className="text-lg font-medium text-muted-foreground">
                         No matching websites found
                     </p>
                 </div>
             ) : (
                 <>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 h-fit lg:min-h-[900px]">
                         {paginatedWebsites.map((website) => (
                             <WebsiteCard
                                 key={website.id}
                                 name={website.name}
                                 href={website.href}
-                                tags={
-                                    tag
-                                        ? [
-                                              tag,
-                                              ...(website.tags || []).filter(
-                                                  (t) =>
-                                                      t.toLowerCase() !==
-                                                      tag.toLowerCase()
-                                              ),
-                                          ]
-                                        : website.tags
-                                }
+                                tags={website.tags}
                                 description={website.description}
                             />
                         ))}
@@ -167,7 +152,7 @@ function DirectoryContent() {
                                     handlePageChange(currentPage - 1)
                                 }
                                 disabled={currentPage === 1}
-                                className="p-2 rounded-lg border border-border/50 bg-secondary text-muted-foreground hover:bg-secondary/80 hover:text-foreground disabled:opacity-50 disabled:pointer-events-none"
+                                className="w-8 h-8 flex items-center justify-center rounded-lg border border-border/50 bg-secondary text-muted-foreground hover:bg-secondary/80 hover:text-foreground disabled:opacity-50 disabled:pointer-events-none"
                                 aria-label="Previous page"
                             >
                                 ←
@@ -196,7 +181,7 @@ function DirectoryContent() {
                                     handlePageChange(currentPage + 1)
                                 }
                                 disabled={currentPage === totalPages}
-                                className="p-2 rounded-lg border border-border/50 bg-secondary text-muted-foreground hover:bg-secondary/80 hover:text-foreground disabled:opacity-50 disabled:pointer-events-none"
+                                className="w-8 h-8 flex items-center justify-center rounded-lg border border-border/50 bg-secondary text-muted-foreground hover:bg-secondary/80 hover:text-foreground disabled:opacity-50 disabled:pointer-events-none"
                                 aria-label="Next page"
                             >
                                 →
@@ -225,7 +210,7 @@ function DirectoryFallback() {
                 <div className="animate-pulse h-10 w-full sm:w-[400px] bg-muted rounded-lg" />
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {[...Array(6)].map((_, i) => (
+                {[...Array(9)].map((_, i) => (
                     <div
                         key={i}
                         className="h-[300px] rounded-xl bg-muted animate-pulse"

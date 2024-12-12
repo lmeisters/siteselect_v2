@@ -225,7 +225,7 @@ export function WebsiteDialog({ website, isOpen, onClose, children }) {
                 <div className="h-full overflow-y-auto p-4 sm:p-6">
                     <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
                         <div className="flex-1">
-                            <article className="website-details">
+                            <article className="website-details flex flex-col h-full">
                                 <header className="flex items-center justify-between mb-4">
                                     <div className="flex flex-col">
                                         <div className="flex items-center">
@@ -251,28 +251,30 @@ export function WebsiteDialog({ website, isOpen, onClose, children }) {
                                         </a>
                                     </div>
                                 </header>
-                                <div className="space-y-4 mb-2">
+                                <div className="space-y-4">
                                     <DialogDescription className="text-lg text-muted-foreground">
                                         {website.description}
                                     </DialogDescription>
+                                </div>
+                                <div className="mt-auto space-y-2">
                                     <p className="text-sm text-muted-foreground">
                                         Last updated:{" "}
                                         {formatDate(
                                             website.lastUpdated || "2024-01-01"
                                         )}
                                     </p>
+                                    <figure className="relative w-full aspect-video rounded-lg overflow-hidden">
+                                        <div className="absolute inset-0 bg-black/5 z-10" />
+                                        <Image
+                                            src={imagePath}
+                                            alt={`Screenshot of ${website.name}'s homepage`}
+                                            fill
+                                            className="object-cover"
+                                            sizes="(max-width: 768px) 100vw, 768px"
+                                            priority
+                                        />
+                                    </figure>
                                 </div>
-                                <figure className="relative w-full aspect-video rounded-lg overflow-hidden">
-                                    <div className="absolute inset-0 bg-black/5 z-10" />
-                                    <Image
-                                        src={imagePath}
-                                        alt={`Screenshot of ${website.name}'s homepage`}
-                                        fill
-                                        className="object-cover"
-                                        sizes="(max-width: 768px) 100vw, 768px"
-                                        priority
-                                    />
-                                </figure>
                             </article>
                         </div>
 
