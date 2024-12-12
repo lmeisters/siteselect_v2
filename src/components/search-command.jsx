@@ -62,7 +62,7 @@ export function SearchCommand() {
         layouts: {},
         platforms: {},
     });
-    const [currentSuggestion, setCurrentSuggestion] = useState("");
+
     const [suggestion, setSuggestion] = useState("");
     const scrollRef = useRef(null);
 
@@ -270,7 +270,7 @@ export function SearchCommand() {
     return (
         <Dialog open={isOpen} onOpenChange={setIsOpen}>
             <DialogTrigger asChild>
-                <button className="flex w-full items-center h-9 rounded-3xl border bg-background px-3 text-sm text-muted-foreground shadow-sm hover:bg-accent">
+                <button className="flex w-full items-center h-9 rounded-3xl border bg-background px-3 text-sm text-muted-foreground shadow-sm hover:bg-accent leading-normal py-2">
                     <Search className="mr-2 h-4 w-4 shrink-0 opacity-50" />
                     <span className="flex-1 text-left truncate">
                         {query
@@ -372,181 +372,185 @@ export function SearchCommand() {
                         )}
                     </div>
                     <div className="flex flex-col sm:flex-row h-[400px] sm:h-[245px]">
-                        <CommandList className="w-full sm:w-[30%] border-b sm:border-b-0 sm:border-r">
-                            <CommandEmpty>
-                                {isLoading
-                                    ? "Searching..."
-                                    : "No results found."}
-                            </CommandEmpty>
+                        {searchValue ? (
+                            // Full-width search results
+                            <CommandList className="w-full">
+                                <CommandEmpty>
+                                    {isLoading
+                                        ? "Searching..."
+                                        : "No results found."}
+                                </CommandEmpty>
+                                {Object.entries(SEARCH_CATEGORIES).map(
+                                    ([categoryKey, items]) => {
+                                        const matchingItems = items.filter(
+                                            (item) =>
+                                                item
+                                                    .toLowerCase()
+                                                    .includes(
+                                                        searchValue.toLowerCase()
+                                                    )
+                                        );
 
-                            {searchValue ? (
-                                <>
-                                    {Object.entries(SEARCH_CATEGORIES).map(
-                                        ([categoryKey, items]) => {
-                                            const matchingItems = items.filter(
-                                                (item) =>
-                                                    item
-                                                        .toLowerCase()
-                                                        .includes(
-                                                            searchValue.toLowerCase()
-                                                        )
-                                            );
+                                        if (matchingItems.length === 0)
+                                            return null;
 
-                                            if (matchingItems.length === 0)
-                                                return null;
+                                        const Icon = categoryIcons[categoryKey];
 
-                                            const Icon =
-                                                categoryIcons[categoryKey];
-
-                                            return (
-                                                <CommandGroup
-                                                    key={categoryKey}
-                                                    heading={
-                                                        categories[categoryKey]
-                                                    }
-                                                >
-                                                    {matchingItems.map(
-                                                        (item) => (
-                                                            <CommandItem
-                                                                key={`${categoryKey}-${item}`}
-                                                                onSelect={() =>
-                                                                    handleCategorySelect(
-                                                                        categoryKey,
-                                                                        item
-                                                                    )
-                                                                }
-                                                                className="cursor-pointer"
-                                                            >
-                                                                <Icon className="mr-2 h-4 w-4" />
-                                                                <span className="flex-1 truncate">
-                                                                    {item}
-                                                                </span>
-                                                                <span className="text-xs text-muted-foreground mr-2">
-                                                                    {filterCounts[
-                                                                        categoryKey
-                                                                    ]?.[
-                                                                        item.toLowerCase()
-                                                                    ] || 0}
-                                                                </span>
-                                                            </CommandItem>
-                                                        )
-                                                    )}
-                                                </CommandGroup>
-                                            );
-                                        }
-                                    )}
-                                </>
-                            ) : (
-                                <CommandGroup>
-                                    {Object.entries(categories).map(
-                                        ([key, label]) => {
-                                            const Icon = categoryIcons[key];
-                                            return (
-                                                <CommandItem
-                                                    key={key}
-                                                    onSelect={() => {
-                                                        setSelectedCategory(
-                                                            key
-                                                        );
-                                                        if (scrollRef.current) {
-                                                            scrollRef.current.scrollTop = 0;
+                                        return (
+                                            <CommandGroup
+                                                key={categoryKey}
+                                                heading={
+                                                    categories[categoryKey]
+                                                }
+                                            >
+                                                {matchingItems.map((item) => (
+                                                    <CommandItem
+                                                        key={`${categoryKey}-${item}`}
+                                                        onSelect={() =>
+                                                            handleCategorySelect(
+                                                                categoryKey,
+                                                                item
+                                                            )
                                                         }
-                                                    }}
-                                                    className={`cursor-pointer mb-0.5 last:mb-0 ${
-                                                        selectedCategory === key
-                                                            ? "bg-accent"
-                                                            : ""
-                                                    }`}
-                                                >
-                                                    <Icon className="mr-2 h-4 w-4" />
-                                                    <span
-                                                        className={`capitalize ${
+                                                        className="cursor-pointer"
+                                                    >
+                                                        <Icon className="mr-2 h-4 w-4" />
+                                                        <span className="flex-1 truncate">
+                                                            {item}
+                                                        </span>
+                                                        <span className="text-xs text-muted-foreground mr-2">
+                                                            {filterCounts[
+                                                                categoryKey
+                                                            ]?.[
+                                                                item.toLowerCase()
+                                                            ] || 0}
+                                                        </span>
+                                                    </CommandItem>
+                                                ))}
+                                            </CommandGroup>
+                                        );
+                                    }
+                                )}
+                            </CommandList>
+                        ) : (
+                            // Original split view for categories and tags
+                            <>
+                                <CommandList className="w-full sm:w-[30%] border-b sm:border-b-0 sm:border-r">
+                                    <CommandGroup>
+                                        {Object.entries(categories).map(
+                                            ([key, label]) => {
+                                                const Icon = categoryIcons[key];
+                                                return (
+                                                    <CommandItem
+                                                        key={key}
+                                                        onSelect={() => {
+                                                            setSelectedCategory(
+                                                                key
+                                                            );
+                                                            if (
+                                                                scrollRef.current
+                                                            ) {
+                                                                scrollRef.current.scrollTop = 0;
+                                                            }
+                                                        }}
+                                                        className={`cursor-pointer mb-0.5 last:mb-0 ${
                                                             selectedCategory ===
                                                             key
-                                                                ? "font-medium"
+                                                                ? "bg-accent"
                                                                 : ""
                                                         }`}
                                                     >
-                                                        {label}
-                                                    </span>
-                                                </CommandItem>
-                                            );
-                                        }
-                                    )}
-                                </CommandGroup>
-                            )}
-                        </CommandList>
-
-                        {!searchValue && selectedCategory && (
-                            <div
-                                ref={scrollRef}
-                                className="w-full sm:w-[70%] overflow-y-auto"
-                            >
-                                <CommandList>
-                                    <CommandGroup>
-                                        {SEARCH_CATEGORIES[
-                                            selectedCategory
-                                        ]?.map((item) => (
-                                            <CommandItem
-                                                key={item}
-                                                onSelect={() =>
-                                                    handleCategorySelect(
-                                                        selectedCategory,
-                                                        item
-                                                    )
-                                                }
-                                                className={`cursor-pointer mb-0.5 last:mb-0 ${
-                                                    type?.toLowerCase() ===
-                                                        item.toLowerCase() ||
-                                                    style?.toLowerCase() ===
-                                                        item.toLowerCase() ||
-                                                    industry?.toLowerCase() ===
-                                                        item.toLowerCase() ||
-                                                    color?.toLowerCase() ===
-                                                        item.toLowerCase() ||
-                                                    feature?.toLowerCase() ===
-                                                        item.toLowerCase() ||
-                                                    layout?.toLowerCase() ===
-                                                        item.toLowerCase() ||
-                                                    platform?.toLowerCase() ===
-                                                        item.toLowerCase()
-                                                        ? "bg-accent"
-                                                        : ""
-                                                }`}
-                                            >
-                                                <span
-                                                    className={`flex-1 truncate ${
-                                                        type?.toLowerCase() ===
-                                                            item.toLowerCase() ||
-                                                        style?.toLowerCase() ===
-                                                            item.toLowerCase() ||
-                                                        industry?.toLowerCase() ===
-                                                            item.toLowerCase() ||
-                                                        color?.toLowerCase() ===
-                                                            item.toLowerCase() ||
-                                                        feature?.toLowerCase() ===
-                                                            item.toLowerCase() ||
-                                                        layout?.toLowerCase() ===
-                                                            item.toLowerCase() ||
-                                                        platform?.toLowerCase() ===
-                                                            item.toLowerCase()
-                                                            ? "font-medium"
-                                                            : ""
-                                                    }`}
-                                                >
-                                                    {item}
-                                                </span>
-                                                <span className="text-xs text-muted-foreground mr-2">
-                                                    {filterCounts[
-                                                        selectedCategory
-                                                    ]?.[item.toLowerCase()] ||
-                                                        0}
-                                                </span>
-                                            </CommandItem>
-                                        ))}
+                                                        <Icon className="mr-2 h-4 w-4" />
+                                                        <span
+                                                            className={`capitalize ${
+                                                                selectedCategory ===
+                                                                key
+                                                                    ? "font-medium"
+                                                                    : ""
+                                                            }`}
+                                                        >
+                                                            {label}
+                                                        </span>
+                                                    </CommandItem>
+                                                );
+                                            }
+                                        )}
                                     </CommandGroup>
                                 </CommandList>
-                            </div>
+
+                                {selectedCategory && (
+                                    <div
+                                        ref={scrollRef}
+                                        className="w-full sm:w-[70%] overflow-y-auto"
+                                    >
+                                        <CommandList>
+                                            <CommandGroup>
+                                                {SEARCH_CATEGORIES[
+                                                    selectedCategory
+                                                ]?.map((item) => (
+                                                    <CommandItem
+                                                        key={item}
+                                                        onSelect={() =>
+                                                            handleCategorySelect(
+                                                                selectedCategory,
+                                                                item
+                                                            )
+                                                        }
+                                                        className={`cursor-pointer mb-0.5 last:mb-0 ${
+                                                            type?.toLowerCase() ===
+                                                                item.toLowerCase() ||
+                                                            style?.toLowerCase() ===
+                                                                item.toLowerCase() ||
+                                                            industry?.toLowerCase() ===
+                                                                item.toLowerCase() ||
+                                                            color?.toLowerCase() ===
+                                                                item.toLowerCase() ||
+                                                            feature?.toLowerCase() ===
+                                                                item.toLowerCase() ||
+                                                            layout?.toLowerCase() ===
+                                                                item.toLowerCase() ||
+                                                            platform?.toLowerCase() ===
+                                                                item.toLowerCase()
+                                                                ? "bg-accent"
+                                                                : ""
+                                                        }`}
+                                                    >
+                                                        <span
+                                                            className={`flex-1 truncate ${
+                                                                type?.toLowerCase() ===
+                                                                    item.toLowerCase() ||
+                                                                style?.toLowerCase() ===
+                                                                    item.toLowerCase() ||
+                                                                industry?.toLowerCase() ===
+                                                                    item.toLowerCase() ||
+                                                                color?.toLowerCase() ===
+                                                                    item.toLowerCase() ||
+                                                                feature?.toLowerCase() ===
+                                                                    item.toLowerCase() ||
+                                                                layout?.toLowerCase() ===
+                                                                    item.toLowerCase() ||
+                                                                platform?.toLowerCase() ===
+                                                                    item.toLowerCase()
+                                                                    ? "font-medium"
+                                                                    : ""
+                                                            }`}
+                                                        >
+                                                            {item}
+                                                        </span>
+                                                        <span className="text-xs text-muted-foreground mr-2">
+                                                            {filterCounts[
+                                                                selectedCategory
+                                                            ]?.[
+                                                                item.toLowerCase()
+                                                            ] || 0}
+                                                        </span>
+                                                    </CommandItem>
+                                                ))}
+                                            </CommandGroup>
+                                        </CommandList>
+                                    </div>
+                                )}
+                            </>
                         )}
                     </div>
                 </Command>
