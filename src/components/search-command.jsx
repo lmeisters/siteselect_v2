@@ -202,6 +202,12 @@ export function SearchCommand() {
                         value.toLowerCase()
                     )}`
                 );
+            } else {
+                // Update URL without navigation
+                const newUrl = `/directory?query=${encodeURIComponent(
+                    value.toLowerCase()
+                )}`;
+                window.history.pushState({}, "", newUrl);
             }
         } catch (error) {
             console.error("Search error:", error);
@@ -257,15 +263,39 @@ export function SearchCommand() {
             scrollRef.current.scrollTop = 0;
         }
 
+        const paramKey = Object.keys(searchParam)[0];
+        const newUrl = `/directory?${paramKey}=${encodeURIComponent(
+            value.toLowerCase()
+        )}`;
+
         if (window.location.pathname !== "/directory") {
-            const paramKey = Object.keys(searchParam)[0];
-            router.push(
-                `/directory?${paramKey}=${encodeURIComponent(
-                    value.toLowerCase()
-                )}`
-            );
+            router.push(newUrl);
+        } else {
+            // Update URL without navigation
+            window.history.pushState({}, "", newUrl);
         }
     };
+
+    useEffect(() => {
+        if (window.location.pathname === "/directory") {
+            const searchParams = new URLSearchParams();
+
+            if (query) searchParams.set("query", query);
+            if (type) searchParams.set("type", type);
+            if (style) searchParams.set("style", style);
+            if (industry) searchParams.set("industry", industry);
+            if (color) searchParams.set("color", color);
+            if (feature) searchParams.set("feature", feature);
+            if (layout) searchParams.set("layout", layout);
+            if (platform) searchParams.set("platform", platform);
+
+            const newUrl = searchParams.toString()
+                ? `/directory?${searchParams.toString()}`
+                : "/directory";
+
+            window.history.pushState({}, "", newUrl);
+        }
+    }, [query, type, style, industry, color, feature, layout, platform]);
 
     return (
         <Dialog open={isOpen} onOpenChange={setIsOpen}>
