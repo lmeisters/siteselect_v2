@@ -42,7 +42,7 @@ export const metadata = {
         siteName: "SiteSelect",
         images: [
             {
-                url: "/og-image.jpg",
+                url: '/opengraph-image',
                 width: 1200,
                 height: 630,
                 alt: "SiteSelect - Web Design Gallery",
@@ -56,7 +56,7 @@ export const metadata = {
         title: "SiteSelect | Curated Design Gallery for Creative Inspiration",
         description:
             "Discover a handpicked collection of innovative web design galleries. Browse expertly organized visual references to inspire your next web project.",
-        images: ["/og-image.jpg"],
+        images: ['/opengraph-image'],
     },
     icons: {
         icon: [
