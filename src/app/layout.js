@@ -32,12 +32,31 @@ export const metadata = {
         },
     },
     alternate: {
-        canonical: "https://siteselect.com",
+        canonical: "https://siteselect-v2.vercel.app",
     },
     openGraph: {
         title: "SiteSelect | Curated Design Gallery for Creative Inspiration",
         description:
             "Discover a handpicked collection of innovative web design galleries. Browse expertly organized visual references to inspire your next web project and fuel your creative process.",
+        url: "https://siteselect-v2.vercel.app",
+        siteName: "SiteSelect",
+        images: [
+            {
+                url: "/og-image.jpg",
+                width: 1200,
+                height: 630,
+                alt: "SiteSelect - Web Design Gallery",
+            },
+        ],
+        locale: "en_US",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "SiteSelect | Curated Design Gallery for Creative Inspiration",
+        description:
+            "Discover a handpicked collection of innovative web design galleries. Browse expertly organized visual references to inspire your next web project.",
+        images: ["/og-image.jpg"],
     },
     icons: {
         icon: [
